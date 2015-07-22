@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		4C1F05C11B5F8E6700DF101C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F05C01B5F8E6700DF101C /* main.m */; };
 		4C1F05C41B5F8E6700DF101C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F05C31B5F8E6700DF101C /* AppDelegate.m */; };
-		4C1F05C71B5F8E6700DF101C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F05C61B5F8E6700DF101C /* ViewController.m */; };
-		4C1F05CA1B5F8E6700DF101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F05C81B5F8E6700DF101C /* Main.storyboard */; };
 		4C1F05CC1B5F8E6700DF101C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F05CB1B5F8E6700DF101C /* Images.xcassets */; };
-		4C1F05CF1B5F8E6700DF101C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F05CD1B5F8E6700DF101C /* LaunchScreen.xib */; };
 		4C1F05DB1B5F8E6700DF101C /* ExchangeRateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F05DA1B5F8E6700DF101C /* ExchangeRateTests.m */; };
+		4C1F06521B5F978C00DF101C /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F06421B5F978C00DF101C /* DataManager.m */; };
+		4C1F06531B5F978C00DF101C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F06451B5F978C00DF101C /* ViewController.m */; };
+		4C1F06541B5F978C00DF101C /* MCCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F06481B5F978C00DF101C /* MCCountry.m */; };
+		4C1F06551B5F978C00DF101C /* MCExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */; };
+		4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */; };
+		4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064D1B5F978C00DF101C /* Main.storyboard */; };
+		4C1F06581B5F978C00DF101C /* MCExchangeRateListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F06501B5F978C00DF101C /* MCExchangeRateListCell.m */; };
+		4C1F06591B5F978C00DF101C /* MCExchangeRateListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F06511B5F978C00DF101C /* MCExchangeRateListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +37,23 @@
 		4C1F05C01B5F8E6700DF101C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C1F05C21B5F8E6700DF101C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C1F05C31B5F8E6700DF101C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4C1F05C51B5F8E6700DF101C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4C1F05C61B5F8E6700DF101C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4C1F05C91B5F8E6700DF101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C1F05CB1B5F8E6700DF101C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4C1F05CE1B5F8E6700DF101C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4C1F05D41B5F8E6700DF101C /* ExchangeRateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1F05D91B5F8E6700DF101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1F05DA1B5F8E6700DF101C /* ExchangeRateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExchangeRateTests.m; sourceTree = "<group>"; };
+		4C1F06411B5F978C00DF101C /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		4C1F06421B5F978C00DF101C /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		4C1F06441B5F978C00DF101C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4C1F06451B5F978C00DF101C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4C1F06471B5F978C00DF101C /* MCCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCountry.h; sourceTree = "<group>"; };
+		4C1F06481B5F978C00DF101C /* MCCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCountry.m; sourceTree = "<group>"; };
+		4C1F06491B5F978C00DF101C /* MCExchangeRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRate.h; sourceTree = "<group>"; };
+		4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRate.m; sourceTree = "<group>"; };
+		4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		4C1F064D1B5F978C00DF101C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C1F064F1B5F978C00DF101C /* MCExchangeRateListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateListCell.h; sourceTree = "<group>"; };
+		4C1F06501B5F978C00DF101C /* MCExchangeRateListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateListCell.m; sourceTree = "<group>"; };
+		4C1F06511B5F978C00DF101C /* MCExchangeRateListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCExchangeRateListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +95,14 @@
 		4C1F05BD1B5F8E6700DF101C /* ExchangeRate */ = {
 			isa = PBXGroup;
 			children = (
+				4C1F06401B5F978C00DF101C /* Common */,
+				4C1F06431B5F978C00DF101C /* Controller */,
+				4C1F06461B5F978C00DF101C /* Model */,
+				4C1F064E1B5F978C00DF101C /* View */,
+				4C1F064B1B5F978C00DF101C /* Resources */,
 				4C1F05C21B5F8E6700DF101C /* AppDelegate.h */,
 				4C1F05C31B5F8E6700DF101C /* AppDelegate.m */,
-				4C1F05C51B5F8E6700DF101C /* ViewController.h */,
-				4C1F05C61B5F8E6700DF101C /* ViewController.m */,
-				4C1F05C81B5F8E6700DF101C /* Main.storyboard */,
 				4C1F05CB1B5F8E6700DF101C /* Images.xcassets */,
-				4C1F05CD1B5F8E6700DF101C /* LaunchScreen.xib */,
 				4C1F05BE1B5F8E6700DF101C /* Supporting Files */,
 			);
 			path = ExchangeRate;
@@ -117,6 +132,54 @@
 				4C1F05D91B5F8E6700DF101C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C1F06401B5F978C00DF101C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C1F06411B5F978C00DF101C /* DataManager.h */,
+				4C1F06421B5F978C00DF101C /* DataManager.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4C1F06431B5F978C00DF101C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C1F06441B5F978C00DF101C /* ViewController.h */,
+				4C1F06451B5F978C00DF101C /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4C1F06461B5F978C00DF101C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C1F06471B5F978C00DF101C /* MCCountry.h */,
+				4C1F06481B5F978C00DF101C /* MCCountry.m */,
+				4C1F06491B5F978C00DF101C /* MCExchangeRate.h */,
+				4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C1F064B1B5F978C00DF101C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */,
+				4C1F064D1B5F978C00DF101C /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C1F064E1B5F978C00DF101C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C1F064F1B5F978C00DF101C /* MCExchangeRateListCell.h */,
+				4C1F06501B5F978C00DF101C /* MCExchangeRateListCell.m */,
+				4C1F06511B5F978C00DF101C /* MCExchangeRateListCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C1F05CA1B5F8E6700DF101C /* Main.storyboard in Resources */,
-				4C1F05CF1B5F8E6700DF101C /* LaunchScreen.xib in Resources */,
+				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
+				4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */,
+				4C1F06591B5F978C00DF101C /* MCExchangeRateListCell.xib in Resources */,
 				4C1F05CC1B5F8E6700DF101C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C1F05C71B5F8E6700DF101C /* ViewController.m in Sources */,
+				4C1F06551B5F978C00DF101C /* MCExchangeRate.m in Sources */,
+				4C1F06581B5F978C00DF101C /* MCExchangeRateListCell.m in Sources */,
 				4C1F05C41B5F8E6700DF101C /* AppDelegate.m in Sources */,
+				4C1F06541B5F978C00DF101C /* MCCountry.m in Sources */,
+				4C1F06521B5F978C00DF101C /* DataManager.m in Sources */,
+				4C1F06531B5F978C00DF101C /* ViewController.m in Sources */,
 				4C1F05C11B5F8E6700DF101C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,25 +310,6 @@
 			targetProxy = 4C1F05D51B5F8E6700DF101C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4C1F05C81B5F8E6700DF101C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C1F05C91B5F8E6700DF101C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4C1F05CD1B5F8E6700DF101C /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C1F05CE1B5F8E6700DF101C /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4C1F05DC1B5F8E6700DF101C /* Debug */ = {
@@ -416,6 +465,7 @@
 				4C1F05E01B5F8E6700DF101C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C1F05E11B5F8E6700DF101C /* Build configuration list for PBXNativeTarget "ExchangeRateTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +474,7 @@
 				4C1F05E31B5F8E6700DF101C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
