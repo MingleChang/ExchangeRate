@@ -19,6 +19,7 @@
 		4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064D1B5F978C00DF101C /* Main.storyboard */; };
 		4C1F06581B5F978C00DF101C /* MCExchangeRateListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F06501B5F978C00DF101C /* MCExchangeRateListCell.m */; };
 		4C1F06591B5F978C00DF101C /* MCExchangeRateListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F06511B5F978C00DF101C /* MCExchangeRateListCell.xib */; };
+		82B627671B5FE66400070EB9 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B627661B5FE66400070EB9 /* YQL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		4C1F064F1B5F978C00DF101C /* MCExchangeRateListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateListCell.h; sourceTree = "<group>"; };
 		4C1F06501B5F978C00DF101C /* MCExchangeRateListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateListCell.m; sourceTree = "<group>"; };
 		4C1F06511B5F978C00DF101C /* MCExchangeRateListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCExchangeRateListCell.xib; sourceTree = "<group>"; };
+		82B627651B5FE66400070EB9 /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
+		82B627661B5FE66400070EB9 /* YQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,7 @@
 		4C1F05BD1B5F8E6700DF101C /* ExchangeRate */ = {
 			isa = PBXGroup;
 			children = (
+				82B627631B5FE66400070EB9 /* Depends */,
 				4C1F06401B5F978C00DF101C /* Common */,
 				4C1F06431B5F978C00DF101C /* Controller */,
 				4C1F06461B5F978C00DF101C /* Model */,
@@ -180,6 +184,23 @@
 				4C1F06511B5F978C00DF101C /* MCExchangeRateListCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		82B627631B5FE66400070EB9 /* Depends */ = {
+			isa = PBXGroup;
+			children = (
+				82B627641B5FE66400070EB9 /* YQL */,
+			);
+			path = Depends;
+			sourceTree = "<group>";
+		};
+		82B627641B5FE66400070EB9 /* YQL */ = {
+			isa = PBXGroup;
+			children = (
+				82B627651B5FE66400070EB9 /* YQL.h */,
+				82B627661B5FE66400070EB9 /* YQL.m */,
+			);
+			path = YQL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +310,7 @@
 				4C1F06541B5F978C00DF101C /* MCCountry.m in Sources */,
 				4C1F06521B5F978C00DF101C /* DataManager.m in Sources */,
 				4C1F06531B5F978C00DF101C /* ViewController.m in Sources */,
+				82B627671B5FE66400070EB9 /* YQL.m in Sources */,
 				4C1F05C11B5F8E6700DF101C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
