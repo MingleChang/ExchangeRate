@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-//select * from yahoo.finance.xchange where pair in ("EURUSD","GBPUSD")
 @interface DataManager : NSObject
 +(DataManager *)manager;
 @end

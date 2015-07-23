@@ -6,9 +6,20 @@
 //  Copyright (c) 2015年 MingleChang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-@class MCCountry;
-@interface MCExchangeRate : NSObject
-@property(nonatomic,strong)MCCountry *fromCountry;
-@property(nonatomic,strong)MCCountry *toCountry;
+#import <UIKit/UIKit.h>
+@class MCCurrency;
+@interface MCExchangeRate : NSObject<NSCoding>
+
+@property(nonatomic,copy,readonly)NSString *identifier;
+
+@property(nonatomic,strong)MCCurrency *fromCurrency;
+@property(nonatomic,strong)MCCurrency *toCurrency;
+
+@property(nonatomic,assign)CGFloat rate;
+@property(nonatomic,assign)CGFloat ask;
+@property(nonatomic,assign)CGFloat bid;
+
+@property(nonatomic,copy)NSDate *date;
+
+-(void)setExchangeRateInfo:(NSDictionary *)dic;
 @end
