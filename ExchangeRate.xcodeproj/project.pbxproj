@@ -16,6 +16,7 @@
 		4C1338821B60BD6800585E62 /* MCExchangeRateRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1338811B60BD6800585E62 /* MCExchangeRateRoot.m */; };
 		4C1338851B60BDA100585E62 /* MCExchangeRateQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1338841B60BDA100585E62 /* MCExchangeRateQuery.m */; };
 		4C1338881B60BDF600585E62 /* MCExchangeRateResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1338871B60BDF600585E62 /* MCExchangeRateResult.m */; };
+		4C1338EA1B60E47600585E62 /* Currency.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C1338E91B60E47600585E62 /* Currency.plist */; };
 		4C1F05C11B5F8E6700DF101C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F05C01B5F8E6700DF101C /* main.m */; };
 		4C1F05C41B5F8E6700DF101C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F05C31B5F8E6700DF101C /* AppDelegate.m */; };
 		4C1F05CC1B5F8E6700DF101C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F05CB1B5F8E6700DF101C /* Images.xcassets */; };
@@ -60,6 +61,7 @@
 		4C1338841B60BDA100585E62 /* MCExchangeRateQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateQuery.m; sourceTree = "<group>"; };
 		4C1338861B60BDF600585E62 /* MCExchangeRateResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateResult.h; sourceTree = "<group>"; };
 		4C1338871B60BDF600585E62 /* MCExchangeRateResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateResult.m; sourceTree = "<group>"; };
+		4C1338E91B60E47600585E62 /* Currency.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currency.plist; sourceTree = "<group>"; };
 		4C1F05BB1B5F8E6700DF101C /* ExchangeRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1F05BF1B5F8E6700DF101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1F05C01B5F8E6700DF101C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */,
 				4C1F064D1B5F978C00DF101C /* Main.storyboard */,
+				4C1338E91B60E47600585E62 /* Currency.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
+				4C1338EA1B60E47600585E62 /* Currency.plist in Resources */,
 				4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */,
 				4C1F06591B5F978C00DF101C /* MCExchangeRateListCell.xib in Resources */,
 				4C1F05CC1B5F8E6700DF101C /* Images.xcassets in Resources */,
