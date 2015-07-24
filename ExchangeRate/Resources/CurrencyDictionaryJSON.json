@@ -1,0 +1,47 @@
+{
+  "USD": {
+    "name": "美元",
+    "unit": "USD",
+    "symbol": "$"
+  },
+  "CNY": {
+    "name": "人民币",
+    "unit": "CNY",
+    "symbol": "￥"
+  },
+  "EUR": {
+    "name": "欧元",
+    "unit": "EUR",
+    "symbol": "€"
+  },
+  "GBP": {
+    "name": "英镑",
+    "unit": "GBP",
+    "symbol": "￡"
+  },
+  "HKD": {
+    "name": "港币",
+    "unit": "HKD",
+    "symbol": "$"
+  },
+  "AUD": {
+    "name": "澳元",
+    "unit": "AUD",
+    "symbol": "$"
+  },
+  "JPY": {
+    "name": "日元",
+    "unit": "JPY",
+    "symbol": "¥"
+  },
+  "KER": {
+    "name": "韩元",
+    "unit": "KER",
+    "symbol": "₩"
+  },
+  "TWD": {
+    "name": "新台币",
+    "unit": "TWD",
+    "symbol": "$"
+  }
+}
