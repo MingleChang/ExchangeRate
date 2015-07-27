@@ -20,4 +20,9 @@ typedef NS_ENUM(NSUInteger, PanCellStatus) {
 @property(nonatomic,assign)PanCellStatus status;
 @property(nonatomic,assign)CGFloat leftDistance;
 @property(nonatomic,assign)CGFloat rightDistance;
+
+-(void)showLeftWith:(BOOL)animation;
+-(void)showRightWith:(BOOL)animation;
+-(void)showNormalWith:(BOOL)animation;
+
 @end

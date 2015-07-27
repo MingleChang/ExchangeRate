@@ -11,13 +11,15 @@
 @interface MCPanCell()
 
 @property(nonatomic,assign)CGAffineTransform forwardBeginTransform;
-
-- (void)panGestureResponse:(UIPanGestureRecognizer *)sender;
+-(void)panGestureResponseBegin;
+-(void)panGestureResponseChangeWithTranslation:(CGPoint )translation;
+-(void)panGestureResponseEndWithVelocity:(CGPoint )velocity;
+-(void)panGestureResponse:(UIPanGestureRecognizer *)sender;
 
 @end
 @implementation MCPanCell
 
-- (void)awakeFromNib {
+-(void)awakeFromNib {
     // Initialization code
     [super awakeFromNib];
     
@@ -28,30 +30,13 @@
     [self.contentView addGestureRecognizer:lPan];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+-(void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     // Configure the view for the selected state
 }
 
+#pragma mark - Private Motheds
 #pragma mark - PanGesture
-- (void)panGestureResponse:(UIPanGestureRecognizer *)sender {
-    switch (sender.state) {
-        case UIGestureRecognizerStateBegan:{
-            [self panGestureResponseBegin];
-        }break;
-        case UIGestureRecognizerStateChanged:{
-            CGPoint translation = [sender translationInView:self.contentView];
-            [self panGestureResponseChangeWithTranslation:translation];
-        }break;
-        case UIGestureRecognizerStateEnded:
-        case UIGestureRecognizerStateCancelled:{
-            CGPoint velocity = [sender velocityInView:self];
-            [self panGestureResponseEndWithVelocity:velocity];
-        }break;
-        default:
-            break;
-    }
-}
 -(void)panGestureResponseBegin{
     self.forwardBeginTransform=self.forwardView.transform;
 }
@@ -88,5 +73,63 @@
     } completion:^(BOOL finished) {
         self.status=lStatus;
     }];
+}
+
+#pragma mark - PanGesture Response
+- (void)panGestureResponse:(UIPanGestureRecognizer *)sender {
+    switch (sender.state) {
+        case UIGestureRecognizerStateBegan:{
+            [self panGestureResponseBegin];
+        }break;
+        case UIGestureRecognizerStateChanged:{
+            CGPoint translation = [sender translationInView:self.contentView];
+            [self panGestureResponseChangeWithTranslation:translation];
+        }break;
+        case UIGestureRecognizerStateEnded:
+        case UIGestureRecognizerStateCancelled:{
+            CGPoint velocity = [sender velocityInView:self];
+            [self panGestureResponseEndWithVelocity:velocity];
+        }break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - Public Motheds
+-(void)showLeftWith:(BOOL)animation{
+    if (animation) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.forwardView.transform=CGAffineTransformMakeTranslation(self.leftDistance, 0);
+        } completion:^(BOOL finished) {
+            self.status=PanCellStatusLeft;
+        }];
+    }else{
+        self.forwardView.transform=CGAffineTransformMakeTranslation(self.leftDistance, 0);
+        self.status=PanCellStatusLeft;
+    }
+}
+-(void)showRightWith:(BOOL)animation{
+    if (animation) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.forwardView.transform=CGAffineTransformMakeTranslation(self.rightDistance, 0);
+        } completion:^(BOOL finished) {
+            self.status=PanCellStatusRight;
+        }];
+    }else{
+        self.forwardView.transform=CGAffineTransformMakeTranslation(self.rightDistance, 0);
+        self.status=PanCellStatusRight;
+    }
+}
+-(void)showNormalWith:(BOOL)animation{
+    if (animation) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.forwardView.transform=CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            self.status=PanCellStatusNormal;
+        }];
+    }else{
+        self.forwardView.transform=CGAffineTransformIdentity;
+        self.status=PanCellStatusNormal;
+    }
 }
 @end
