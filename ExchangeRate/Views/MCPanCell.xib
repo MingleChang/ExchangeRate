@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MCPanCell" id="KGk-i7-Jjw" customClass="MCPanCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juh-HY-by0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oe8-Xb-lxA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </subviews>
+                <gestureRecognizers/>
+                <constraints>
+                    <constraint firstItem="Oe8-Xb-lxA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0Qo-8X-0vN"/>
+                    <constraint firstItem="juh-HY-by0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="L6x-Vg-pgP"/>
+                    <constraint firstItem="juh-HY-by0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Sgc-SC-wh5"/>
+                    <constraint firstAttribute="bottom" secondItem="Oe8-Xb-lxA" secondAttribute="bottom" id="av5-vm-zSO"/>
+                    <constraint firstAttribute="trailing" secondItem="juh-HY-by0" secondAttribute="trailing" id="azC-wN-3c7"/>
+                    <constraint firstAttribute="trailing" secondItem="Oe8-Xb-lxA" secondAttribute="trailing" id="lNF-yY-zdO"/>
+                    <constraint firstItem="Oe8-Xb-lxA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oJZ-mx-ydX"/>
+                    <constraint firstAttribute="bottom" secondItem="juh-HY-by0" secondAttribute="bottom" id="y1Y-jk-ed4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <gestureRecognizers/>
+            <connections>
+                <outlet property="bgView" destination="juh-HY-by0" id="8bd-4a-Gyq"/>
+                <outlet property="forwardView" destination="Oe8-Xb-lxA" id="hh5-Mx-EvC"/>
+            </connections>
+        </tableViewCell>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+</document>

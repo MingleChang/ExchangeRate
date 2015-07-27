@@ -1,17 +1,18 @@
 //
-//  MCExchangeRateListCell.m
-//  ExchangeRate
+//  MCExchangeRateCell.m
+//  CellTest
 //
-//  Created by 常峻玮 on 15/7/22.
+//  Created by 常峻玮 on 15/7/27.
 //  Copyright (c) 2015年 MingleChang. All rights reserved.
 //
 
-#import "MCExchangeRateListCell.h"
+#import "MCExchangeRateCell.h"
 
-@implementation MCExchangeRateListCell
+@implementation MCExchangeRateCell
 
 - (void)awakeFromNib {
     // Initialization code
+    [super awakeFromNib];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
