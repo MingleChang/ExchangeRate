@@ -12,4 +12,5 @@
 @property(nonatomic,copy)NSString *name;
 @property(nonatomic,copy)NSString *unit;
 @property(nonatomic,copy)NSString *symbol;
+-(instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

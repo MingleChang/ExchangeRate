@@ -6,13 +6,14 @@
 //  Copyright (c) 2015年 MingleChang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 @class MCExchangeRate;
+@class MCCurrency;
 @interface DataManager : NSObject
-@property(nonatomic,strong)MCExchangeRate *localeExchangeRate;
-@property(nonatomic,copy)NSArray *allExchangeRates;
-@property(nonatomic,copy)NSArray *allSelectedExchangeRates;
-@property(nonatomic,copy)NSArray *allUnselectedExchangeRates;
+@property(nonatomic,strong)MCCurrency *localeCurrency;
+@property(nonatomic,copy)NSArray *allCurrencies;
+@property(nonatomic,copy)NSArray *selectedCurrencies;
+@property(nonatomic,copy)NSArray *unselectedCurrencies;
 +(DataManager *)manager;
 
 @end

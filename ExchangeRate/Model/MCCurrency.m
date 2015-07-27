@@ -16,7 +16,17 @@
 
 @end
 @implementation MCCurrency
-
+-(instancetype)initWithDictionary:(NSDictionary *)dic{
+    self=[super init];
+    if (self) {
+        [self setValuesForKeysWithDictionary:dic];
+    }
+    return self;
+}
+-(NSString *)description{
+    NSString *lString=[NSString stringWithFormat:@"name:%@ unit:%@ symbol:%@",self.name,self.unit,self.symbol];
+    return lString;
+}
 #pragma mark - Coding
 -(void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:self.name forKey:CURRENCY_NAME_CODING_KEY];
