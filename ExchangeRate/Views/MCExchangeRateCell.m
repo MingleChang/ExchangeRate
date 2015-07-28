@@ -14,9 +14,8 @@
     // Initialization code
     [super awakeFromNib];
     
-    
-    self.leftDistance=10;
-    self.rightDistance=100;
+    self.leftDistance=150;
+    self.rightDistance=70;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

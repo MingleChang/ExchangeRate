@@ -14,6 +14,7 @@
 @property(nonatomic,copy)NSArray *allCurrencies;
 @property(nonatomic,copy)NSArray *selectedCurrencies;
 @property(nonatomic,copy)NSArray *unselectedCurrencies;
+@property(nonatomic,copy)NSArray *selectedExchangeRate;
 +(DataManager *)manager;
 
 @end
