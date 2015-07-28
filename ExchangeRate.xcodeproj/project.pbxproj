@@ -34,6 +34,10 @@
 		4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5781B661EED003C1A56 /* MCPanCell.xib */; };
 		823DE42F1B667A6C009C4381 /* MCExchangeRateNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */; };
 		823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */; };
+		825B20651B67C7E300ED9E7D /* MCLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B20641B67C7E300ED9E7D /* MCLoadView.m */; };
+		825B20671B67C7FF00ED9E7D /* MCLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 825B20661B67C7FF00ED9E7D /* MCLoadView.xib */; };
+		825B206A1B67D88A00ED9E7D /* MCCurrencyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */; };
+		825B206D1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */; };
 		82B627671B5FE66400070EB9 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B627661B5FE66400070EB9 /* YQL.m */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +102,13 @@
 		823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateNavigationController.m; sourceTree = "<group>"; };
 		823DE4301B667A88009C4381 /* MCExchangeRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateViewController.h; sourceTree = "<group>"; };
 		823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateViewController.m; sourceTree = "<group>"; };
+		825B20631B67C7E300ED9E7D /* MCLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLoadView.h; sourceTree = "<group>"; };
+		825B20641B67C7E300ED9E7D /* MCLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLoadView.m; sourceTree = "<group>"; };
+		825B20661B67C7FF00ED9E7D /* MCLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCLoadView.xib; sourceTree = "<group>"; };
+		825B20681B67D88A00ED9E7D /* MCCurrencyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyListViewController.h; sourceTree = "<group>"; };
+		825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListViewController.m; sourceTree = "<group>"; };
+		825B206B1B67D8A900ED9E7D /* MCCurrencyListNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyListNavigationController.h; sourceTree = "<group>"; };
+		825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListNavigationController.m; sourceTree = "<group>"; };
 		82B627651B5FE66400070EB9 /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
 		82B627661B5FE66400070EB9 /* YQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +228,10 @@
 				823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */,
 				823DE4301B667A88009C4381 /* MCExchangeRateViewController.h */,
 				823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */,
+				825B206B1B67D8A900ED9E7D /* MCCurrencyListNavigationController.h */,
+				825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */,
+				825B20681B67D88A00ED9E7D /* MCCurrencyListViewController.h */,
+				825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +282,9 @@
 				4CF9E5761B661EED003C1A56 /* MCPanCell.h */,
 				4CF9E5771B661EED003C1A56 /* MCPanCell.m */,
 				4CF9E5781B661EED003C1A56 /* MCPanCell.xib */,
+				825B20631B67C7E300ED9E7D /* MCLoadView.h */,
+				825B20641B67C7E300ED9E7D /* MCLoadView.m */,
+				825B20661B67C7FF00ED9E7D /* MCLoadView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -372,6 +390,7 @@
 			files = (
 				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
 				4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */,
+				825B20671B67C7FF00ED9E7D /* MCLoadView.xib in Resources */,
 				4C3ACD621B676AB8003B7C59 /* Localization.strings in Resources */,
 				4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */,
 				4C0832601B61C4F1009F17CC /* CurrencyJSON.json in Resources */,
@@ -405,13 +424,16 @@
 				4C13387A1B60B97C00585E62 /* MCImageExtension.m in Sources */,
 				4C1338851B60BDA100585E62 /* MCExchangeRateQuery.m in Sources */,
 				4C3ACD601B672A11003B7C59 /* FilePath.m in Sources */,
+				825B206A1B67D88A00ED9E7D /* MCCurrencyListViewController.m in Sources */,
 				4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */,
 				4C1338821B60BD6800585E62 /* MCExchangeRateRoot.m in Sources */,
 				4C1338761B60B97C00585E62 /* MCDevice.m in Sources */,
+				825B20651B67C7E300ED9E7D /* MCLoadView.m in Sources */,
 				4C1338521B6087A300585E62 /* MCCurrency.m in Sources */,
 				4C1F05C41B5F8E6700DF101C /* AppDelegate.m in Sources */,
 				4C1F06521B5F978C00DF101C /* DataManager.m in Sources */,
 				82B627671B5FE66400070EB9 /* YQL.m in Sources */,
+				825B206D1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m in Sources */,
 				4CF9E5791B661EED003C1A56 /* MCExchangeRateCell.m in Sources */,
 				4C1F05C11B5F8E6700DF101C /* main.m in Sources */,
 			);

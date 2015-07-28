@@ -8,6 +8,7 @@
 
 #import "MCExchangeRateViewController.h"
 #import "MCExchangeRateCell.h"
+#import "DataManager.h"
 
 #define MCExchangeRateCellID @"MCExchangeRateCell"
 
@@ -40,7 +41,7 @@
 }
 #pragma mark - TableView DataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 100;
+    return [DataManager manager].selectedExchangeRate.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MCExchangeRateCell *lCell=[tableView dequeueReusableCellWithIdentifier:MCExchangeRateCellID forIndexPath:indexPath];

@@ -10,6 +10,7 @@
 #import "MCCurrency.h"
 #import "MCExchangeRate.h"
 #import "FilePath.h"
+#import "MCExchangeRateRequest.h"
 
 #define CURRENCY_LIST_FILE @"CurrencyJSON"
 #define ALL_EXCHANGE_RATE_CACHE_NAME @"ALL_EXCHANGE_RATE_CACHE_NAME"
@@ -31,6 +32,14 @@
     return self;
 }
 #pragma mark - 
+-(void)saveSelectedCurrency{
+    NSString *lPath=[FilePath pathInDocumentWithFileName:SELECTED_CURRENCY_CACHE_NAME];
+    [NSKeyedArchiver archiveRootObject:self.selectedCurrencies toFile:lPath];
+}
+-(void)saveAllExchangeRate{
+    NSString *lPath=[FilePath pathInDocumentWithFileName:ALL_EXCHANGE_RATE_CACHE_NAME];
+    [NSKeyedArchiver archiveRootObject:self.selectedExchangeRate toFile:lPath];
+}
 -(NSArray *)readCacheSelectedCurrency{
     NSString *lPath=[FilePath pathInDocumentWithFileName:SELECTED_CURRENCY_CACHE_NAME];
     if ([[NSFileManager defaultManager]fileExistsAtPath:lPath]) {

@@ -20,6 +20,22 @@
             </objects>
             <point key="canvasLocation" x="299" y="-5"/>
         </scene>
+        <!--Currency List Navigation Controller-->
+        <scene sceneID="8JS-kf-N4M">
+            <objects>
+                <navigationController storyboardIdentifier="MCCurrencyListNavigationController" id="C1Q-be-Sen" customClass="MCCurrencyListNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yXI-gf-8Jb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EXC-B4-mGB" kind="relationship" relationship="rootViewController" id="AUE-Y6-ln0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lj-y2-dQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="615"/>
+        </scene>
         <!--Exchange Rate View Controller-->
         <scene sceneID="1Kd-tD-iQ5">
             <objects>
@@ -49,7 +65,9 @@
                             <constraint firstItem="UD6-4c-lVj" firstAttribute="leading" secondItem="zEi-Mg-MXu" secondAttribute="leading" id="uLE-1h-YNU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mHc-Oy-esD"/>
+                    <navigationItem key="navigationItem" id="mHc-Oy-esD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MLQ-zQ-T0q"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="UD6-4c-lVj" id="3Uw-pe-BB1"/>
                     </connections>
@@ -57,6 +75,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7I-KB-i2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="703" y="-5"/>
+        </scene>
+        <!--Currency List View Controller-->
+        <scene sceneID="hyJ-Ra-hU5">
+            <objects>
+                <viewController storyboardIdentifier="MCCurrencyListViewController" id="EXC-B4-mGB" customClass="MCCurrencyListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wnX-tC-Gho"/>
+                        <viewControllerLayoutGuide type="bottom" id="JIP-01-B1w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Svp-qg-meG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="euk-HF-WjQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="euk-HF-WjQ" firstAttribute="top" secondItem="Svp-qg-meG" secondAttribute="top" id="QXd-GZ-O1I"/>
+                            <constraint firstItem="JIP-01-B1w" firstAttribute="top" secondItem="euk-HF-WjQ" secondAttribute="bottom" id="cX1-0R-BML"/>
+                            <constraint firstAttribute="trailing" secondItem="euk-HF-WjQ" secondAttribute="trailing" id="mIf-DU-zuX"/>
+                            <constraint firstItem="euk-HF-WjQ" firstAttribute="leading" secondItem="Svp-qg-meG" secondAttribute="leading" id="oKL-Qy-T1G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZD2-8I-Z2D">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="CnI-iE-2ud"/>
+                        <barButtonItem key="rightBarButtonItem" title="确定" id="mHj-7Y-la0"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UR9-OO-MdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="615"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
