@@ -27,6 +27,7 @@
     self.rightDistance=100;
     
     UIPanGestureRecognizer *lPan=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGestureResponse:)];
+    lPan.delegate=self;
     [self.contentView addGestureRecognizer:lPan];
 }
 
