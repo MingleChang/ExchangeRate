@@ -13,6 +13,10 @@
 - (void)awakeFromNib {
     // Initialization code
     [super awakeFromNib];
+    
+    
+    self.leftDistance=10;
+    self.rightDistance=100;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -23,9 +23,6 @@
     // Initialization code
     [super awakeFromNib];
     
-    self.leftDistance=10;
-    self.rightDistance=100;
-    
     UIPanGestureRecognizer *lPan=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGestureResponse:)];
     lPan.delegate=self;
     [self.contentView addGestureRecognizer:lPan];
