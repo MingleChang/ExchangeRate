@@ -13,4 +13,5 @@
 @property(nonatomic,copy)NSString *unit;
 @property(nonatomic,copy)NSString *symbol;
 -(instancetype)initWithDictionary:(NSDictionary *)dic;
+-(BOOL)isEqualCurrency:(MCCurrency *)currency;
 @end

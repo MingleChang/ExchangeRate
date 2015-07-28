@@ -23,6 +23,12 @@
     }
     return self;
 }
+-(BOOL)isEqualCurrency:(MCCurrency *)currency{
+    if ([self.unit isEqualToString:currency.unit]&&[self.symbol isEqualToString:currency.symbol]) {
+        return YES;
+    }
+    return NO;
+}
 -(NSString *)description{
     NSString *lString=[NSString stringWithFormat:@"name:%@ unit:%@ symbol:%@",self.name,self.unit,self.symbol];
     return lString;

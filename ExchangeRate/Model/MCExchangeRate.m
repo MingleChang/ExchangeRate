@@ -30,6 +30,9 @@
     self.date=[NSDate date];
 }
 
+-(NSString *)description{
+    return [NSString stringWithFormat:@"from:%@   to:%@",self.fromCurrency,self.toCurrency];
+}
 #pragma mark - Setter And Getter
 -(NSString *)identifier{
     if (self.fromCurrency&&self.toCurrency) {

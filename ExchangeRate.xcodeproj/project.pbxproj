@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C0832601B61C4F1009F17CC /* CurrencyArrayJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C08325F1B61C4F1009F17CC /* CurrencyArrayJSON.json */; };
-		4C0832621B61C538009F17CC /* CurrencyDictionaryJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C0832611B61C538009F17CC /* CurrencyDictionaryJSON.json */; };
+		4C0832601B61C4F1009F17CC /* CurrencyJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C08325F1B61C4F1009F17CC /* CurrencyJSON.json */; };
 		4C1338521B6087A300585E62 /* MCCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1338511B6087A300585E62 /* MCCurrency.m */; };
 		4C1338551B60899300585E62 /* MCExchangeRateRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1338541B60899300585E62 /* MCExchangeRateRequest.m */; };
 		4C1338761B60B97C00585E62 /* MCDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1338641B60B97C00585E62 /* MCDevice.m */; };
@@ -27,6 +26,8 @@
 		4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */; };
 		4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064D1B5F978C00DF101C /* Main.storyboard */; };
 		4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ACD5C1B6715A3003B7C59 /* Reachability.m */; };
+		4C3ACD601B672A11003B7C59 /* FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ACD5F1B672A11003B7C59 /* FilePath.m */; };
+		4C3ACD621B676AB8003B7C59 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3ACD611B676AB8003B7C59 /* Localization.strings */; };
 		4CF9E5791B661EED003C1A56 /* MCExchangeRateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5741B661EED003C1A56 /* MCExchangeRateCell.m */; };
 		4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */; };
 		4CF9E57B1B661EED003C1A56 /* MCPanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5771B661EED003C1A56 /* MCPanCell.m */; };
@@ -47,8 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C08325F1B61C4F1009F17CC /* CurrencyArrayJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CurrencyArrayJSON.json; sourceTree = "<group>"; };
-		4C0832611B61C538009F17CC /* CurrencyDictionaryJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CurrencyDictionaryJSON.json; sourceTree = "<group>"; };
+		4C08325F1B61C4F1009F17CC /* CurrencyJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CurrencyJSON.json; sourceTree = "<group>"; };
 		4C1338501B6087A300585E62 /* MCCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrency.h; sourceTree = "<group>"; };
 		4C1338511B6087A300585E62 /* MCCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrency.m; sourceTree = "<group>"; };
 		4C1338531B60899300585E62 /* MCExchangeRateRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateRequest.h; sourceTree = "<group>"; };
@@ -85,6 +85,9 @@
 		4C1F064D1B5F978C00DF101C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C3ACD5B1B6715A3003B7C59 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4C3ACD5C1B6715A3003B7C59 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		4C3ACD5E1B672A11003B7C59 /* FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePath.h; sourceTree = "<group>"; };
+		4C3ACD5F1B672A11003B7C59 /* FilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePath.m; sourceTree = "<group>"; };
+		4C3ACD611B676AB8003B7C59 /* Localization.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
 		4CF9E5731B661EED003C1A56 /* MCExchangeRateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateCell.h; sourceTree = "<group>"; };
 		4CF9E5741B661EED003C1A56 /* MCExchangeRateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateCell.m; sourceTree = "<group>"; };
 		4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCExchangeRateCell.xib; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				4C1F06421B5F978C00DF101C /* DataManager.m */,
 				4C1338531B60899300585E62 /* MCExchangeRateRequest.h */,
 				4C1338541B60899300585E62 /* MCExchangeRateRequest.m */,
+				4C3ACD5E1B672A11003B7C59 /* FilePath.h */,
+				4C3ACD5F1B672A11003B7C59 /* FilePath.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -238,8 +243,8 @@
 			children = (
 				4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */,
 				4C1F064D1B5F978C00DF101C /* Main.storyboard */,
-				4C08325F1B61C4F1009F17CC /* CurrencyArrayJSON.json */,
-				4C0832611B61C538009F17CC /* CurrencyDictionaryJSON.json */,
+				4C08325F1B61C4F1009F17CC /* CurrencyJSON.json */,
+				4C3ACD611B676AB8003B7C59 /* Localization.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -367,9 +372,9 @@
 			files = (
 				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
 				4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */,
+				4C3ACD621B676AB8003B7C59 /* Localization.strings in Resources */,
 				4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */,
-				4C0832601B61C4F1009F17CC /* CurrencyArrayJSON.json in Resources */,
-				4C0832621B61C538009F17CC /* CurrencyDictionaryJSON.json in Resources */,
+				4C0832601B61C4F1009F17CC /* CurrencyJSON.json in Resources */,
 				4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */,
 				4C1F05CC1B5F8E6700DF101C /* Images.xcassets in Resources */,
 			);
@@ -399,6 +404,7 @@
 				823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */,
 				4C13387A1B60B97C00585E62 /* MCImageExtension.m in Sources */,
 				4C1338851B60BDA100585E62 /* MCExchangeRateQuery.m in Sources */,
+				4C3ACD601B672A11003B7C59 /* FilePath.m in Sources */,
 				4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */,
 				4C1338821B60BD6800585E62 /* MCExchangeRateRoot.m in Sources */,
 				4C1338761B60B97C00585E62 /* MCDevice.m in Sources */,

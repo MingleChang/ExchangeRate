@@ -10,10 +10,11 @@
 @class MCExchangeRate;
 @class MCCurrency;
 @interface DataManager : NSObject
-@property(nonatomic,strong)MCCurrency *localeCurrency;
+@property(nonatomic,strong)MCCurrency *toCurrency;
 @property(nonatomic,copy)NSArray *allCurrencies;
 @property(nonatomic,copy)NSArray *selectedCurrencies;
-@property(nonatomic,copy)NSArray *unselectedCurrencies;
+@property(nonatomic,copy,readonly)NSArray *unselectedCurrencies;
+@property(nonatomic,copy)NSArray *allExchangeRate;
 @property(nonatomic,copy)NSArray *selectedExchangeRate;
 +(DataManager *)manager;
 

@@ -61,4 +61,10 @@
  返回值：BOOL，返回YES或者NO
  */
 +(BOOL)isRetina;
+/*
+ 获取应用正在用于显示的ViewController
+ 参数：N/A
+ 返回值：UIViewController，返回对应的视图控制器
+ */
++(UIViewController *)getAppFrontViewController;
 @end
