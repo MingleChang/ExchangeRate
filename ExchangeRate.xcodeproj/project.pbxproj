@@ -26,6 +26,7 @@
 		4C1F06551B5F978C00DF101C /* MCExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */; };
 		4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */; };
 		4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064D1B5F978C00DF101C /* Main.storyboard */; };
+		4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ACD5C1B6715A3003B7C59 /* Reachability.m */; };
 		4CF9E5791B661EED003C1A56 /* MCExchangeRateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5741B661EED003C1A56 /* MCExchangeRateCell.m */; };
 		4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */; };
 		4CF9E57B1B661EED003C1A56 /* MCPanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5771B661EED003C1A56 /* MCPanCell.m */; };
@@ -82,6 +83,8 @@
 		4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRate.m; sourceTree = "<group>"; };
 		4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4C1F064D1B5F978C00DF101C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C3ACD5B1B6715A3003B7C59 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		4C3ACD5C1B6715A3003B7C59 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4CF9E5731B661EED003C1A56 /* MCExchangeRateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateCell.h; sourceTree = "<group>"; };
 		4CF9E5741B661EED003C1A56 /* MCExchangeRateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateCell.m; sourceTree = "<group>"; };
 		4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCExchangeRateCell.xib; sourceTree = "<group>"; };
@@ -241,6 +244,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4C3ACD5A1B6715A3003B7C59 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				4C3ACD5B1B6715A3003B7C59 /* Reachability.h */,
+				4C3ACD5C1B6715A3003B7C59 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		4CF9E5721B661EED003C1A56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +269,7 @@
 		82B627631B5FE66400070EB9 /* Depends */ = {
 			isa = PBXGroup;
 			children = (
+				4C3ACD5A1B6715A3003B7C59 /* Reachability */,
 				4C1338561B60B97C00585E62 /* MingleChang */,
 				82B627641B5FE66400070EB9 /* YQL */,
 			);
@@ -386,6 +399,7 @@
 				823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */,
 				4C13387A1B60B97C00585E62 /* MCImageExtension.m in Sources */,
 				4C1338851B60BDA100585E62 /* MCExchangeRateQuery.m in Sources */,
+				4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */,
 				4C1338821B60BD6800585E62 /* MCExchangeRateRoot.m in Sources */,
 				4C1338761B60B97C00585E62 /* MCDevice.m in Sources */,
 				4C1338521B6087A300585E62 /* MCCurrency.m in Sources */,
