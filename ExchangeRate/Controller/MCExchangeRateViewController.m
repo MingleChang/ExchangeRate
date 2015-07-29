@@ -17,6 +17,9 @@
 @interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (weak, nonatomic) IBOutlet UIView *emptyView;
+- (IBAction)emptyViewTapGestureClick:(UITapGestureRecognizer *)sender;
+
 @end
 
 @implementation MCExchangeRateViewController
@@ -37,6 +40,11 @@
 }
 -(void)initAllSubviews{
     [self.tableView registerNib:[UINib nibWithNibName:MCExchangeRateCellID bundle:nil] forCellReuseIdentifier:MCExchangeRateCellID];
+    if ([DataManager manager].selectedExchangeRate.count>0) {
+        self.emptyView.hidden=YES;
+    }else{
+        self.emptyView.hidden=NO;
+    }
 }
 -(void)initAllData{
     [self checkUpdateAllExchangeRate];
@@ -48,6 +56,10 @@
             [lProgress hide:YES];
         }];
     }
+}
+#pragma mark - Event Response
+- (IBAction)emptyViewTapGestureClick:(UITapGestureRecognizer *)sender {
+    MCLOG(@"Tap");
 }
 #pragma mark - TableView DataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -67,5 +79,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

@@ -56,23 +56,53 @@
                                     <outlet property="delegate" destination="kec-6X-ocJ" id="Age-E7-f8Z"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFR-hp-cGO">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMPTY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJV-CW-4qJ">
+                                        <rect key="frame" x="131" y="241" width="58" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="aJV-CW-4qJ" secondAttribute="centerX" id="7q8-7Z-C0w"/>
+                                    <constraint firstAttribute="centerY" secondItem="aJV-CW-4qJ" secondAttribute="centerY" id="eN6-LX-klX"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="DQH-nc-4gk" appends="YES" id="jh8-aa-FNM"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cLf-Fm-Ozw" firstAttribute="top" secondItem="jFR-hp-cGO" secondAttribute="bottom" id="FYA-S7-DiE"/>
+                            <constraint firstAttribute="trailing" secondItem="jFR-hp-cGO" secondAttribute="trailing" id="Hw0-39-tJu"/>
+                            <constraint firstItem="jFR-hp-cGO" firstAttribute="leading" secondItem="zEi-Mg-MXu" secondAttribute="leading" id="PaP-jT-5bR"/>
                             <constraint firstAttribute="trailing" secondItem="UD6-4c-lVj" secondAttribute="trailing" id="ZiO-DI-ZHl"/>
                             <constraint firstItem="UD6-4c-lVj" firstAttribute="top" secondItem="zEi-Mg-MXu" secondAttribute="top" id="hkg-V0-Hb9"/>
                             <constraint firstItem="cLf-Fm-Ozw" firstAttribute="top" secondItem="UD6-4c-lVj" secondAttribute="bottom" id="qbp-JJ-t9P"/>
                             <constraint firstItem="UD6-4c-lVj" firstAttribute="leading" secondItem="zEi-Mg-MXu" secondAttribute="leading" id="uLE-1h-YNU"/>
+                            <constraint firstItem="jFR-hp-cGO" firstAttribute="top" secondItem="KZb-b7-EGx" secondAttribute="bottom" id="v8b-HM-8b9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mHc-Oy-esD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MLQ-zQ-T0q"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="emptyView" destination="jFR-hp-cGO" id="sQ8-yQ-GxH"/>
                         <outlet property="tableView" destination="UD6-4c-lVj" id="3Uw-pe-BB1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7I-KB-i2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DQH-nc-4gk">
+                    <connections>
+                        <action selector="emptyViewTapGestureClick:" destination="kec-6X-ocJ" id="2hm-FX-pId"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="703" y="-5"/>
         </scene>
