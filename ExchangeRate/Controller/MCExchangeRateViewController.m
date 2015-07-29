@@ -9,7 +9,9 @@
 #import "MCExchangeRateViewController.h"
 #import "MCExchangeRateCell.h"
 #import "DataManager.h"
-
+#import "ToastManager.h"
+#import "MBProgressHUD.h"
+#import "MingleChang.h"
 #define MCExchangeRateCellID @"MCExchangeRateCell"
 
 @interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -37,7 +39,15 @@
     [self.tableView registerNib:[UINib nibWithNibName:MCExchangeRateCellID bundle:nil] forCellReuseIdentifier:MCExchangeRateCellID];
 }
 -(void)initAllData{
-    
+    [self checkUpdateAllExchangeRate];
+}
+-(void)checkUpdateAllExchangeRate{
+    if (![DataManager manager].allExchangeRateUpdateDate) {
+        MBProgressHUD *lProgress=[MBProgressHUD showHUDAddedTo:[MCDevice getAppFrontWindow] animated:YES];
+        [[DataManager manager]updateAllExchangeCompletion:^(BOOL isSucceed) {
+            [lProgress hide:YES];
+        }];
+    }
 }
 #pragma mark - TableView DataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

@@ -34,7 +34,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lj-y2-dQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299" y="615"/>
+            <point key="canvasLocation" x="299" y="623"/>
         </scene>
         <!--Exchange Rate View Controller-->
         <scene sceneID="1Kd-tD-iQ5">
@@ -108,7 +108,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UR9-OO-MdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="703" y="615"/>
+            <point key="canvasLocation" x="703" y="623"/>
+        </scene>
+        <!--Currency Change List Navigation Controller-->
+        <scene sceneID="sCV-CS-dYL">
+            <objects>
+                <navigationController storyboardIdentifier="MCCurrencyChangeListNavigationController" id="Uc0-09-9dN" customClass="MCCurrencyChangeListNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BQm-VJ-Kuh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="d2d-A0-BuB" kind="relationship" relationship="rootViewController" id="01w-BR-VxF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOz-TA-QFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="1259"/>
+        </scene>
+        <!--Currency Change List View Controller-->
+        <scene sceneID="ZIn-X9-2kd">
+            <objects>
+                <viewController storyboardIdentifier="MCCurrencyChangeListViewController" id="d2d-A0-BuB" customClass="MCCurrencyChangeListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1hg-bv-uRE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Akt-LJ-rjc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4xh-XV-9wz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9pX-4g-IZ5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9pX-4g-IZ5" firstAttribute="leading" secondItem="4xh-XV-9wz" secondAttribute="leading" id="6v7-ww-UhR"/>
+                            <constraint firstAttribute="trailing" secondItem="9pX-4g-IZ5" secondAttribute="trailing" id="YFF-Ot-y1K"/>
+                            <constraint firstItem="9pX-4g-IZ5" firstAttribute="top" secondItem="4xh-XV-9wz" secondAttribute="top" id="k4c-UL-bmT"/>
+                            <constraint firstItem="Akt-LJ-rjc" firstAttribute="top" secondItem="9pX-4g-IZ5" secondAttribute="bottom" id="lDG-b5-nbc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X7X-VI-B4z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgI-tR-qxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="1259"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

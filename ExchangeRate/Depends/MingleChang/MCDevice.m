@@ -43,6 +43,18 @@
 
 +(UIViewController *)getAppFrontViewController{
     UIViewController *result = nil;
+    UIWindow * window = [self getAppFrontWindow];
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    return result;
+}
+
++(UIWindow *)getAppFrontWindow{
     UIWindow * window = [[UIApplication sharedApplication] keyWindow];
     if (window.windowLevel != UIWindowLevelNormal)
     {
@@ -56,13 +68,6 @@
             }
         }
     }
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-    
-    if ([nextResponder isKindOfClass:[UIViewController class]])
-        result = nextResponder;
-    else
-        result = window.rootViewController;
-    return result;
+    return window;
 }
 @end

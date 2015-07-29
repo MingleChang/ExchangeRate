@@ -11,7 +11,9 @@
 #import "MCExchangeRate.h"
 #import "FilePath.h"
 #import "MCExchangeRateRequest.h"
+#import "ToastManager.h"
 
+#define ALL_EXCHANGE_UPDATE_DATE @"ALL_EXCHANGE_UPDATE_DATE"
 #define CURRENCY_LIST_FILE @"CurrencyJSON"
 #define ALL_EXCHANGE_RATE_CACHE_NAME @"ALL_EXCHANGE_RATE_CACHE_NAME"
 #define SELECTED_CURRENCY_CACHE_NAME @"SELECTED_CURRENCY_CACHE_NAME"
@@ -32,11 +34,47 @@
     return self;
 }
 #pragma mark - 
+-(void)updateAllExchangeCompletion:(void(^)(BOOL isSucceed))completion{
+    [MCExchangeRateRequest requestExchangeRates:self.allExchangeRate completion:^(BOOL isSucceed, NSArray *info) {
+        if (isSucceed&&info.count==self.allExchangeRate.count) {
+            for (int i=0; i<info.count; i++) {
+                NSDictionary *lDic=[info objectAtIndex:i];
+                MCExchangeRate *lExchange=[self.allExchangeRate objectAtIndex:i];
+                [lExchange setExchangeRateInfo:lDic];
+            }
+            [ToastManager toastText:@"更新成功1"];
+            [self saveAllExchangeRate];
+            completion(YES);
+        }else{
+            [ToastManager toastText:@"更新失败1"];
+            completion(NO);
+        }
+    }];
+}
+-(void)updateAllExchange{
+    [MCExchangeRateRequest requestExchangeRates:self.allExchangeRate completion:^(BOOL isSucceed, NSArray *info) {
+        if (isSucceed&&info.count==self.allExchangeRate.count) {
+            for (int i=0; i<info.count; i++) {
+                NSDictionary *lDic=[info objectAtIndex:i];
+                MCExchangeRate *lExchange=[self.allExchangeRate objectAtIndex:i];
+                [lExchange setExchangeRateInfo:lDic];
+            }
+            [ToastManager toastText:@"更新成功2"];
+            [self saveAllExchangeRate];
+        }else{
+            [ToastManager toastText:@"更新失败2"];
+        }
+    }];
+}
 -(void)saveSelectedCurrency{
     NSString *lPath=[FilePath pathInDocumentWithFileName:SELECTED_CURRENCY_CACHE_NAME];
     [NSKeyedArchiver archiveRootObject:self.selectedCurrencies toFile:lPath];
 }
 -(void)saveAllExchangeRate{
+    NSDate *lNowDate=[NSDate date];
+    self.allExchangeRateUpdateDate=lNowDate;
+    [[NSUserDefaults standardUserDefaults]setObject:lNowDate forKey:ALL_EXCHANGE_UPDATE_DATE];
+    [NSUserDefaults resetStandardUserDefaults];
     NSString *lPath=[FilePath pathInDocumentWithFileName:ALL_EXCHANGE_RATE_CACHE_NAME];
     [NSKeyedArchiver archiveRootObject:self.selectedExchangeRate toFile:lPath];
 }
@@ -48,6 +86,7 @@
     return [NSArray array];
 }
 -(NSArray *)readCacheAllExchangeRate{
+    self.allExchangeRateUpdateDate=[[NSUserDefaults standardUserDefaults]objectForKey:ALL_EXCHANGE_UPDATE_DATE];
     NSString *lPath=[FilePath pathInDocumentWithFileName:ALL_EXCHANGE_RATE_CACHE_NAME];
     if ([[NSFileManager defaultManager]fileExistsAtPath:lPath]) {
         return [NSKeyedUnarchiver unarchiveObjectWithFile:lPath];
@@ -65,6 +104,13 @@
     return [lArray copy];
 }
 #pragma mark - Setter And Getter
+-(NSDate *)allExchangeRateUpdateDate{
+    if (_allExchangeRateUpdateDate) {
+        return _allExchangeRateUpdateDate;
+    }
+    _allExchangeRateUpdateDate=[[NSUserDefaults standardUserDefaults]objectForKey:ALL_EXCHANGE_UPDATE_DATE];
+    return _allExchangeRateUpdateDate;
+}
 -(MCCurrency *)toCurrency{
     if (_toCurrency) {
         return _toCurrency;

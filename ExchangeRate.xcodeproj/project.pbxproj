@@ -25,6 +25,13 @@
 		4C1F06551B5F978C00DF101C /* MCExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */; };
 		4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */; };
 		4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064D1B5F978C00DF101C /* Main.storyboard */; };
+		4C38FCAB1B686B8F0025709E /* MCCurrencyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCA91B686B8F0025709E /* MCCurrencyListCell.m */; };
+		4C38FCAC1B686B8F0025709E /* MCCurrencyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C38FCAA1B686B8F0025709E /* MCCurrencyListCell.xib */; };
+		4C38FCAF1B686F740025709E /* StartUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCAE1B686F740025709E /* StartUp.m */; };
+		4C38FCF41B6883DC0025709E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCF31B6883DC0025709E /* MBProgressHUD.m */; };
+		4C38FCF71B6899DD0025709E /* ToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCF61B6899DD0025709E /* ToastManager.m */; };
+		4C38FCFA1B68A18F0025709E /* MCCurrencyChangeListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCF91B68A18F0025709E /* MCCurrencyChangeListNavigationController.m */; };
+		4C38FCFD1B68A1A90025709E /* MCCurrencyChangeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCFC1B68A1A90025709E /* MCCurrencyChangeListViewController.m */; };
 		4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ACD5C1B6715A3003B7C59 /* Reachability.m */; };
 		4C3ACD601B672A11003B7C59 /* FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ACD5F1B672A11003B7C59 /* FilePath.m */; };
 		4C3ACD621B676AB8003B7C59 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3ACD611B676AB8003B7C59 /* Localization.strings */; };
@@ -34,8 +41,6 @@
 		4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5781B661EED003C1A56 /* MCPanCell.xib */; };
 		823DE42F1B667A6C009C4381 /* MCExchangeRateNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */; };
 		823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */; };
-		825B20651B67C7E300ED9E7D /* MCLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B20641B67C7E300ED9E7D /* MCLoadView.m */; };
-		825B20671B67C7FF00ED9E7D /* MCLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 825B20661B67C7FF00ED9E7D /* MCLoadView.xib */; };
 		825B206A1B67D88A00ED9E7D /* MCCurrencyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */; };
 		825B206D1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */; };
 		82B627671B5FE66400070EB9 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B627661B5FE66400070EB9 /* YQL.m */; };
@@ -87,6 +92,19 @@
 		4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRate.m; sourceTree = "<group>"; };
 		4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4C1F064D1B5F978C00DF101C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C38FCA81B686B8F0025709E /* MCCurrencyListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyListCell.h; sourceTree = "<group>"; };
+		4C38FCA91B686B8F0025709E /* MCCurrencyListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListCell.m; sourceTree = "<group>"; };
+		4C38FCAA1B686B8F0025709E /* MCCurrencyListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCCurrencyListCell.xib; sourceTree = "<group>"; };
+		4C38FCAD1B686F740025709E /* StartUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUp.h; sourceTree = "<group>"; };
+		4C38FCAE1B686F740025709E /* StartUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUp.m; sourceTree = "<group>"; };
+		4C38FCF21B6883DC0025709E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		4C38FCF31B6883DC0025709E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		4C38FCF51B6899DD0025709E /* ToastManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastManager.h; sourceTree = "<group>"; };
+		4C38FCF61B6899DD0025709E /* ToastManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastManager.m; sourceTree = "<group>"; };
+		4C38FCF81B68A18F0025709E /* MCCurrencyChangeListNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyChangeListNavigationController.h; sourceTree = "<group>"; };
+		4C38FCF91B68A18F0025709E /* MCCurrencyChangeListNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyChangeListNavigationController.m; sourceTree = "<group>"; };
+		4C38FCFB1B68A1A90025709E /* MCCurrencyChangeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyChangeListViewController.h; sourceTree = "<group>"; };
+		4C38FCFC1B68A1A90025709E /* MCCurrencyChangeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyChangeListViewController.m; sourceTree = "<group>"; };
 		4C3ACD5B1B6715A3003B7C59 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4C3ACD5C1B6715A3003B7C59 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4C3ACD5E1B672A11003B7C59 /* FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePath.h; sourceTree = "<group>"; };
@@ -102,9 +120,6 @@
 		823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateNavigationController.m; sourceTree = "<group>"; };
 		823DE4301B667A88009C4381 /* MCExchangeRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateViewController.h; sourceTree = "<group>"; };
 		823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateViewController.m; sourceTree = "<group>"; };
-		825B20631B67C7E300ED9E7D /* MCLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLoadView.h; sourceTree = "<group>"; };
-		825B20641B67C7E300ED9E7D /* MCLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLoadView.m; sourceTree = "<group>"; };
-		825B20661B67C7FF00ED9E7D /* MCLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCLoadView.xib; sourceTree = "<group>"; };
 		825B20681B67D88A00ED9E7D /* MCCurrencyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyListViewController.h; sourceTree = "<group>"; };
 		825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListViewController.m; sourceTree = "<group>"; };
 		825B206B1B67D8A900ED9E7D /* MCCurrencyListNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyListNavigationController.h; sourceTree = "<group>"; };
@@ -217,6 +232,10 @@
 				4C1338541B60899300585E62 /* MCExchangeRateRequest.m */,
 				4C3ACD5E1B672A11003B7C59 /* FilePath.h */,
 				4C3ACD5F1B672A11003B7C59 /* FilePath.m */,
+				4C38FCAD1B686F740025709E /* StartUp.h */,
+				4C38FCAE1B686F740025709E /* StartUp.m */,
+				4C38FCF51B6899DD0025709E /* ToastManager.h */,
+				4C38FCF61B6899DD0025709E /* ToastManager.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -232,6 +251,10 @@
 				825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */,
 				825B20681B67D88A00ED9E7D /* MCCurrencyListViewController.h */,
 				825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */,
+				4C38FCF81B68A18F0025709E /* MCCurrencyChangeListNavigationController.h */,
+				4C38FCF91B68A18F0025709E /* MCCurrencyChangeListNavigationController.m */,
+				4C38FCFB1B68A1A90025709E /* MCCurrencyChangeListViewController.h */,
+				4C38FCFC1B68A1A90025709E /* MCCurrencyChangeListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,6 +287,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4C38FCF11B6883DC0025709E /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				4C38FCF21B6883DC0025709E /* MBProgressHUD.h */,
+				4C38FCF31B6883DC0025709E /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		4C3ACD5A1B6715A3003B7C59 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,15 +308,15 @@
 		4CF9E5721B661EED003C1A56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C38FCA81B686B8F0025709E /* MCCurrencyListCell.h */,
+				4C38FCA91B686B8F0025709E /* MCCurrencyListCell.m */,
+				4C38FCAA1B686B8F0025709E /* MCCurrencyListCell.xib */,
 				4CF9E5731B661EED003C1A56 /* MCExchangeRateCell.h */,
 				4CF9E5741B661EED003C1A56 /* MCExchangeRateCell.m */,
 				4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */,
 				4CF9E5761B661EED003C1A56 /* MCPanCell.h */,
 				4CF9E5771B661EED003C1A56 /* MCPanCell.m */,
 				4CF9E5781B661EED003C1A56 /* MCPanCell.xib */,
-				825B20631B67C7E300ED9E7D /* MCLoadView.h */,
-				825B20641B67C7E300ED9E7D /* MCLoadView.m */,
-				825B20661B67C7FF00ED9E7D /* MCLoadView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +324,7 @@
 		82B627631B5FE66400070EB9 /* Depends */ = {
 			isa = PBXGroup;
 			children = (
+				4C38FCF11B6883DC0025709E /* MBProgressHUD */,
 				4C3ACD5A1B6715A3003B7C59 /* Reachability */,
 				4C1338561B60B97C00585E62 /* MingleChang */,
 				82B627641B5FE66400070EB9 /* YQL */,
@@ -390,8 +423,8 @@
 			files = (
 				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
 				4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */,
-				825B20671B67C7FF00ED9E7D /* MCLoadView.xib in Resources */,
 				4C3ACD621B676AB8003B7C59 /* Localization.strings in Resources */,
+				4C38FCAC1B686B8F0025709E /* MCCurrencyListCell.xib in Resources */,
 				4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */,
 				4C0832601B61C4F1009F17CC /* CurrencyJSON.json in Resources */,
 				4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */,
@@ -419,8 +452,12 @@
 				4CF9E57B1B661EED003C1A56 /* MCPanCell.m in Sources */,
 				823DE42F1B667A6C009C4381 /* MCExchangeRateNavigationController.m in Sources */,
 				4C1338551B60899300585E62 /* MCExchangeRateRequest.m in Sources */,
+				4C38FCAB1B686B8F0025709E /* MCCurrencyListCell.m in Sources */,
 				4C13387B1B60B97C00585E62 /* MCStringExtension.m in Sources */,
 				823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */,
+				4C38FCF71B6899DD0025709E /* ToastManager.m in Sources */,
+				4C38FCF41B6883DC0025709E /* MBProgressHUD.m in Sources */,
+				4C38FCAF1B686F740025709E /* StartUp.m in Sources */,
 				4C13387A1B60B97C00585E62 /* MCImageExtension.m in Sources */,
 				4C1338851B60BDA100585E62 /* MCExchangeRateQuery.m in Sources */,
 				4C3ACD601B672A11003B7C59 /* FilePath.m in Sources */,
@@ -428,7 +465,7 @@
 				4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */,
 				4C1338821B60BD6800585E62 /* MCExchangeRateRoot.m in Sources */,
 				4C1338761B60B97C00585E62 /* MCDevice.m in Sources */,
-				825B20651B67C7E300ED9E7D /* MCLoadView.m in Sources */,
+				4C38FCFA1B68A18F0025709E /* MCCurrencyChangeListNavigationController.m in Sources */,
 				4C1338521B6087A300585E62 /* MCCurrency.m in Sources */,
 				4C1F05C41B5F8E6700DF101C /* AppDelegate.m in Sources */,
 				4C1F06521B5F978C00DF101C /* DataManager.m in Sources */,
@@ -436,6 +473,7 @@
 				825B206D1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m in Sources */,
 				4CF9E5791B661EED003C1A56 /* MCExchangeRateCell.m in Sources */,
 				4C1F05C11B5F8E6700DF101C /* main.m in Sources */,
+				4C38FCFD1B68A1A90025709E /* MCCurrencyChangeListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
