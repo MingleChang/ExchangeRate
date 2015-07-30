@@ -7,11 +7,25 @@
 //
 
 #import "MCCurrencyListCell.h"
+#import "MingleChang.h"
+#import "MCCurrency.h"
 
+@interface MCCurrencyListCell()
+
+@property (weak, nonatomic) IBOutlet UIView *lineView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineViewHeightConstraint;
+
+
+
+@property (weak, nonatomic) IBOutlet UILabel *testLabel;
+
+@end
 @implementation MCCurrencyListCell
 
 - (void)awakeFromNib {
     // Initialization code
+    [super awakeFromNib];
+    [self initAllSubviewAndData];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -19,5 +33,23 @@
 
     // Configure the view for the selected state
 }
-
+#pragma mark - Private Motheds
+-(void)initAllSubviewAndData{
+    [self initAllSubviews];
+    [self initAllData];
+}
+-(void)initAllSubviews{
+    self.lineViewHeightConstraint.constant=ONE_PIXEL;
+}
+-(void)initAllData{
+    
+}
+-(void)resetCellUI{
+    self.testLabel.text=self.currency.unit;
+}
+#pragma mark - Setter And Getter
+-(void)setCurrency:(MCCurrency *)currency{
+    _currency=currency;
+    [self resetCellUI];
+}
 @end

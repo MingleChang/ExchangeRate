@@ -20,4 +20,6 @@
 +(DataManager *)manager;
 -(void)updateAllExchangeCompletion:(void(^)(BOOL isSucceed))completion;
 -(void)updateAllExchange;
+-(void)saveSelectedCurrency;
+-(void)saveAllExchangeRate;
 @end

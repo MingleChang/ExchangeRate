@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MCPanCell.h"
+@class MCExchangeRate;
 @interface MCExchangeRateCell : MCPanCell
-
+@property(nonatomic,strong)MCExchangeRate *exchangeRate;
 @end

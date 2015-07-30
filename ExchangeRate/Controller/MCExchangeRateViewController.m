@@ -12,18 +12,26 @@
 #import "ToastManager.h"
 #import "MBProgressHUD.h"
 #import "MingleChang.h"
-#define MCExchangeRateCellID @"MCExchangeRateCell"
+#import "MCCurrencyListNavigationController.h"
+#import "MCCurrencyListViewController.h"
 
-@interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate>
+#define MCExchangeRateCellID @"MCExchangeRateCell"
+#define MCCurrencyListNavigationControllerID @"MCCurrencyListNavigationController"
+#define MCCurrencyListViewControllerID @"MCCurrencyListViewController"
+
+@interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet UIView *emptyView;
 - (IBAction)emptyViewTapGestureClick:(UITapGestureRecognizer *)sender;
+- (IBAction)rightBarButtonItemClick:(UIBarButtonItem *)sender;
 
 @end
 
 @implementation MCExchangeRateViewController
-
+-(void)dealloc{
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initAllSubviewAndData];
@@ -40,11 +48,7 @@
 }
 -(void)initAllSubviews{
     [self.tableView registerNib:[UINib nibWithNibName:MCExchangeRateCellID bundle:nil] forCellReuseIdentifier:MCExchangeRateCellID];
-    if ([DataManager manager].selectedExchangeRate.count>0) {
-        self.emptyView.hidden=YES;
-    }else{
-        self.emptyView.hidden=NO;
-    }
+    [self changeEmptyHidden];
 }
 -(void)initAllData{
     [self checkUpdateAllExchangeRate];
@@ -57,9 +61,20 @@
         }];
     }
 }
+-(void)changeEmptyHidden{
+    if ([DataManager manager].selectedExchangeRate.count>0) {
+        self.emptyView.hidden=YES;
+    }else{
+        self.emptyView.hidden=NO;
+    }
+}
 #pragma mark - Event Response
 - (IBAction)emptyViewTapGestureClick:(UITapGestureRecognizer *)sender {
-    MCLOG(@"Tap");
+    [self performSegueWithIdentifier:MCCurrencyListNavigationControllerID sender:nil];
+}
+
+- (IBAction)rightBarButtonItemClick:(UIBarButtonItem *)sender {
+    [self performSegueWithIdentifier:MCCurrencyListNavigationControllerID sender:nil];
 }
 #pragma mark - TableView DataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -67,16 +82,30 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MCExchangeRateCell *lCell=[tableView dequeueReusableCellWithIdentifier:MCExchangeRateCellID forIndexPath:indexPath];
+    NSInteger row=[indexPath row];
+    lCell.exchangeRate=[[DataManager manager].selectedExchangeRate objectAtIndex:row];
     return lCell;
 }
+#pragma mark - MCCurrencyListViewController Delegate
+-(void)currencyListViewControllerRightBarButtonClick:(MCCurrencyListViewController *)viewController{
+    [self changeEmptyHidden];
+    [self.tableView reloadData];
+}
+-(void)currencyListViewControllerLeftBarButtonClick:(MCCurrencyListViewController *)viewController{
+    
+}
 
-/*
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:MCCurrencyListNavigationControllerID]) {
+        MCCurrencyListNavigationController *lNavigationController=[segue destinationViewController];
+        MCCurrencyListViewController *lViewController=(MCCurrencyListViewController *)lNavigationController.topViewController;
+        lViewController.delegate=self;
+    }
+    if ([segue.identifier isEqualToString:MCCurrencyListViewControllerID]) {
+        
+    }
 }
-*/
+ 
 @end

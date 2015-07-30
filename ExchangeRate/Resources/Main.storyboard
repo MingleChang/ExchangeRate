@@ -90,11 +90,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mHc-Oy-esD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MLQ-zQ-T0q"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MLQ-zQ-T0q">
+                            <connections>
+                                <action selector="rightBarButtonItemClick:" destination="kec-6X-ocJ" id="jkI-Nu-xVx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emptyView" destination="jFR-hp-cGO" id="sQ8-yQ-GxH"/>
                         <outlet property="tableView" destination="UD6-4c-lVj" id="3Uw-pe-BB1"/>
+                        <segue destination="C1Q-be-Sen" kind="modal" identifier="MCCurrencyListNavigationController" id="ece-E2-sVM"/>
+                        <segue destination="EXC-B4-mGB" kind="push" identifier="MCCurrencyListViewController" id="Srg-IB-Oa5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7I-KB-i2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,9 +124,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="euk-HF-WjQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="euk-HF-WjQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EXC-B4-mGB" id="Ies-Zx-ter"/>
+                                    <outlet property="delegate" destination="EXC-B4-mGB" id="Waf-Uu-2lO"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,9 +142,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZD2-8I-Z2D">
-                        <barButtonItem key="leftBarButtonItem" title="取消" id="CnI-iE-2ud"/>
-                        <barButtonItem key="rightBarButtonItem" title="确定" id="mHj-7Y-la0"/>
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="CnI-iE-2ud">
+                            <connections>
+                                <action selector="leftBarButtonClick:" destination="EXC-B4-mGB" id="pbC-bN-4eH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="确定" id="mHj-7Y-la0">
+                            <connections>
+                                <action selector="rightBarButtonClick:" destination="EXC-B4-mGB" id="xq6-X4-EbH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="euk-HF-WjQ" id="8HV-m7-3Lx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UR9-OO-MdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,4 +214,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Srg-IB-Oa5"/>
+    </inferredMetricsTieBreakers>
 </document>

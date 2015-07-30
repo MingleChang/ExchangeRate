@@ -19,7 +19,29 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4V-vz-tfT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVD-kC-BGR" userLabel="LineView">
+                                <rect key="frame" x="0.0" y="42" width="320" height="1"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6np-hS-dYs"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-bI-WbR">
+                                <rect key="frame" x="139" y="11" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OVD-kC-BGR" secondAttribute="bottom" id="18E-bE-04S"/>
+                            <constraint firstAttribute="centerY" secondItem="Sra-bI-WbR" secondAttribute="centerY" id="H7I-Uo-nNe"/>
+                            <constraint firstItem="OVD-kC-BGR" firstAttribute="leading" secondItem="e4V-vz-tfT" secondAttribute="leading" id="MzX-9J-nHi"/>
+                            <constraint firstAttribute="trailing" secondItem="OVD-kC-BGR" secondAttribute="trailing" id="X8t-Ye-nlz"/>
+                            <constraint firstAttribute="centerX" secondItem="Sra-bI-WbR" secondAttribute="centerX" id="ciC-vj-WT9"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -36,6 +58,9 @@
             <connections>
                 <outlet property="bgView" destination="0yI-2a-Tf0" id="nhJ-VP-IKi"/>
                 <outlet property="forwardView" destination="e4V-vz-tfT" id="T4m-Xj-m49"/>
+                <outlet property="lineView" destination="OVD-kC-BGR" id="vVX-tj-37y"/>
+                <outlet property="lineViewHeightConstraint" destination="6np-hS-dYs" id="PMM-IF-lJI"/>
+                <outlet property="testLabel" destination="Sra-bI-WbR" id="uWD-sP-iv4"/>
             </connections>
         </tableViewCell>
     </objects>

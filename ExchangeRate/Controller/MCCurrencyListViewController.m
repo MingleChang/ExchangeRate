@@ -7,23 +7,170 @@
 //
 
 #import "MCCurrencyListViewController.h"
+#import "DataManager.h"
+#import "MCCurrencyListCell.h"
+#import "MCCurrency.h"
 
-@interface MCCurrencyListViewController ()
+#define MCCurrencyListCellID @"MCCurrencyListCell"
+
+@interface MCCurrencyListViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property(nonatomic,strong)NSMutableArray *selectedCurrencies;
+@property(nonatomic,strong)NSMutableArray *unselectedCurrencies;
+- (IBAction)leftBarButtonClick:(UIBarButtonItem *)sender;
+- (IBAction)rightBarButtonClick:(UIBarButtonItem *)sender;
 
 @end
 
 @implementation MCCurrencyListViewController
-
+-(void)dealloc{
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self initAllSubViewAndData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)initAllSubViewAndData{
+    [self initAllSubViews];
+    [self initAllData];
+}
+-(void)initAllSubViews{
+    [self.tableView registerNib:[UINib nibWithNibName:MCCurrencyListCellID bundle:nil] forCellReuseIdentifier:MCCurrencyListCellID];
+    self.tableView.editing=YES;
+}
+-(void)initAllData{
+    self.selectedCurrencies=[[DataManager manager].selectedCurrencies mutableCopy];
+    self.unselectedCurrencies=[[DataManager manager].unselectedCurrencies mutableCopy];
+}
+#pragma mark - Event Response
+- (IBAction)leftBarButtonClick:(UIBarButtonItem *)sender {
+    if ([self.delegate respondsToSelector:@selector(currencyListViewControllerLeftBarButtonClick:)]) {
+        [self.delegate currencyListViewControllerLeftBarButtonClick:self];
+    }
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 
+- (IBAction)rightBarButtonClick:(UIBarButtonItem *)sender {
+    [DataManager manager].selectedCurrencies=[self.selectedCurrencies copy];
+    [[DataManager manager]saveSelectedCurrency];
+    if ([self.delegate respondsToSelector:@selector(currencyListViewControllerRightBarButtonClick:)]) {
+        [self.delegate currencyListViewControllerRightBarButtonClick:self];
+    }
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+#pragma mark - TableView DataSource
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section==0) {
+        return self.selectedCurrencies.count;
+    }else{
+        return self.unselectedCurrencies.count;
+    }
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    MCCurrencyListCell *lCell=[tableView dequeueReusableCellWithIdentifier:MCCurrencyListCellID forIndexPath:indexPath];
+    NSInteger row=[indexPath row];
+    NSInteger section=[indexPath section];
+    MCCurrency *lCurrency=nil;
+    if (section==0) {
+        lCurrency=[self.selectedCurrencies objectAtIndex:row];
+    }else{
+        lCurrency=[self.unselectedCurrencies objectAtIndex:row];
+    }
+    lCell.currency=lCurrency;
+    return lCell;
+}
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([indexPath section] == 0) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath == nil) {//5s 7.1 点快了会传回nil
+        return;
+    }
+    NSInteger row=[indexPath row];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        MCCurrency *lCurrency=[self.selectedCurrencies objectAtIndex:row];
+        [self.selectedCurrencies removeObjectAtIndex:row];
+        [tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView endUpdates];
+        
+        [self.unselectedCurrencies addObject:lCurrency];
+        [tableView beginUpdates];
+        [tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.unselectedCurrencies.count - 1 inSection:1]] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView endUpdates];
+        
+        if (self.unselectedCurrencies.count==1) {
+            [tableView reloadSections:[[NSIndexSet alloc] initWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+    }else if (editingStyle == UITableViewCellEditingStyleInsert)
+    {
+        MCCurrency *lCurrency=[self.unselectedCurrencies objectAtIndex:row];
+        [self.unselectedCurrencies removeObjectAtIndex:row];
+        [tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView endUpdates];
+        
+        [self.selectedCurrencies addObject:lCurrency];
+        [tableView beginUpdates];
+        [tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.selectedCurrencies.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView endUpdates];
+        
+        if (self.unselectedCurrencies.count == 0) {
+            [tableView reloadSections:[[NSIndexSet alloc] initWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+    }
+}
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    
+    [self.selectedCurrencies exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+}
+#pragma mark - TableView Delegate
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 1) {
+        return 44;
+    }
+    return 0;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
+}
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([indexPath section]==0) {
+        return UITableViewCellEditingStyleDelete;
+    }else{
+        return UITableViewCellEditingStyleInsert;
+    }
+}
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
+{
+    if (proposedDestinationIndexPath.section == 1) {
+        return sourceIndexPath;
+    }else{
+        return proposedDestinationIndexPath;
+    }
+}
 /*
 #pragma mark - Navigation
 

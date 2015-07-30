@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MCCurrencyListViewController;
+@protocol MCCurrencyListViewControllerDelegate <NSObject>
+
+-(void)currencyListViewControllerRightBarButtonClick:(MCCurrencyListViewController *)viewController;
+-(void)currencyListViewControllerLeftBarButtonClick:(MCCurrencyListViewController *)viewController;
+
+@end
 
 @interface MCCurrencyListViewController : UIViewController
-
+@property(nonatomic,assign)id<MCCurrencyListViewControllerDelegate> delegate;
 @end
