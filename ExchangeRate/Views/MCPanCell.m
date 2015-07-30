@@ -94,6 +94,21 @@
 }
 
 #pragma mark - Public Motheds
+-(void)showStatus:(PanCellStatus)status with:(BOOL)animation{
+    switch (status) {
+        case PanCellStatusLeft:
+            [self showLeftWith:animation];
+            break;
+        case PanCellStatusRight:
+            [self showRightWith:animation];
+            break;
+        case PanCellStatusNormal:
+            [self showNormalWith:animation];
+            break;
+        default:
+            break;
+    }
+}
 -(void)showLeftWith:(BOOL)animation{
     if (animation) {
         [UIView animateWithDuration:0.2 animations:^{

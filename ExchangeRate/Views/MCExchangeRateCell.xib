@@ -15,7 +15,44 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yI-2a-Tf0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                        <color key="backgroundColor" red="0.31779399671052633" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09g-Uc-lRI">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="43"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196078431372548" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="DM5-8n-CYb"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VWh-AP-nQw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrr-OQ-f1o">
+                                <rect key="frame" x="240" y="0.0" width="80" height="43"/>
+                                <color key="backgroundColor" red="0.85098039215686272" green="0.28235294117647058" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Wuo-pc-T3P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="删除">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FXM-pB-MCu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="09g-Uc-lRI" firstAttribute="top" secondItem="0yI-2a-Tf0" secondAttribute="top" id="3jQ-zD-iqd"/>
+                            <constraint firstAttribute="trailing" secondItem="vrr-OQ-f1o" secondAttribute="trailing" id="F9B-hE-RPD"/>
+                            <constraint firstAttribute="bottom" secondItem="vrr-OQ-f1o" secondAttribute="bottom" id="ZAo-QW-8Oi"/>
+                            <constraint firstItem="vrr-OQ-f1o" firstAttribute="top" secondItem="0yI-2a-Tf0" secondAttribute="top" id="cTB-QO-BCD"/>
+                            <constraint firstAttribute="bottom" secondItem="09g-Uc-lRI" secondAttribute="bottom" id="qgb-LB-IEv"/>
+                            <constraint firstItem="09g-Uc-lRI" firstAttribute="leading" secondItem="0yI-2a-Tf0" secondAttribute="leading" id="tdj-oQ-wef"/>
+                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4V-vz-tfT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -27,20 +64,12 @@
                                     <constraint firstAttribute="height" constant="1" id="6np-hS-dYs"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-bI-WbR">
-                                <rect key="frame" x="139" y="11" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="OVD-kC-BGR" secondAttribute="bottom" id="18E-bE-04S"/>
-                            <constraint firstAttribute="centerY" secondItem="Sra-bI-WbR" secondAttribute="centerY" id="H7I-Uo-nNe"/>
                             <constraint firstItem="OVD-kC-BGR" firstAttribute="leading" secondItem="e4V-vz-tfT" secondAttribute="leading" id="MzX-9J-nHi"/>
                             <constraint firstAttribute="trailing" secondItem="OVD-kC-BGR" secondAttribute="trailing" id="X8t-Ye-nlz"/>
-                            <constraint firstAttribute="centerX" secondItem="Sra-bI-WbR" secondAttribute="centerX" id="ciC-vj-WT9"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -57,10 +86,11 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="bgView" destination="0yI-2a-Tf0" id="nhJ-VP-IKi"/>
+                <outlet property="changeButton" destination="09g-Uc-lRI" id="Gfn-OU-K56"/>
+                <outlet property="deleteButton" destination="vrr-OQ-f1o" id="0HV-Nc-oYb"/>
                 <outlet property="forwardView" destination="e4V-vz-tfT" id="T4m-Xj-m49"/>
                 <outlet property="lineView" destination="OVD-kC-BGR" id="vVX-tj-37y"/>
                 <outlet property="lineViewHeightConstraint" destination="6np-hS-dYs" id="PMM-IF-lJI"/>
-                <outlet property="testLabel" destination="Sra-bI-WbR" id="uWD-sP-iv4"/>
             </connections>
         </tableViewCell>
     </objects>

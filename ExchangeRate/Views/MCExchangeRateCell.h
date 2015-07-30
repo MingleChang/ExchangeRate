@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MCPanCell.h"
-@class MCExchangeRate;
+@class MCExchangeRate,MCExchangeRateCell;
+@protocol MCExchangeRateCellDelegate <NSObject>
+
+-(void)exchangeRateCellChangeButtonClick:(MCExchangeRateCell *)cell;
+-(void)exchangeRateCellDeleteButtonClick:(MCExchangeRateCell *)cell;
+
+@end
 @interface MCExchangeRateCell : MCPanCell
+@property(nonatomic,assign)id<MCExchangeRateCellDelegate> delegate;
 @property(nonatomic,strong)MCExchangeRate *exchangeRate;
 @end

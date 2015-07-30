@@ -11,10 +11,16 @@
 #import "MCCurrency.h"
 #import "MCExchangeRate.h"
 @interface MCExchangeRateCell()
+
+@property (weak, nonatomic) IBOutlet UIButton *changeButton;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+
+
 @property (weak, nonatomic) IBOutlet UIView *lineView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineViewHeightConstraint;
 
-@property (weak, nonatomic) IBOutlet UILabel *testLabel;
+- (IBAction)changeButtonClick:(UIButton *)sender;
+- (IBAction)deleteButtonClick:(UIButton *)sender;
 
 @end
 
@@ -24,8 +30,8 @@
     // Initialization code
     [super awakeFromNib];
     
-    self.leftDistance=150;
-    self.rightDistance=70;
+    self.leftDistance=120;
+    self.rightDistance=80;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -45,9 +51,22 @@
     
 }
 -(void)resetCellUI{
-    self.testLabel.text=self.exchangeRate.fromCurrency.unit;
+    
+}
+#pragma mark - Event Response
+- (IBAction)changeButtonClick:(UIButton *)sender {
+    [self showStatus:PanCellStatusNormal with:NO];
+    if ([self.delegate respondsToSelector:@selector(exchangeRateCellChangeButtonClick:)]) {
+        [self.delegate exchangeRateCellChangeButtonClick:self];
+    }
 }
 
+- (IBAction)deleteButtonClick:(UIButton *)sender {
+    [self showStatus:PanCellStatusNormal with:NO];
+    if ([self.delegate respondsToSelector:@selector(exchangeRateCellDeleteButtonClick:)]) {
+        [self.delegate exchangeRateCellDeleteButtonClick:self];
+    }
+}
 #pragma mark - Setter And Getter
 -(void)setExchangeRate:(MCExchangeRate *)exchangeRate{
     _exchangeRate=exchangeRate;
