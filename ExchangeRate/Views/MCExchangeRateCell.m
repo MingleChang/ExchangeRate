@@ -22,6 +22,8 @@
 - (IBAction)changeButtonClick:(UIButton *)sender;
 - (IBAction)deleteButtonClick:(UIButton *)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *testLabel;
+
 @end
 
 @implementation MCExchangeRateCell
@@ -51,7 +53,7 @@
     
 }
 -(void)resetCellUI{
-    
+    self.testLabel.text=self.exchangeRate.fromCurrency.unit;
 }
 #pragma mark - Event Response
 - (IBAction)changeButtonClick:(UIButton *)sender {

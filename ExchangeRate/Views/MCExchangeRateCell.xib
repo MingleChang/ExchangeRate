@@ -64,12 +64,20 @@
                                     <constraint firstAttribute="height" constant="1" id="6np-hS-dYs"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0s-xb-x28">
+                                <rect key="frame" x="139" y="11" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="OVD-kC-BGR" secondAttribute="bottom" id="18E-bE-04S"/>
                             <constraint firstItem="OVD-kC-BGR" firstAttribute="leading" secondItem="e4V-vz-tfT" secondAttribute="leading" id="MzX-9J-nHi"/>
                             <constraint firstAttribute="trailing" secondItem="OVD-kC-BGR" secondAttribute="trailing" id="X8t-Ye-nlz"/>
+                            <constraint firstAttribute="centerY" secondItem="i0s-xb-x28" secondAttribute="centerY" id="bxY-XW-BlJ"/>
+                            <constraint firstAttribute="centerX" secondItem="i0s-xb-x28" secondAttribute="centerX" id="yyb-M5-1kp"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -91,6 +99,7 @@
                 <outlet property="forwardView" destination="e4V-vz-tfT" id="T4m-Xj-m49"/>
                 <outlet property="lineView" destination="OVD-kC-BGR" id="vVX-tj-37y"/>
                 <outlet property="lineViewHeightConstraint" destination="6np-hS-dYs" id="PMM-IF-lJI"/>
+                <outlet property="testLabel" destination="i0s-xb-x28" id="lUb-z9-eE2"/>
             </connections>
         </tableViewCell>
     </objects>

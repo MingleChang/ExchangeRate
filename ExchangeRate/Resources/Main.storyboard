@@ -27,6 +27,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yXI-gf-8Jb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="EXC-B4-mGB" kind="relationship" relationship="rootViewController" id="AUE-Y6-ln0"/>
@@ -143,11 +144,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZD2-8I-Z2D">
                         <barButtonItem key="leftBarButtonItem" title="取消" id="CnI-iE-2ud">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="leftBarButtonClick:" destination="EXC-B4-mGB" id="pbC-bN-4eH"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="确定" id="mHj-7Y-la0">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="rightBarButtonClick:" destination="EXC-B4-mGB" id="xq6-X4-EbH"/>
                             </connections>
@@ -215,6 +218,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Srg-IB-Oa5"/>
+        <segue reference="AUE-Y6-ln0"/>
     </inferredMetricsTieBreakers>
 </document>

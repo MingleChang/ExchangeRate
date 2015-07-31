@@ -19,7 +19,7 @@
 #define MCCurrencyListNavigationControllerID @"MCCurrencyListNavigationController"
 #define MCCurrencyListViewControllerID @"MCCurrencyListViewController"
 
-@interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate>
+@interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate,MCExchangeRateCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (weak, nonatomic) IBOutlet UIView *emptyView;
@@ -84,6 +84,7 @@
     MCExchangeRateCell *lCell=[tableView dequeueReusableCellWithIdentifier:MCExchangeRateCellID forIndexPath:indexPath];
     NSInteger row=[indexPath row];
     lCell.exchangeRate=[[DataManager manager].selectedExchangeRate objectAtIndex:row];
+    lCell.delegate=self;
     return lCell;
 }
 #pragma mark - MCCurrencyListViewController Delegate
@@ -94,7 +95,23 @@
 -(void)currencyListViewControllerLeftBarButtonClick:(MCCurrencyListViewController *)viewController{
     
 }
-
+#pragma mark - MCExchangeRateCell Delegate
+-(void)exchangeRateCellChangeButtonClick:(MCExchangeRateCell *)cell{
+    
+}
+-(void)exchangeRateCellDeleteButtonClick:(MCExchangeRateCell *)cell{
+    NSIndexPath *lIndexPath=[self.tableView indexPathForCell:cell];
+    if (lIndexPath==nil) {
+        return;
+    }
+    NSMutableArray *lArray=[[DataManager manager].selectedExchangeRate mutableCopy];
+    [lArray removeObjectAtIndex:lIndexPath.row];
+    [DataManager manager].selectedExchangeRate=[lArray copy];
+    [[DataManager manager]saveSelectedCurrency];
+    [self.tableView beginUpdates];
+    [self.tableView deleteRowsAtIndexPaths:@[lIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    [self.tableView endUpdates];
+}
 #pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
