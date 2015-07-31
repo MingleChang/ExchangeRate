@@ -126,14 +126,14 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="euk-HF-WjQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="EXC-B4-mGB" id="Ies-Zx-ter"/>
                                     <outlet property="delegate" destination="EXC-B4-mGB" id="Waf-Uu-2lO"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="euk-HF-WjQ" firstAttribute="top" secondItem="Svp-qg-meG" secondAttribute="top" id="QXd-GZ-O1I"/>
                             <constraint firstItem="JIP-01-B1w" firstAttribute="top" secondItem="euk-HF-WjQ" secondAttribute="bottom" id="cX1-0R-BML"/>

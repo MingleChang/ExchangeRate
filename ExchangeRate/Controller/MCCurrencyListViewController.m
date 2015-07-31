@@ -10,7 +10,7 @@
 #import "DataManager.h"
 #import "MCCurrencyListCell.h"
 #import "MCCurrency.h"
-
+#import "MingleChang.h"
 #define MCCurrencyListCellID @"MCCurrencyListCell"
 
 @interface MCCurrencyListViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -82,8 +82,10 @@
     MCCurrency *lCurrency=nil;
     if (section==0) {
         lCurrency=[self.selectedCurrencies objectAtIndex:row];
+        lCell.backgroundColor=RGBA(0, 0, 0, 0.2);
     }else{
         lCurrency=[self.unselectedCurrencies objectAtIndex:row];
+        lCell.backgroundColor=[UIColor clearColor];
     }
     lCell.currency=lCurrency;
     return lCell;
