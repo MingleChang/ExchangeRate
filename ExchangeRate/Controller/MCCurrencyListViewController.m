@@ -158,6 +158,26 @@
 {
     return 44;
 }
+
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (section==1) {
+        UIView *lView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 44)];
+        lView.backgroundColor=[UIColor clearColor];
+        UIView *lLineView=[[UIView alloc]initWithFrame:CGRectMake(0,44-ONE_PIXEL, tableView.frame.size.width, ONE_PIXEL)];
+        lLineView.backgroundColor=RGB(137, 137, 137);
+        [lView addSubview:lLineView];
+        UILabel *lLabel=[[UILabel alloc]initWithFrame:CGRectMake(13, 44-25, tableView.frame.size.width, 20)];
+        lLabel.textColor=[UIColor whiteColor];
+        lLabel.font=[UIFont systemFontOfSize:15];
+        lLabel.text=@"未选择货币";
+        [lView addSubview:lLabel];
+        return lView;
+    }else{
+        return nil;
+    }
+}
+
 -(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
     if ([indexPath section]==0) {
         return UITableViewCellEditingStyleDelete;

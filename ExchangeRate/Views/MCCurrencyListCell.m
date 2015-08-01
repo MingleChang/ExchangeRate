@@ -45,7 +45,7 @@
     
 }
 -(void)resetCellUI{
-    self.testLabel.text=self.currency.unit;
+    self.testLabel.text=[NSString stringWithFormat:@"%@(%@)",self.currency.name,self.currency.unit];
 }
 #pragma mark - Setter And Getter
 -(void)setCurrency:(MCCurrency *)currency{

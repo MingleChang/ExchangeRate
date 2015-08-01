@@ -63,7 +63,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMPTY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJV-CW-4qJ">
                                         <rect key="frame" x="131" y="241" width="58" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -102,6 +102,8 @@
                         <outlet property="tableView" destination="UD6-4c-lVj" id="3Uw-pe-BB1"/>
                         <segue destination="C1Q-be-Sen" kind="modal" identifier="MCCurrencyListNavigationController" id="ece-E2-sVM"/>
                         <segue destination="EXC-B4-mGB" kind="push" identifier="MCCurrencyListViewController" id="Srg-IB-Oa5"/>
+                        <segue destination="Uc0-09-9dN" kind="modal" identifier="MCCurrencyChangeListNavigationController" id="Y9P-ul-OlJ"/>
+                        <segue destination="d2d-A0-BuB" kind="push" identifier="MCCurrencyChangeListViewController" id="kkL-aw-2v0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7I-KB-i2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,6 +220,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="01w-BR-VxF"/>
         <segue reference="AUE-Y6-ln0"/>
     </inferredMetricsTieBreakers>
 </document>

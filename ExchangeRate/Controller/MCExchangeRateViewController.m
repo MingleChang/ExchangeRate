@@ -12,12 +12,17 @@
 #import "ToastManager.h"
 #import "MBProgressHUD.h"
 #import "MingleChang.h"
+#import "MCExchangeRate.h"
 #import "MCCurrencyListNavigationController.h"
 #import "MCCurrencyListViewController.h"
+#import "MCCurrencyChangeListNavigationController.h"
+#import "MCCurrencyChangeListViewController.h"
 
 #define MCExchangeRateCellID @"MCExchangeRateCell"
 #define MCCurrencyListNavigationControllerID @"MCCurrencyListNavigationController"
 #define MCCurrencyListViewControllerID @"MCCurrencyListViewController"
+#define MCCurrencyChangeListNavigationControllerID @"MCCurrencyChangeListNavigationController"
+#define MCCurrencyChangeListViewControllerID @"MCCurrencyChangeListViewController"
 
 @interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate,MCExchangeRateCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -97,7 +102,7 @@
 }
 #pragma mark - MCExchangeRateCell Delegate
 -(void)exchangeRateCellChangeButtonClick:(MCExchangeRateCell *)cell{
-    
+    [self performSegueWithIdentifier:MCCurrencyChangeListViewControllerID sender:cell.exchangeRate.fromCurrency];
 }
 -(void)exchangeRateCellDeleteButtonClick:(MCExchangeRateCell *)cell{
     NSIndexPath *lIndexPath=[self.tableView indexPathForCell:cell];
@@ -121,6 +126,12 @@
         lViewController.delegate=self;
     }
     if ([segue.identifier isEqualToString:MCCurrencyListViewControllerID]) {
+        
+    }
+    if ([segue.identifier isEqualToString:MCCurrencyChangeListNavigationControllerID]) {
+        
+    }
+    if ([segue.identifier isEqualToString:MCCurrencyChangeListViewControllerID]) {
         
     }
 }
