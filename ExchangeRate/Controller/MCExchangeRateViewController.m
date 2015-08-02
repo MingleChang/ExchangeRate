@@ -90,6 +90,7 @@
     NSInteger row=[indexPath row];
     lCell.exchangeRate=[[DataManager manager].selectedExchangeRate objectAtIndex:row];
     lCell.delegate=self;
+    [lCell updateUI];
     return lCell;
 }
 #pragma mark - MCCurrencyListViewController Delegate

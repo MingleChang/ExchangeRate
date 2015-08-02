@@ -10,4 +10,5 @@
 @class MCCurrency;
 @interface MCCurrencyListCell : UITableViewCell
 @property(nonatomic,strong)MCCurrency *currency;
+-(void)updateUI;
 @end

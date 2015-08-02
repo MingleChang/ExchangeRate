@@ -88,6 +88,7 @@
         lCell.backgroundColor=[UIColor clearColor];
     }
     lCell.currency=lCurrency;
+    [lCell updateUI];
     return lCell;
 }
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

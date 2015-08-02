@@ -52,7 +52,7 @@
 -(void)initAllData{
     
 }
--(void)resetCellUI{
+-(void)updateUI{
     self.testLabel.text=self.exchangeRate.fromCurrency.unit;
 }
 #pragma mark - Event Response
@@ -70,8 +70,5 @@
     }
 }
 #pragma mark - Setter And Getter
--(void)setExchangeRate:(MCExchangeRate *)exchangeRate{
-    _exchangeRate=exchangeRate;
-    [self resetCellUI];
-}
+
 @end

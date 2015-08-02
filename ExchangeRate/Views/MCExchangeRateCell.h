@@ -18,4 +18,5 @@
 @interface MCExchangeRateCell : MCPanCell
 @property(nonatomic,assign)id<MCExchangeRateCellDelegate> delegate;
 @property(nonatomic,strong)MCExchangeRate *exchangeRate;
+-(void)updateUI;
 @end
