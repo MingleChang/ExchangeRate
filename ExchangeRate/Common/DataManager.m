@@ -148,10 +148,10 @@
     }
     @try {
         NSPredicate *lPredicate=[NSPredicate predicateWithFormat:lPredicateString];
-        self.selectedExchangeRate=[self.allExchangeRate filteredArrayUsingPredicate:lPredicate];
+        self.selectedExchangeRate=[[self.allExchangeRate filteredArrayUsingPredicate:lPredicate]mutableCopy];
     }
     @catch (NSException *exception) {
-        self.selectedExchangeRate=[NSArray array];
+        self.selectedExchangeRate=[NSMutableArray array];
     }
 }
 -(NSArray *)selectedCurrencies{
@@ -178,7 +178,7 @@
     _allExchangeRate=lArray;
     return _allExchangeRate;
 }
--(NSArray *)selectedExchangeRate{
+-(NSMutableArray *)selectedExchangeRate{
     if (_selectedExchangeRate) {
         return _selectedExchangeRate;
     }

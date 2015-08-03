@@ -149,7 +149,10 @@
 #pragma mark UIGestureRecognizerDelegate
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
-    CGPoint translation = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:self];
-    return ((fabs(translation.x) / fabs(translation.y) > 1) ? YES : NO);
+    if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
+        CGPoint translation = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:self];
+        return ((fabs(translation.x) / fabs(translation.y) > 1) ? YES : NO);
+    }
+    return NO;
 }
 @end

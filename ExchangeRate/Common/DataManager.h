@@ -16,7 +16,7 @@
 @property(nonatomic,copy)NSArray *selectedCurrencies;
 @property(nonatomic,copy,readonly)NSArray *unselectedCurrencies;
 @property(nonatomic,copy)NSArray *allExchangeRate;
-@property(nonatomic,copy)NSArray *selectedExchangeRate;
+@property(nonatomic,strong)NSMutableArray *selectedExchangeRate;
 +(DataManager *)manager;
 -(void)updateAllExchangeCompletion:(void(^)(BOOL isSucceed))completion;
 -(void)updateAllExchange;
