@@ -15,14 +15,10 @@
 #import "MCExchangeRate.h"
 #import "MCCurrencyListNavigationController.h"
 #import "MCCurrencyListViewController.h"
-#import "MCCurrencyChangeListNavigationController.h"
-#import "MCCurrencyChangeListViewController.h"
 
 #define MCExchangeRateCellID @"MCExchangeRateCell"
 #define MCCurrencyListNavigationControllerID @"MCCurrencyListNavigationController"
 #define MCCurrencyListViewControllerID @"MCCurrencyListViewController"
-#define MCCurrencyChangeListNavigationControllerID @"MCCurrencyChangeListNavigationController"
-#define MCCurrencyChangeListViewControllerID @"MCCurrencyChangeListViewController"
 
 @interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate,MCExchangeRateCellDelegate,MCPanCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -109,7 +105,7 @@
 }
 #pragma mark - MCExchangeRateCell Delegate
 -(void)exchangeRateCellChangeButtonClick:(MCExchangeRateCell *)cell{
-    [self performSegueWithIdentifier:MCCurrencyChangeListViewControllerID sender:cell.exchangeRate.fromCurrency];
+    
 }
 -(void)exchangeRateCellDeleteButtonClick:(MCExchangeRateCell *)cell{
     NSIndexPath *lIndexPath=[self.tableView indexPathForCell:cell];
@@ -127,7 +123,6 @@
     if (![self.lastPanCell isEqual:cell]&&self.lastPanCell.status!=PanCellStatusNormal) {
         [self.lastPanCell showNormalWith:YES];
     }
-    
 }
 -(void)panCellEndGesture:(MCPanCell *)cell{
     self.lastPanCell=(MCExchangeRateCell *)cell;
@@ -252,12 +247,6 @@
         lViewController.delegate=self;
     }
     if ([segue.identifier isEqualToString:MCCurrencyListViewControllerID]) {
-        
-    }
-    if ([segue.identifier isEqualToString:MCCurrencyChangeListNavigationControllerID]) {
-        
-    }
-    if ([segue.identifier isEqualToString:MCCurrencyChangeListViewControllerID]) {
         
     }
 }

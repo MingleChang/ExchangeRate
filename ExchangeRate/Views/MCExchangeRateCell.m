@@ -54,6 +54,7 @@
 }
 -(void)updateUI{
     self.testLabel.text=self.exchangeRate.fromCurrency.unit;
+    [self showNormalWith:NO];
 }
 #pragma mark - Event Response
 - (IBAction)changeButtonClick:(UIButton *)sender {
