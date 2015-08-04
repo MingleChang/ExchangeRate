@@ -36,6 +36,9 @@
 #pragma mark - Private Motheds
 #pragma mark - PanGesture
 -(void)panGestureResponseBegin{
+    if ([self.panDelegate respondsToSelector:@selector(panCellBeginGesture:)]) {
+        [self.panDelegate panCellBeginGesture:self];
+    }
     self.forwardBeginTransform=self.forwardView.transform;
 }
 -(void)panGestureResponseChangeWithTranslation:(CGPoint )translation{
@@ -71,6 +74,9 @@
     } completion:^(BOOL finished) {
         self.status=lStatus;
     }];
+    if ([self.panDelegate respondsToSelector:@selector(panCellEndGesture:)]) {
+        [self.panDelegate panCellEndGesture:self];
+    }
 }
 
 #pragma mark - PanGesture Response

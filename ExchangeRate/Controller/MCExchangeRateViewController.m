@@ -24,8 +24,11 @@
 #define MCCurrencyChangeListNavigationControllerID @"MCCurrencyChangeListNavigationController"
 #define MCCurrencyChangeListViewControllerID @"MCCurrencyChangeListViewController"
 
-@interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate,MCExchangeRateCellDelegate>
+@interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate,MCExchangeRateCellDelegate,MCPanCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
+@property(nonatomic,weak)MCExchangeRateCell *lastPanCell;
 
 @property (weak, nonatomic) IBOutlet UIView *emptyView;
 - (IBAction)emptyViewTapGestureClick:(UITapGestureRecognizer *)sender;
@@ -92,6 +95,7 @@
     NSInteger row=[indexPath row];
     lCell.exchangeRate=[[DataManager manager].selectedExchangeRate objectAtIndex:row];
     lCell.delegate=self;
+    lCell.panDelegate=self;
     [lCell updateUI];
     return lCell;
 }
@@ -118,7 +122,18 @@
     [self.tableView deleteRowsAtIndexPaths:@[lIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
     [self.tableView endUpdates];
 }
+#pragma mark - PanCell Delegate
+-(void)panCellBeginGesture:(MCPanCell *)cell{
+    if (![self.lastPanCell isEqual:cell]&&self.lastPanCell.status!=PanCellStatusNormal) {
+        [self.lastPanCell showNormalWith:YES];
+    }
+    
+}
+-(void)panCellEndGesture:(MCPanCell *)cell{
+    self.lastPanCell=(MCExchangeRateCell *)cell;
+}
 
+#pragma mark - Long Press Sort Cell
 - (void)longPressGestureRecognized:(id)sender {
     
     UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer *)sender;

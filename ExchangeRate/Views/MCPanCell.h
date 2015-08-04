@@ -7,14 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MCPanCell;
 typedef NS_ENUM(NSUInteger, PanCellStatus) {
     PanCellStatusNormal,
     PanCellStatusLeft,
     PanCellStatusRight,
 };
+@protocol MCPanCellDelegate <NSObject>
 
+-(void)panCellBeginGesture:(MCPanCell *)cell;
+-(void)panCellEndGesture:(MCPanCell *)cell;
+
+@end
 @interface MCPanCell : UITableViewCell
+
+@property(nonatomic,assign)id<MCPanCellDelegate> panDelegate;
+
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UIView *forwardView;
 @property(nonatomic,assign)PanCellStatus status;
