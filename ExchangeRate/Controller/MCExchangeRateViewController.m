@@ -15,6 +15,8 @@
 #import "MCExchangeRate.h"
 #import "MCCurrencyListNavigationController.h"
 #import "MCCurrencyListViewController.h"
+#import "MCNumberKeyboard.h"
+#import "MCCalculate.h"
 
 #define MCExchangeRateCellID @"MCExchangeRateCell"
 #define MCCurrencyListNavigationControllerID @"MCCurrencyListNavigationController"
@@ -83,6 +85,9 @@
     [self performSegueWithIdentifier:MCCurrencyListNavigationControllerID sender:nil];
 }
 #pragma mark - TableView DataSource
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [DataManager manager].selectedExchangeRate.count;
 }
@@ -94,6 +99,11 @@
     lCell.panDelegate=self;
     [lCell updateUI];
     return lCell;
+}
+#pragma mark - TableView Delegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    MCNumberKeyboard *lView=[[NSBundle mainBundle]loadNibNamed:@"MCNumberKeyboard" owner:nil options:nil][0];
+    [lView showInView:self.navigationController.view];
 }
 #pragma mark - MCCurrencyListViewController Delegate
 -(void)currencyListViewControllerRightBarButtonClick:(MCCurrencyListViewController *)viewController{

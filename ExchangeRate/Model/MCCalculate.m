@@ -57,6 +57,9 @@
             return self.variable1*self.variable2;
             break;
         case MCCalculateTypeDivide:
+            if (self.variable2==0) {
+                return 0.0;
+            }
             return self.variable1/self.variable2;
             break;
         default:
