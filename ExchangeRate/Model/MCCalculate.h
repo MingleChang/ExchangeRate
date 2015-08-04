@@ -19,9 +19,11 @@ typedef NS_ENUM(NSUInteger, MCCalculateType) {
 
 @property(nonatomic,assign)MCCalculateType calculateType;
 @property(nonatomic,assign)double variable1;
-@property(nonatomic,copy)NSString *variableStr1;
-@property(nonatomic,assign)double variable2;
-@property(nonatomic,copy)NSString *variableStr2;
-@property(nonatomic,assign)double result;
-
+@property(nonatomic,assign,readonly)double variable2;
+@property(nonatomic,assign,readonly)double result;
+@property(nonatomic,copy)NSString *inputStr;
+-(void)inputNumber:(NSString *)numberStr;
+-(void)inputPoint;
+-(void)inputOperation:(MCCalculateType)operation;
+-(void)clear;
 @end

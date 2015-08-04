@@ -133,51 +133,67 @@
 }
 
 - (IBAction)zeroButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"0"];
 }
 
 - (IBAction)oneButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"1"];
 }
 
 - (IBAction)twoButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"2"];
 }
 
 - (IBAction)threeButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"3"];
 }
 
 - (IBAction)fourButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"4"];
 }
 
 - (IBAction)fiveButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"5"];
 }
 
 - (IBAction)sixButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"6"];
 }
 
 - (IBAction)sevenButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"7"];
 }
 
 - (IBAction)eightButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"8"];
 }
 
 - (IBAction)nineButtonClick:(UIButton *)sender {
+    [self.calculate inputNumber:@"9"];
 }
 
 - (IBAction)pointButtonClick:(UIButton *)sender {
+    [self.calculate inputPoint];
 }
 
 - (IBAction)clearButtonClick:(UIButton *)sender {
+    [self.calculate clear];
 }
 
 - (IBAction)plusButtonClick:(UIButton *)sender {
+    [self.calculate inputOperation:MCCalculateTypePlus];
 }
 
 - (IBAction)minusButtonClick:(UIButton *)sender {
+    [self.calculate inputOperation:MCCalculateTypeMinus];
 }
 
 - (IBAction)multiplyButtonClick:(UIButton *)sender {
+    [self.calculate inputOperation:MCCalculateTypeMultiply];
 }
 
 - (IBAction)divideButtonClick:(UIButton *)sender {
+    [self.calculate inputOperation:MCCalculateTypeDivide];
 }
 
 #pragma mark - Public Motheds
