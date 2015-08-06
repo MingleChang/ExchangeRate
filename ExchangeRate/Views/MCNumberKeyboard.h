@@ -10,15 +10,18 @@
 #import "MCCalculate.h"
 @class MCNumberKeyboard;
 @protocol MCNumberKeyboardDelegate <NSObject>
-
+@optional
 -(void)numberKeyboardWillShow:(MCNumberKeyboard *)numberKeyboard;
 -(void)numberKeyboardDidShow:(MCNumberKeyboard *)numberKeyboard;
 -(void)numberKeyboardWillDismiss:(MCNumberKeyboard *)numberKeyboard;
 -(void)numberKeyboardDidDismiss:(MCNumberKeyboard *)numberKeyboard;
-
+-(void)numberKeyboardClickNumberButton:(MCNumberKeyboard *)numberKeyboard;
+-(void)numberKeyboardClickPointButton:(MCNumberKeyboard *)numberKeyboard;
+-(void)numberKeyboardClickOperationButton:(MCNumberKeyboard *)numberKeyboard;
 @end
 
 @interface MCNumberKeyboard : UIView
+@property(nonatomic,assign)id<MCNumberKeyboardDelegate> delegate;
 @property(nonatomic,strong)MCCalculate *calculate;
 -(void)showInView:(UIView *)view;
 -(void)dismiss;

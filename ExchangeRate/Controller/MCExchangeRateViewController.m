@@ -22,7 +22,7 @@
 #define MCCurrencyListNavigationControllerID @"MCCurrencyListNavigationController"
 #define MCCurrencyListViewControllerID @"MCCurrencyListViewController"
 
-@interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate,MCExchangeRateCellDelegate,MCPanCellDelegate>
+@interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate,MCExchangeRateCellDelegate,MCPanCellDelegate,MCNumberKeyboardDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
@@ -103,6 +103,7 @@
 #pragma mark - TableView Delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     MCNumberKeyboard *lView=[[NSBundle mainBundle]loadNibNamed:@"MCNumberKeyboard" owner:nil options:nil][0];
+    lView.delegate=self;
     [lView showInView:self.navigationController.view];
 }
 #pragma mark - MCCurrencyListViewController Delegate
@@ -136,6 +137,29 @@
 }
 -(void)panCellEndGesture:(MCPanCell *)cell{
     self.lastPanCell=(MCExchangeRateCell *)cell;
+}
+
+#pragma mark - NumberKeyboard Delegate
+-(void)numberKeyboardWillShow:(MCNumberKeyboard *)numberKeyboard{
+    
+}
+-(void)numberKeyboardDidShow:(MCNumberKeyboard *)numberKeyboard{
+    
+}
+-(void)numberKeyboardWillDismiss:(MCNumberKeyboard *)numberKeyboard{
+    
+}
+-(void)numberKeyboardDidDismiss:(MCNumberKeyboard *)numberKeyboard{
+    
+}
+-(void)numberKeyboardClickNumberButton:(MCNumberKeyboard *)numberKeyboard{
+    
+}
+-(void)numberKeyboardClickPointButton:(MCNumberKeyboard *)numberKeyboard{
+    
+}
+-(void)numberKeyboardClickOperationButton:(MCNumberKeyboard *)numberKeyboard{
+    
 }
 
 #pragma mark - Long Press Sort Cell
