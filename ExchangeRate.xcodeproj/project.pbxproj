@@ -44,6 +44,7 @@
 		823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */; };
 		825B206A1B67D88A00ED9E7D /* MCCurrencyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */; };
 		825B206D1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */; };
+		82AAAB111B73BDD900C4C73A /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 82AAAB101B73BDD900C4C73A /* Currency.json */; };
 		82B627671B5FE66400070EB9 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B627661B5FE66400070EB9 /* YQL.m */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListViewController.m; sourceTree = "<group>"; };
 		825B206B1B67D8A900ED9E7D /* MCCurrencyListNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyListNavigationController.h; sourceTree = "<group>"; };
 		825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListNavigationController.m; sourceTree = "<group>"; };
+		82AAAB101B73BDD900C4C73A /* Currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Currency.json; sourceTree = "<group>"; };
 		82B627651B5FE66400070EB9 /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
 		82B627661B5FE66400070EB9 /* YQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -282,6 +284,7 @@
 				4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */,
 				4C1F064D1B5F978C00DF101C /* Main.storyboard */,
 				4C08325F1B61C4F1009F17CC /* CurrencyJSON.json */,
+				82AAAB101B73BDD900C4C73A /* Currency.json */,
 				4C3ACD611B676AB8003B7C59 /* Localization.strings */,
 			);
 			path = Resources;
@@ -433,6 +436,7 @@
 				4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */,
 				4C0832601B61C4F1009F17CC /* CurrencyJSON.json in Resources */,
 				4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */,
+				82AAAB111B73BDD900C4C73A /* Currency.json in Resources */,
 				4C1F05CC1B5F8E6700DF101C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

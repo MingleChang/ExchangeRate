@@ -14,7 +14,7 @@
 #import "ToastManager.h"
 
 #define ALL_EXCHANGE_UPDATE_DATE @"ALL_EXCHANGE_UPDATE_DATE"
-#define CURRENCY_LIST_FILE @"CurrencyJSON"
+#define CURRENCY_LIST_FILE @"Currency"
 #define ALL_EXCHANGE_RATE_CACHE_NAME @"ALL_EXCHANGE_RATE_CACHE_NAME"
 #define SELECTED_CURRENCY_CACHE_NAME @"SELECTED_CURRENCY_CACHE_NAME"
 @implementation DataManager
@@ -29,7 +29,7 @@
 -(instancetype)init{
     self=[super init];
     if (self) {
-        
+        self.toCurrencyValue=10000;
     }
     return self;
 }
@@ -44,25 +44,14 @@
             }
             [ToastManager toastText:@"更新成功1"];
             [self saveAllExchangeRate];
-            completion(YES);
+            if(completion){
+                completion(YES);
+            }
         }else{
             [ToastManager toastText:@"更新失败1"];
-            completion(NO);
-        }
-    }];
-}
--(void)updateAllExchange{
-    [MCExchangeRateRequest requestExchangeRates:self.allExchangeRate completion:^(BOOL isSucceed, NSArray *info) {
-        if (isSucceed&&info.count==self.allExchangeRate.count) {
-            for (int i=0; i<info.count; i++) {
-                NSDictionary *lDic=[info objectAtIndex:i];
-                MCExchangeRate *lExchange=[self.allExchangeRate objectAtIndex:i];
-                [lExchange setExchangeRateInfo:lDic];
+            if(completion){
+                completion(NO);
             }
-            [ToastManager toastText:@"更新成功2"];
-            [self saveAllExchangeRate];
-        }else{
-            [ToastManager toastText:@"更新失败2"];
         }
     }];
 }
@@ -76,7 +65,7 @@
     [[NSUserDefaults standardUserDefaults]setObject:lNowDate forKey:ALL_EXCHANGE_UPDATE_DATE];
     [NSUserDefaults resetStandardUserDefaults];
     NSString *lPath=[FilePath pathInDocumentWithFileName:ALL_EXCHANGE_RATE_CACHE_NAME];
-    [NSKeyedArchiver archiveRootObject:self.selectedExchangeRate toFile:lPath];
+    [NSKeyedArchiver archiveRootObject:self.allExchangeRate toFile:lPath];
 }
 -(NSArray *)readCacheSelectedCurrency{
     NSString *lPath=[FilePath pathInDocumentWithFileName:SELECTED_CURRENCY_CACHE_NAME];

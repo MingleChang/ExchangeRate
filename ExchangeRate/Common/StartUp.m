@@ -17,7 +17,7 @@
 +(void)updateExchange{
     if ([DataManager manager].allExchangeRateUpdateDate) {
         if ([self checkNeedUpdateExchange]) {
-            [[DataManager manager]updateAllExchange];
+            [[DataManager manager]updateAllExchangeCompletion:nil];
         }
     }
 }

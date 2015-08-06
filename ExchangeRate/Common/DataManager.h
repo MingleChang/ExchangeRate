@@ -12,6 +12,7 @@
 @interface DataManager : NSObject
 @property(nonatomic,strong)NSDate *allExchangeRateUpdateDate;
 @property(nonatomic,strong)MCCurrency *toCurrency;
+@property(nonatomic,assign)double toCurrencyValue;
 @property(nonatomic,copy)NSArray *allCurrencies;
 @property(nonatomic,copy)NSArray *selectedCurrencies;
 @property(nonatomic,copy,readonly)NSArray *unselectedCurrencies;
@@ -19,7 +20,6 @@
 @property(nonatomic,strong)NSMutableArray *selectedExchangeRate;
 +(DataManager *)manager;
 -(void)updateAllExchangeCompletion:(void(^)(BOOL isSucceed))completion;
--(void)updateAllExchange;
 -(void)saveSelectedCurrency;
 -(void)saveAllExchangeRate;
 @end

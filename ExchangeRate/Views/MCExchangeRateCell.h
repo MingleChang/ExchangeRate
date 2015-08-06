@@ -19,4 +19,5 @@
 @property(nonatomic,assign)id<MCExchangeRateCellDelegate> delegate;
 @property(nonatomic,strong)MCExchangeRate *exchangeRate;
 -(void)updateUI;
+-(void)setCountLabelValue:(double)value;
 @end

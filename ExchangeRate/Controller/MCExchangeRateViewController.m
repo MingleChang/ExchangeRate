@@ -28,6 +28,7 @@
 
 @property(nonatomic,weak)MCExchangeRateCell *lastPanCell;
 @property(nonatomic,weak)MCExchangeRateCell *selectedCell;
+@property(nonatomic,assign)CGFloat tableOffset;
 
 @property (weak, nonatomic) IBOutlet UIView *emptyView;
 - (IBAction)emptyViewTapGestureClick:(UITapGestureRecognizer *)sender;
@@ -143,19 +144,33 @@
 
 #pragma mark - NumberKeyboard Delegate
 -(void)numberKeyboardWillShow:(MCNumberKeyboard *)numberKeyboard{
-    
+    CGFloat lHeight=numberKeyboard.keyBoardViewHeightConstraint.constant;
+    CGRect lRect=[self.tableView rectForRowAtIndexPath:[self.tableView indexPathForCell:self.selectedCell]];
+    lRect=[self.view convertRect:lRect fromView:self.tableView];
+    CGFloat distance=(lRect.origin.y+lRect.size.height)-([UIScreen mainScreen].bounds.size.height-lHeight);
+    if (distance>0) {
+        self.tableOffset=distance;
+        [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentOffset.y+self.tableOffset) animated:YES];
+    }else{
+        
+    }
 }
 -(void)numberKeyboardDidShow:(MCNumberKeyboard *)numberKeyboard{
     
 }
 -(void)numberKeyboardWillDismiss:(MCNumberKeyboard *)numberKeyboard{
-    
+    if (self.tableOffset>0) {
+        [self.tableView setContentOffset:CGPointMake(0, self.tableView.contentOffset.y-self.tableOffset) animated:YES];
+        self.tableOffset=0;
+    }
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForCell:self.selectedCell] animated:YES];
+    self.selectedCell=nil;
 }
 -(void)numberKeyboardDidDismiss:(MCNumberKeyboard *)numberKeyboard{
     
 }
 -(void)numberKeyboardClickNumberButton:(MCNumberKeyboard *)numberKeyboard{
-    
+    [self.selectedCell setCountLabelValue:numberKeyboard.calculate.result];
 }
 -(void)numberKeyboardClickPointButton:(MCNumberKeyboard *)numberKeyboard{
     
@@ -163,7 +178,9 @@
 -(void)numberKeyboardClickOperationButton:(MCNumberKeyboard *)numberKeyboard{
     
 }
-
+-(void)numberKeyboardClickClearButton:(MCNumberKeyboard *)numberKeyboard{
+    [self.selectedCell setCountLabelValue:numberKeyboard.calculate.result];
+}
 #pragma mark - Long Press Sort Cell
 - (void)longPressGestureRecognized:(id)sender {
     
