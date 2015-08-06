@@ -39,6 +39,7 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyBoardViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyBoardViewTopConstraint;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *verticalLineViewWidthConstraint1;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *verticalLineViewWidthConstraint2;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *verticalLineViewWidthConstraint3;

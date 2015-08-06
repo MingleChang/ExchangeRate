@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "MCCalculate.h"
+@class MCNumberKeyboard;
+@protocol MCNumberKeyboardDelegate <NSObject>
+
+-(void)numberKeyboardWillShow:(MCNumberKeyboard *)numberKeyboard;
+-(void)numberKeyboardDidShow:(MCNumberKeyboard *)numberKeyboard;
+-(void)numberKeyboardWillDismiss:(MCNumberKeyboard *)numberKeyboard;
+-(void)numberKeyboardDidDismiss:(MCNumberKeyboard *)numberKeyboard;
+
+@end
+
 @interface MCNumberKeyboard : UIView
 @property(nonatomic,strong)MCCalculate *calculate;
 -(void)showInView:(UIView *)view;
