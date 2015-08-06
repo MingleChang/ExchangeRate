@@ -18,11 +18,16 @@
 -(void)numberKeyboardClickNumberButton:(MCNumberKeyboard *)numberKeyboard;
 -(void)numberKeyboardClickPointButton:(MCNumberKeyboard *)numberKeyboard;
 -(void)numberKeyboardClickOperationButton:(MCNumberKeyboard *)numberKeyboard;
+-(void)numberKeyboardClickClearButton:(MCNumberKeyboard *)numberKeyboard;
 @end
 
 @interface MCNumberKeyboard : UIView
 @property(nonatomic,assign)id<MCNumberKeyboardDelegate> delegate;
 @property(nonatomic,strong)MCCalculate *calculate;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyBoardViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *keyBoardViewTopConstraint;
+
 -(void)showInView:(UIView *)view;
 -(void)dismiss;
 @end

@@ -27,6 +27,7 @@
 
 
 @property(nonatomic,weak)MCExchangeRateCell *lastPanCell;
+@property(nonatomic,weak)MCExchangeRateCell *selectedCell;
 
 @property (weak, nonatomic) IBOutlet UIView *emptyView;
 - (IBAction)emptyViewTapGestureClick:(UITapGestureRecognizer *)sender;
@@ -102,6 +103,7 @@
 }
 #pragma mark - TableView Delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    self.selectedCell=(MCExchangeRateCell *)[tableView cellForRowAtIndexPath:indexPath];
     MCNumberKeyboard *lView=[[NSBundle mainBundle]loadNibNamed:@"MCNumberKeyboard" owner:nil options:nil][0];
     lView.delegate=self;
     [lView showInView:self.navigationController.view];
