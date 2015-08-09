@@ -261,6 +261,7 @@
                 sourceIndexPath = nil;
                 [snapshot removeFromSuperview];
                 snapshot = nil;
+                [[DataManager manager]saveSelectedCurrency];
                 
             }];
             
