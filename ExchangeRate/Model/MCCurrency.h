@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface MCCurrency : NSObject<NSCoding>
+@property(nonatomic,copy)NSString *prefix;
+@property(nonatomic,copy)NSString *cate;
 @property(nonatomic,copy)NSString *name;
+@property(nonatomic,copy)NSString *localName;
 @property(nonatomic,copy)NSString *unit;
 @property(nonatomic,copy)NSString *symbol;
 -(instancetype)initWithDictionary:(NSDictionary *)dic;

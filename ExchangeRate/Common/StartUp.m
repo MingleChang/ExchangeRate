@@ -13,6 +13,7 @@
 
 +(void)launch{
     [self updateExchange];
+//    [[DataManager manager]updateLocalCache];
 }
 +(void)updateExchange{
     if ([DataManager manager].allExchangeRateUpdateDate) {

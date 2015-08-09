@@ -166,4 +166,39 @@
     [self setSelectedCurrencies:self.selectedCurrencies];
     return _selectedExchangeRate;
 }
+
+#pragma mark - TEST
+
+-(void)updateLocalCache{
+    NSString *lPath=[[NSBundle mainBundle]pathForResource:CURRENCY_LIST_FILE ofType:@"json"];
+    NSData *lData=[NSData dataWithContentsOfFile:lPath];
+    NSArray *lJSONArray=[NSJSONSerialization JSONObjectWithData:lData options:NSJSONReadingAllowFragments error:nil];
+    NSMutableArray *lCurrencies=[NSMutableArray array];
+    for (NSDictionary *lDic in lJSONArray) {
+        MCCurrency *lCurrency=[[MCCurrency alloc]initWithDictionary:lDic];
+        [lCurrencies addObject:lCurrency];
+    }
+
+    NSMutableArray *lArray=[NSMutableArray array];
+    for (MCCurrency *lFromCurrency in lCurrencies) {
+        MCExchangeRate *lExchangeRate=[[MCExchangeRate alloc]init];
+        lExchangeRate.fromCurrency=lFromCurrency;
+        lExchangeRate.toCurrency=self.toCurrency;
+        [lArray addObject:lExchangeRate];
+    }
+    
+    [MCExchangeRateRequest requestExchangeRates:lArray completion:^(BOOL isSucceed, NSArray *info) {
+        if (isSucceed&&info.count==self.allExchangeRate.count) {
+            for (int i=0; i<info.count; i++) {
+                NSDictionary *lDic=[info objectAtIndex:i];
+                MCExchangeRate *lExchange=[lArray objectAtIndex:i];
+                [lExchange setExchangeRateInfo:lDic];
+            }
+            
+            [NSKeyedArchiver archiveRootObject:lArray toFile:@"/Users/Mingle/Desktop/AllExchangeRateCache"];
+        }else{
+            
+        }
+    }];
+}
 @end

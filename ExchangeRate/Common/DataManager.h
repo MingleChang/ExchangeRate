@@ -22,4 +22,7 @@
 -(void)updateAllExchangeCompletion:(void(^)(BOOL isSucceed))completion;
 -(void)saveSelectedCurrency;
 -(void)saveAllExchangeRate;
+
+
+-(void)updateLocalCache;
 @end
