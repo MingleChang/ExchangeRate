@@ -77,6 +77,9 @@
 -(NSArray *)readCacheAllExchangeRate{
     self.allExchangeRateUpdateDate=[[NSUserDefaults standardUserDefaults]objectForKey:ALL_EXCHANGE_UPDATE_DATE];
     NSString *lPath=[FilePath pathInDocumentWithFileName:ALL_EXCHANGE_RATE_CACHE_NAME];
+    if (![[NSFileManager defaultManager]fileExistsAtPath:lPath]) {
+        lPath=[[NSBundle mainBundle]pathForResource:@"AllExchangeRateCache" ofType:nil];
+    }
     if ([[NSFileManager defaultManager]fileExistsAtPath:lPath]) {
         return [NSKeyedUnarchiver unarchiveObjectWithFile:lPath];
     }
@@ -106,23 +109,15 @@
     }
     _toCurrency=[[MCCurrency alloc]init];
     _toCurrency.name=@"";
-    _toCurrency.unit=@"VND";
-    _toCurrency.symbol=@"₫";
+    _toCurrency.unit=@"IRR";
+    _toCurrency.symbol=@"";
     return _toCurrency;
 }
 -(NSArray *)allCurrencies{
     if (_allCurrencies) {
         return _allCurrencies;
     }
-    NSString *lPath=[[NSBundle mainBundle]pathForResource:CURRENCY_LIST_FILE ofType:@"json"];
-    NSData *lData=[NSData dataWithContentsOfFile:lPath];
-    NSArray *lJSONArray=[NSJSONSerialization JSONObjectWithData:lData options:NSJSONReadingAllowFragments error:nil];
-    NSMutableArray *lCurrencies=[NSMutableArray array];
-    for (NSDictionary *lDic in lJSONArray) {
-        MCCurrency *lCurrency=[[MCCurrency alloc]initWithDictionary:lDic];
-        [lCurrencies addObject:lCurrency];
-    }
-    _allCurrencies=[lCurrencies copy];
+    _allCurrencies=[self.allExchangeRate valueForKey:@"fromCurrency"];
     return _allCurrencies;
 }
 -(void)setSelectedCurrencies:(NSArray *)selectedCurrencies{
@@ -161,9 +156,6 @@
         return _allExchangeRate;
     }
     NSArray *lArray=[self readCacheAllExchangeRate];
-    if (lArray.count!=self.allCurrencies.count) {
-        lArray=[self readAllExchangeRateFromAllCurrencies];
-    }
     _allExchangeRate=lArray;
     return _allExchangeRate;
 }
