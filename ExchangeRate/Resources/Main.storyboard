@@ -142,20 +142,7 @@
                             <constraint firstItem="euk-HF-WjQ" firstAttribute="leading" secondItem="Svp-qg-meG" secondAttribute="leading" id="oKL-Qy-T1G"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZD2-8I-Z2D">
-                        <barButtonItem key="leftBarButtonItem" title="取消" id="CnI-iE-2ud">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="leftBarButtonClick:" destination="EXC-B4-mGB" id="pbC-bN-4eH"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="确定" id="mHj-7Y-la0">
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="rightBarButtonClick:" destination="EXC-B4-mGB" id="xq6-X4-EbH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ZD2-8I-Z2D"/>
                     <connections>
                         <outlet property="tableView" destination="euk-HF-WjQ" id="8HV-m7-3Lx"/>
                     </connections>
@@ -171,6 +158,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="AUE-Y6-ln0"/>
+        <segue reference="Srg-IB-Oa5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,7 +21,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGu-uX-DSA">
-                        <rect key="frame" x="0.0" y="11" width="42" height="21"/>
+                        <rect key="frame" x="10" y="11" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -31,10 +31,11 @@
                     <constraint firstAttribute="bottom" secondItem="8qF-6E-C2h" secondAttribute="bottom" id="24c-gm-T4f"/>
                     <constraint firstItem="8qF-6E-C2h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-40" id="gwd-aZ-Qxd"/>
                     <constraint firstAttribute="centerY" secondItem="oGu-uX-DSA" secondAttribute="centerY" id="tWZ-9L-xCG"/>
-                    <constraint firstItem="oGu-uX-DSA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ufY-TR-mNU"/>
+                    <constraint firstItem="oGu-uX-DSA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ufY-TR-mNU"/>
                     <constraint firstAttribute="trailing" secondItem="8qF-6E-C2h" secondAttribute="trailing" constant="-40" id="zcU-ox-hV4"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="lineView" destination="8qF-6E-C2h" id="0sp-EW-vQb"/>
                 <outlet property="lineViewHeightConstraint" destination="gM3-gS-SVA" id="N90-8Y-9Nd"/>
