@@ -10,8 +10,7 @@
 @class MCCurrencyListViewController;
 @protocol MCCurrencyListViewControllerDelegate <NSObject>
 
--(void)currencyListViewControllerRightBarButtonClick:(MCCurrencyListViewController *)viewController;
--(void)currencyListViewControllerLeftBarButtonClick:(MCCurrencyListViewController *)viewController;
+-(void)currencyListViewControllerSelectNewCurrency:(MCCurrencyListViewController *)viewController;
 
 @end
 

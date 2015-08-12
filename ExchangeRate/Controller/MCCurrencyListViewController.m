@@ -13,7 +13,7 @@
 #import "MingleChang.h"
 #define MCCurrencyListCellID @"MCCurrencyListCell"
 
-@interface MCCurrencyListViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface MCCurrencyListViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)UISearchBar *searchBar;
 
@@ -72,20 +72,38 @@
     MCCurrencyListCell *lCell=[tableView dequeueReusableCellWithIdentifier:MCCurrencyListCellID forIndexPath:indexPath];
     NSInteger row=[indexPath row];
     MCCurrency *lCurrency=[DataManager manager].allCurrencies[row];
-    lCell.currency=lCurrency;
-    [lCell updateUI];
+    [lCell setupCurrency:lCurrency withIsSelected:[[DataManager manager].selectedCurrencies containsObject:lCurrency]];
     return lCell;
 }
 
 #pragma mark - TableView Delegate
-
-
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 44;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    MCCurrencyListCell *lCell=(MCCurrencyListCell *)[tableView cellForRowAtIndexPath:indexPath];
+    if (lCell.isSelected) {
+        return;
+    }
+}
+
+#pragma mark - SearchBar Delegate
+-(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    return YES;
+}
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    
+}
+-(BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar{
+    return YES;
+}
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    
+}
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    
 }
 /*
 #pragma mark - Navigation

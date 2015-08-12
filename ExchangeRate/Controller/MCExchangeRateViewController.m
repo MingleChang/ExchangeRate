@@ -110,12 +110,8 @@
     [lView showInView:self.navigationController.view];
 }
 #pragma mark - MCCurrencyListViewController Delegate
--(void)currencyListViewControllerRightBarButtonClick:(MCCurrencyListViewController *)viewController{
-    [self changeEmptyHidden];
+-(void)currencyListViewControllerSelectNewCurrency:(MCCurrencyListViewController *)viewController{
     [self.tableView reloadData];
-}
--(void)currencyListViewControllerLeftBarButtonClick:(MCCurrencyListViewController *)viewController{
-    
 }
 #pragma mark - MCExchangeRateCell Delegate
 -(void)exchangeRateCellChangeButtonClick:(MCExchangeRateCell *)cell{

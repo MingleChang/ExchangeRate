@@ -26,9 +26,17 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYC-LY-8wf">
+                        <rect key="frame" x="277" y="14" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="8qF-6E-C2h" secondAttribute="bottom" id="24c-gm-T4f"/>
+                    <constraint firstAttribute="centerY" secondItem="wYC-LY-8wf" secondAttribute="centerY" id="IuE-Xy-UNG"/>
+                    <constraint firstAttribute="trailing" secondItem="wYC-LY-8wf" secondAttribute="trailing" constant="10" id="b5w-c5-TNM"/>
                     <constraint firstItem="8qF-6E-C2h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-40" id="gwd-aZ-Qxd"/>
                     <constraint firstAttribute="centerY" secondItem="oGu-uX-DSA" secondAttribute="centerY" id="tWZ-9L-xCG"/>
                     <constraint firstItem="oGu-uX-DSA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ufY-TR-mNU"/>
@@ -37,9 +45,10 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="currencyNameLabel" destination="oGu-uX-DSA" id="MX2-Ed-NaL"/>
+                <outlet property="currencySelectedLabel" destination="wYC-LY-8wf" id="ndC-lB-Ufh"/>
                 <outlet property="lineView" destination="8qF-6E-C2h" id="0sp-EW-vQb"/>
                 <outlet property="lineViewHeightConstraint" destination="gM3-gS-SVA" id="N90-8Y-9Nd"/>
-                <outlet property="testLabel" destination="oGu-uX-DSA" id="6IQ-A3-god"/>
             </connections>
         </tableViewCell>
     </objects>

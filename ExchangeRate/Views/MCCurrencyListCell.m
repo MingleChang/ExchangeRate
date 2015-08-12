@@ -17,8 +17,8 @@
 
 
 
-@property (weak, nonatomic) IBOutlet UILabel *testLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *currencySelectedLabel;
 @end
 @implementation MCCurrencyListCell
 
@@ -40,12 +40,16 @@
 }
 -(void)initAllSubviews{
     self.lineViewHeightConstraint.constant=ONE_PIXEL;
+    self.currencySelectedLabel.text=@"已选择";
 }
 -(void)initAllData{
     
 }
--(void)updateUI{
-    self.testLabel.text=[NSString stringWithFormat:@"%@(%@)",self.currency.name,self.currency.unit];
+-(void)setupCurrency:(MCCurrency *)currency withIsSelected:(BOOL)isSelected{
+    self.currency=currency;
+    self.isSelected=isSelected;
+    self.currencyNameLabel.text=[NSString stringWithFormat:@"%@(%@)",self.currency.name,self.currency.unit];
+    self.currencySelectedLabel.hidden=!isSelected;
 }
 #pragma mark - Setter And Getter
 

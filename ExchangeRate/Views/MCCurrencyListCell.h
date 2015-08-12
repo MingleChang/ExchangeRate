@@ -10,5 +10,7 @@
 @class MCCurrency;
 @interface MCCurrencyListCell : UITableViewCell
 @property(nonatomic,strong)MCCurrency *currency;
--(void)updateUI;
+@property(nonatomic,assign)BOOL isSelected;
+-(void)setupCurrency:(MCCurrency *)currency withIsSelected:(BOOL)isSelected;
+
 @end
