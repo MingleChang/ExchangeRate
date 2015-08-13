@@ -111,6 +111,7 @@
 }
 #pragma mark - MCCurrencyListViewController Delegate
 -(void)currencyListViewControllerSelectNewCurrency:(MCCurrencyListViewController *)viewController{
+    [self changeEmptyHidden];
     [self.tableView reloadData];
 }
 #pragma mark - MCExchangeRateCell Delegate

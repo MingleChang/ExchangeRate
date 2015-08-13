@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)UISearchBar *searchBar;
 
+@property(nonatomic,copy)NSArray *showCurrencies;
+
 - (void)leftBarButtonClick:(UIBarButtonItem *)sender;
 - (void)rightBarButtonClick:(UIBarButtonItem *)sender;
 
@@ -49,6 +51,23 @@
     self.navigationItem.rightBarButtonItem=lRightBarButtonItem;
 }
 -(void)initAllData{
+    self.showCurrencies=self.showCurrencies=[DataManager manager].allCurrencies;
+}
+-(void)refreshTableView{
+    if ([self.searchBar isFirstResponder]) {
+        NSString *lSearchString=[self.searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        if (lSearchString.length==0) {
+            self.showCurrencies=[DataManager manager].allCurrencies;
+        }else{
+            NSString *lPredicateStr=[NSString stringWithFormat:@"self.name LIKE '%@*' or self.unit LIKE '%@*'",[lSearchString uppercaseString],[lSearchString uppercaseString]];
+            NSPredicate *lPredicate=[NSPredicate predicateWithFormat:lPredicateStr];
+            self.showCurrencies=[[DataManager manager].allCurrencies filteredArrayUsingPredicate:lPredicate];
+        }
+        
+    }else{
+        self.showCurrencies=[DataManager manager].allCurrencies;
+    }
+    [self.tableView reloadData];
 }
 #pragma mark - Event Response
 - (void)leftBarButtonClick:(UIBarButtonItem *)sender {
@@ -58,6 +77,7 @@
     if ([self.searchBar isFirstResponder]) {
         self.searchBar.text=@"";
         [self.searchBar resignFirstResponder];
+        [self refreshTableView];
     }else{
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }
@@ -67,12 +87,12 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [DataManager manager].allCurrencies.count;
+    return self.showCurrencies.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MCCurrencyListCell *lCell=[tableView dequeueReusableCellWithIdentifier:MCCurrencyListCellID forIndexPath:indexPath];
     NSInteger row=[indexPath row];
-    MCCurrency *lCurrency=[DataManager manager].allCurrencies[row];
+    MCCurrency *lCurrency=self.showCurrencies[row];
     [lCell setupCurrency:lCurrency withIsSelected:[[DataManager manager].selectedCurrencies containsObject:lCurrency]];
     return lCell;
 }
@@ -88,6 +108,12 @@
     if (lCell.isSelected) {
         return;
     }
+    [DataManager manager].selectedCurrencies=[[DataManager manager].selectedCurrencies arrayByAddingObject:lCell.currency];
+    [[DataManager manager]saveSelectedCurrency];
+    if ([self.delegate respondsToSelector:@selector(currencyListViewControllerSelectNewCurrency:)]) {
+        [self.delegate currencyListViewControllerSelectNewCurrency:self];
+    }
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - SearchBar Delegate
@@ -104,7 +130,7 @@
     
 }
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    
+    [self refreshTableView];
 }
 /*
 #pragma mark - Navigation
