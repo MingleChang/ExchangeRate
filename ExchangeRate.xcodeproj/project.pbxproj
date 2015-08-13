@@ -43,6 +43,7 @@
 		823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */; };
 		825B206A1B67D88A00ED9E7D /* MCCurrencyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */; };
 		825B206D1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */; };
+		82687B531B7CDF76008876CF /* libFlurry_6.7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82687B521B7CDF76008876CF /* libFlurry_6.7.0.a */; };
 		82AAAB111B73BDD900C4C73A /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 82AAAB101B73BDD900C4C73A /* Currency.json */; };
 		82B1B3A71B779AE800A16890 /* AllExchangeRateCache in Resources */ = {isa = PBXBuildFile; fileRef = 82B1B3A61B779AE800A16890 /* AllExchangeRateCache */; };
 		82B1B3A91B779E1000A16890 /* Currency.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82B1B3A81B779E1000A16890 /* Currency.strings */; };
@@ -127,6 +128,9 @@
 		825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListViewController.m; sourceTree = "<group>"; };
 		825B206B1B67D8A900ED9E7D /* MCCurrencyListNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyListNavigationController.h; sourceTree = "<group>"; };
 		825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListNavigationController.m; sourceTree = "<group>"; };
+		82687B501B7CDF76008876CF /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		82687B511B7CDF76008876CF /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
+		82687B521B7CDF76008876CF /* libFlurry_6.7.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.7.0.a; sourceTree = "<group>"; };
 		82AAAB101B73BDD900C4C73A /* Currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Currency.json; sourceTree = "<group>"; };
 		82B1B3A61B779AE800A16890 /* AllExchangeRateCache */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = AllExchangeRateCache; sourceTree = "<group>"; };
 		82B1B3A81B779E1000A16890 /* Currency.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Currency.strings; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82687B531B7CDF76008876CF /* libFlurry_6.7.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,9 +335,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		82687B4F1B7CDF76008876CF /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				82687B501B7CDF76008876CF /* Flurry.h */,
+				82687B511B7CDF76008876CF /* FlurryWatch.h */,
+				82687B521B7CDF76008876CF /* libFlurry_6.7.0.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
 		82B627631B5FE66400070EB9 /* Depends */ = {
 			isa = PBXGroup;
 			children = (
+				82687B4F1B7CDF76008876CF /* Flurry */,
 				4C38FCF11B6883DC0025709E /* MBProgressHUD */,
 				4C3ACD5A1B6715A3003B7C59 /* Reachability */,
 				4C1338561B60B97C00585E62 /* MingleChang */,
@@ -597,6 +613,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExchangeRate/Depends/Flurry",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -610,6 +630,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExchangeRate/Depends/Flurry",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
