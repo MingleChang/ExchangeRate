@@ -128,6 +128,7 @@
     [self.tableView beginUpdates];
     [self.tableView deleteRowsAtIndexPaths:@[lIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
     [self.tableView endUpdates];
+    [self changeEmptyHidden];
 }
 #pragma mark - PanCell Delegate
 -(void)panCellBeginGesture:(MCPanCell *)cell{
