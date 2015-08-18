@@ -13,8 +13,6 @@
 
 +(void)launch{
     [Flurry startSession:@"DYDGVJWM2BTZXC2W3VZP"];
-    [self updateExchange];
-//    [[DataManager manager]updateLocalCache];
 }
 +(void)updateExchange{
     if ([DataManager manager].allExchangeRateUpdateDate) {

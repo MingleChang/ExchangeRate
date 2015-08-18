@@ -25,7 +25,6 @@
 @interface MCExchangeRateViewController ()<UITableViewDataSource,UITableViewDelegate,MCCurrencyListViewControllerDelegate,MCExchangeRateCellDelegate,MCPanCellDelegate,MCNumberKeyboardDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-
 @property(nonatomic,weak)MCExchangeRateCell *lastPanCell;
 @property(nonatomic,weak)MCExchangeRateCell *selectedCell;
 @property(nonatomic,assign)CGFloat tableOffset;
@@ -64,11 +63,20 @@
     [self checkUpdateAllExchangeRate];
 }
 -(void)checkUpdateAllExchangeRate{
-    if (![DataManager manager].allExchangeRateUpdateDate) {
-        MBProgressHUD *lProgress=[MBProgressHUD showHUDAddedTo:[MCDevice getAppFrontWindow] animated:YES];
+    if ([[DataManager manager]checkNeedUpdate]) {
+        self.navigationItem.title=@"更新中...";
         [[DataManager manager]updateAllExchangeCompletion:^(BOOL isSucceed) {
-            [lProgress hide:YES];
+            if(isSucceed){
+                self.navigationItem.title=@"更新成功";
+            }else{
+                self.navigationItem.title=@"更新失败";
+            }
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.navigationItem.title=@"小明汇率";
+            });
         }];
+    }else{
+        self.navigationItem.title=@"小明汇率";
     }
 }
 -(void)changeEmptyHidden{

@@ -19,6 +19,7 @@
 @property(nonatomic,copy)NSArray *allExchangeRate;
 @property(nonatomic,strong)NSMutableArray *selectedExchangeRate;
 +(DataManager *)manager;
+-(BOOL)checkNeedUpdate;
 -(void)updateAllExchangeCompletion:(void(^)(BOOL isSucceed))completion;
 -(void)saveSelectedCurrency;
 -(void)saveAllExchangeRate;
