@@ -16,7 +16,12 @@
 
 #define MCCurrencyListCellID @"MCCurrencyListCell"
 
-#define GOOGLE_AD_ID @"ca-app-pub-7186360707314306/2703448671"
+#ifdef DEBUG
+    #define GOOGLE_AD_ID @"ca-app-pub-3940256099942544/2934735716"
+#else
+    #define GOOGLE_AD_ID @"ca-app-pub-7186360707314306/2703448671"
+#endif
+
 
 @interface MCCurrencyListViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
