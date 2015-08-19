@@ -34,6 +34,14 @@
     return self;
 }
 #pragma mark - 
+-(MCExchangeRate *)getExchangeRateByCurrency:(MCCurrency *)currency{
+    for (MCExchangeRate *lExchangeRate in self.allExchangeRate) {
+        if ([lExchangeRate.fromCurrency isEqualCurrency:currency]) {
+            return lExchangeRate;
+        }
+    }
+    return nil;
+}
 -(BOOL)checkNeedUpdate{
     NSInteger timezoneFix=[NSTimeZone localTimeZone].secondsFromGMT;
     NSDate *lNowDate=[NSDate date];

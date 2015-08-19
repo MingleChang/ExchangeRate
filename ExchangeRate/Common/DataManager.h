@@ -24,6 +24,8 @@
 -(void)saveSelectedCurrency;
 -(void)saveAllExchangeRate;
 
+-(MCExchangeRate *)getExchangeRateByCurrency:(MCCurrency *)currency;
+
 
 -(void)updateLocalCache;
 @end

@@ -124,7 +124,7 @@
 }
 #pragma mark - MCExchangeRateCell Delegate
 -(void)exchangeRateCellChangeButtonClick:(MCExchangeRateCell *)cell{
-    
+    [self performSegueWithIdentifier:MCCurrencyListNavigationControllerID sender:cell.exchangeRate];
 }
 -(void)exchangeRateCellDeleteButtonClick:(MCExchangeRateCell *)cell{
     NSIndexPath *lIndexPath=[self.tableView indexPathForCell:cell];
@@ -305,6 +305,7 @@
         MCCurrencyListNavigationController *lNavigationController=[segue destinationViewController];
         MCCurrencyListViewController *lViewController=(MCCurrencyListViewController *)lNavigationController.topViewController;
         lViewController.delegate=self;
+        lViewController.replaceExchangeRate=sender;
     }
     if ([segue.identifier isEqualToString:MCCurrencyListViewControllerID]) {
         

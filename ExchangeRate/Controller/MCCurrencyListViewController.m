@@ -127,8 +127,14 @@
     if (lCell.isSelected) {
         return;
     }
-    [DataManager manager].selectedCurrencies=[[DataManager manager].selectedCurrencies arrayByAddingObject:lCell.currency];
-    [[DataManager manager]saveSelectedCurrency];
+    if (self.replaceExchangeRate) {
+        NSUInteger index=[[DataManager manager].selectedExchangeRate indexOfObject:self.replaceExchangeRate];
+        MCExchangeRate *lReplaceExchange=[[DataManager manager]getExchangeRateByCurrency:lCell.currency];
+        [[DataManager manager].selectedExchangeRate replaceObjectAtIndex:index withObject:lReplaceExchange];
+    }else{
+        [DataManager manager].selectedCurrencies=[[DataManager manager].selectedCurrencies arrayByAddingObject:lCell.currency];
+        [[DataManager manager]saveSelectedCurrency];
+    }
     if ([self.delegate respondsToSelector:@selector(currencyListViewControllerSelectNewCurrency:)]) {
         [self.delegate currencyListViewControllerSelectNewCurrency:self];
     }
