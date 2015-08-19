@@ -31,7 +31,6 @@
 		4C38FCF71B6899DD0025709E /* ToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCF61B6899DD0025709E /* ToastManager.m */; };
 		4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ACD5C1B6715A3003B7C59 /* Reachability.m */; };
 		4C3ACD601B672A11003B7C59 /* FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ACD5F1B672A11003B7C59 /* FilePath.m */; };
-		4C3ACD621B676AB8003B7C59 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C3ACD611B676AB8003B7C59 /* Localization.strings */; };
 		4C4D4F721B70A94900F18518 /* MCNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D4F701B70A94900F18518 /* MCNumberKeyboard.m */; };
 		4C4D4F731B70A94900F18518 /* MCNumberKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D4F711B70A94900F18518 /* MCNumberKeyboard.xib */; };
 		4C4D4F761B70A95100F18518 /* MCCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D4F751B70A95100F18518 /* MCCalculate.m */; };
@@ -40,6 +39,7 @@
 		4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */; };
 		4CF9E57B1B661EED003C1A56 /* MCPanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5771B661EED003C1A56 /* MCPanCell.m */; };
 		4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5781B661EED003C1A56 /* MCPanCell.xib */; };
+		822A40591B84DFA100CF3A53 /* SelectedCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */; };
 		823DE42F1B667A6C009C4381 /* MCExchangeRateNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */; };
 		823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */; };
 		825B206A1B67D88A00ED9E7D /* MCCurrencyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */; };
@@ -47,7 +47,6 @@
 		82687B531B7CDF76008876CF /* libFlurry_6.7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82687B521B7CDF76008876CF /* libFlurry_6.7.0.a */; };
 		82AAAB111B73BDD900C4C73A /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 82AAAB101B73BDD900C4C73A /* Currency.json */; };
 		82B1B3A71B779AE800A16890 /* AllExchangeRateCache in Resources */ = {isa = PBXBuildFile; fileRef = 82B1B3A61B779AE800A16890 /* AllExchangeRateCache */; };
-		82B1B3A91B779E1000A16890 /* Currency.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82B1B3A81B779E1000A16890 /* Currency.strings */; };
 		82B627671B5FE66400070EB9 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B627661B5FE66400070EB9 /* YQL.m */; };
 /* End PBXBuildFile section */
 
@@ -109,7 +108,6 @@
 		4C3ACD5C1B6715A3003B7C59 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4C3ACD5E1B672A11003B7C59 /* FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePath.h; sourceTree = "<group>"; };
 		4C3ACD5F1B672A11003B7C59 /* FilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePath.m; sourceTree = "<group>"; };
-		4C3ACD611B676AB8003B7C59 /* Localization.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localization.strings; sourceTree = "<group>"; };
 		4C4D4F6F1B70A94900F18518 /* MCNumberKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNumberKeyboard.h; sourceTree = "<group>"; };
 		4C4D4F701B70A94900F18518 /* MCNumberKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNumberKeyboard.m; sourceTree = "<group>"; };
 		4C4D4F711B70A94900F18518 /* MCNumberKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNumberKeyboard.xib; sourceTree = "<group>"; };
@@ -122,6 +120,7 @@
 		4CF9E5761B661EED003C1A56 /* MCPanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPanCell.h; sourceTree = "<group>"; };
 		4CF9E5771B661EED003C1A56 /* MCPanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPanCell.m; sourceTree = "<group>"; };
 		4CF9E5781B661EED003C1A56 /* MCPanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCPanCell.xib; sourceTree = "<group>"; };
+		822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SelectedCurrencies.json; sourceTree = "<group>"; };
 		823DE42D1B667A6C009C4381 /* MCExchangeRateNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateNavigationController.h; sourceTree = "<group>"; };
 		823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateNavigationController.m; sourceTree = "<group>"; };
 		823DE4301B667A88009C4381 /* MCExchangeRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateViewController.h; sourceTree = "<group>"; };
@@ -135,7 +134,6 @@
 		82687B521B7CDF76008876CF /* libFlurry_6.7.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.7.0.a; sourceTree = "<group>"; };
 		82AAAB101B73BDD900C4C73A /* Currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Currency.json; sourceTree = "<group>"; };
 		82B1B3A61B779AE800A16890 /* AllExchangeRateCache */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = AllExchangeRateCache; sourceTree = "<group>"; };
-		82B1B3A81B779E1000A16890 /* Currency.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Currency.strings; sourceTree = "<group>"; };
 		82B627651B5FE66400070EB9 /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
 		82B627661B5FE66400070EB9 /* YQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -295,9 +293,8 @@
 				4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */,
 				4C1F064D1B5F978C00DF101C /* Main.storyboard */,
 				82AAAB101B73BDD900C4C73A /* Currency.json */,
+				822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */,
 				82B1B3A61B779AE800A16890 /* AllExchangeRateCache */,
-				4C3ACD611B676AB8003B7C59 /* Localization.strings */,
-				82B1B3A81B779E1000A16890 /* Currency.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -462,12 +459,11 @@
 				82B1B3A71B779AE800A16890 /* AllExchangeRateCache in Resources */,
 				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
 				4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */,
-				4C3ACD621B676AB8003B7C59 /* Localization.strings in Resources */,
+				822A40591B84DFA100CF3A53 /* SelectedCurrencies.json in Resources */,
 				4C38FCAC1B686B8F0025709E /* MCCurrencyListCell.xib in Resources */,
 				4C4D4F731B70A94900F18518 /* MCNumberKeyboard.xib in Resources */,
 				4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */,
 				4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */,
-				82B1B3A91B779E1000A16890 /* Currency.strings in Resources */,
 				82AAAB111B73BDD900C4C73A /* Currency.json in Resources */,
 				4C1F05CC1B5F8E6700DF101C /* Images.xcassets in Resources */,
 			);
@@ -628,6 +624,7 @@
 					"$(PROJECT_DIR)/ExchangeRate/Frameworks",
 				);
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -649,6 +646,7 @@
 					"$(PROJECT_DIR)/ExchangeRate/Frameworks",
 				);
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

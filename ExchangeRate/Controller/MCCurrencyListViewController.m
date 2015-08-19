@@ -133,8 +133,8 @@
         [[DataManager manager].selectedExchangeRate replaceObjectAtIndex:index withObject:lReplaceExchange];
     }else{
         [DataManager manager].selectedCurrencies=[[DataManager manager].selectedCurrencies arrayByAddingObject:lCell.currency];
-        [[DataManager manager]saveSelectedCurrency];
     }
+    [[DataManager manager]saveSelectedCurrency];
     if ([self.delegate respondsToSelector:@selector(currencyListViewControllerSelectNewCurrency:)]) {
         [self.delegate currencyListViewControllerSelectNewCurrency:self];
     }

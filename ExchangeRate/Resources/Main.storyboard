@@ -11,6 +11,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dvE-hy-A7n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="kec-6X-ocJ" kind="relationship" relationship="rootViewController" id="YG3-Zw-Nvn"/>
@@ -37,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="299" y="623"/>
         </scene>
-        <!--Exchange Rate View Controller-->
+        <!--小明汇率-->
         <scene sceneID="1Kd-tD-iQ5">
             <objects>
                 <viewController storyboardIdentifier="MCExchangeRateViewController" id="kec-6X-ocJ" customClass="MCExchangeRateViewController" sceneMemberID="viewController">
@@ -90,7 +93,7 @@
                             <constraint firstItem="jFR-hp-cGO" firstAttribute="top" secondItem="KZb-b7-EGx" secondAttribute="bottom" id="v8b-HM-8b9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mHc-Oy-esD">
+                    <navigationItem key="navigationItem" title="小明汇率" id="mHc-Oy-esD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MLQ-zQ-T0q">
                             <connections>
                                 <action selector="rightBarButtonItemClick:" destination="kec-6X-ocJ" id="jkI-Nu-xVx"/>

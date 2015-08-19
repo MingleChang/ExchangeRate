@@ -88,6 +88,16 @@
     NSString *lPath=[FilePath pathInDocumentWithFileName:SELECTED_CURRENCY_CACHE_NAME];
     if ([[NSFileManager defaultManager]fileExistsAtPath:lPath]) {
         return [NSKeyedUnarchiver unarchiveObjectWithFile:lPath];
+    }else{
+        NSString *lJSONPath=[[NSBundle mainBundle]pathForResource:@"SelectedCurrencies" ofType:@"json"];
+        NSData *lData=[NSData dataWithContentsOfFile:lJSONPath];
+        NSArray *lJSONArray=[NSJSONSerialization JSONObjectWithData:lData options:NSJSONReadingAllowFragments error:nil];
+        NSMutableArray *lCurrencies=[NSMutableArray array];
+        for (NSDictionary *lDic in lJSONArray) {
+            MCCurrency *lCurrency=[[MCCurrency alloc]initWithDictionary:lDic];
+            [lCurrencies addObject:lCurrency];
+        }
+        return [lCurrencies copy];
     }
     return [NSArray array];
 }
@@ -149,7 +159,17 @@
     }
     @try {
         NSPredicate *lPredicate=[NSPredicate predicateWithFormat:lPredicateString];
-        self.selectedExchangeRate=[[self.allExchangeRate filteredArrayUsingPredicate:lPredicate]mutableCopy];
+        NSArray *lSelectedExchangeRate=[self.allExchangeRate filteredArrayUsingPredicate:lPredicate];
+        self.selectedExchangeRate=[NSMutableArray array];
+        for (MCCurrency *lCurrency in selectedCurrencies) {
+            for (MCExchangeRate *lExchangeRate in lSelectedExchangeRate) {
+                if ([lExchangeRate.fromCurrency isEqualCurrency:lCurrency]) {
+                    [self.selectedExchangeRate addObject:lExchangeRate];
+                    break;
+                }
+            }
+        }
+//        self.selectedExchangeRate=[[self.allExchangeRate filteredArrayUsingPredicate:lPredicate]mutableCopy];
     }
     @catch (NSException *exception) {
         self.selectedExchangeRate=[NSMutableArray array];

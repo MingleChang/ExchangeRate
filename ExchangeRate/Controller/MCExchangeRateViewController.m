@@ -68,6 +68,7 @@
         [[DataManager manager]updateAllExchangeCompletion:^(BOOL isSucceed) {
             if(isSucceed){
                 self.navigationItem.title=@"更新成功";
+                [self.tableView reloadData];
             }else{
                 self.navigationItem.title=@"更新失败";
             }
