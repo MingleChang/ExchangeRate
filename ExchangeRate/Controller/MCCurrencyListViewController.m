@@ -22,6 +22,9 @@
 
 @property(nonatomic,copy)NSArray *showCurrencies;
 
+
+@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
+
 - (void)leftBarButtonClick:(UIBarButtonItem *)sender;
 - (void)rightBarButtonClick:(UIBarButtonItem *)sender;
 
@@ -43,6 +46,7 @@
 -(void)initAllSubViewAndData{
     [self initAllSubViews];
     [self initAllData];
+    [self loadGoogleAds];
 }
 -(void)initAllSubViews{
     [self.tableView registerNib:[UINib nibWithNibName:MCCurrencyListCellID bundle:nil] forCellReuseIdentifier:MCCurrencyListCellID];
@@ -73,7 +77,9 @@
     [self.tableView reloadData];
 }
 -(void)loadGoogleAds{
-    
+    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+    self.bannerView.rootViewController = self;
+    [self.bannerView loadRequest:[GADRequest request]];
 }
 #pragma mark - Event Response
 - (void)leftBarButtonClick:(UIBarButtonItem *)sender {

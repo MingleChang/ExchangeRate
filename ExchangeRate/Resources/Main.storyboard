@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5u1-mp-pke">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5u1-mp-pke">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -126,24 +126,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="euk-HF-WjQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="EXC-B4-mGB" id="Ies-Zx-ter"/>
                                     <outlet property="delegate" destination="EXC-B4-mGB" id="Waf-Uu-2lO"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-Jx-qTT" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="SbG-Jx-qTT" firstAttribute="top" secondItem="euk-HF-WjQ" secondAttribute="bottom" id="Ass-MZ-CF8"/>
+                            <constraint firstAttribute="bottom" secondItem="SbG-Jx-qTT" secondAttribute="bottom" id="Eto-HW-B7l"/>
                             <constraint firstItem="euk-HF-WjQ" firstAttribute="top" secondItem="Svp-qg-meG" secondAttribute="top" id="QXd-GZ-O1I"/>
-                            <constraint firstItem="JIP-01-B1w" firstAttribute="top" secondItem="euk-HF-WjQ" secondAttribute="bottom" id="cX1-0R-BML"/>
+                            <constraint firstItem="JIP-01-B1w" firstAttribute="top" secondItem="euk-HF-WjQ" secondAttribute="bottom" constant="50" id="cX1-0R-BML"/>
                             <constraint firstAttribute="trailing" secondItem="euk-HF-WjQ" secondAttribute="trailing" id="mIf-DU-zuX"/>
                             <constraint firstItem="euk-HF-WjQ" firstAttribute="leading" secondItem="Svp-qg-meG" secondAttribute="leading" id="oKL-Qy-T1G"/>
+                            <constraint firstItem="SbG-Jx-qTT" firstAttribute="leading" secondItem="Svp-qg-meG" secondAttribute="leading" id="pV1-w9-MO1"/>
+                            <constraint firstAttribute="trailing" secondItem="SbG-Jx-qTT" secondAttribute="trailing" id="plO-dL-R6d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZD2-8I-Z2D"/>
                     <connections>
+                        <outlet property="bannerView" destination="SbG-Jx-qTT" id="lbh-Xz-xzb"/>
                         <outlet property="tableView" destination="euk-HF-WjQ" id="8HV-m7-3Lx"/>
                     </connections>
                 </viewController>
