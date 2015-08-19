@@ -11,6 +11,9 @@
 #import "MCCurrencyListCell.h"
 #import "MCCurrency.h"
 #import "MingleChang.h"
+
+@import GoogleMobileAds;
+
 #define MCCurrencyListCellID @"MCCurrencyListCell"
 
 @interface MCCurrencyListViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
@@ -68,6 +71,9 @@
         self.showCurrencies=[DataManager manager].allCurrencies;
     }
     [self.tableView reloadData];
+}
+-(void)loadGoogleAds{
+    
 }
 #pragma mark - Event Response
 - (void)leftBarButtonClick:(UIBarButtonItem *)sender {
