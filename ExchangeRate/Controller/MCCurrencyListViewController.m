@@ -16,6 +16,8 @@
 
 #define MCCurrencyListCellID @"MCCurrencyListCell"
 
+#define GOOGLE_AD_ID @"ca-app-pub-7186360707314306/2703448671"
+
 @interface MCCurrencyListViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic,strong)UISearchBar *searchBar;
@@ -77,7 +79,7 @@
     [self.tableView reloadData];
 }
 -(void)loadGoogleAds{
-    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+    self.bannerView.adUnitID = GOOGLE_AD_ID;
     self.bannerView.rootViewController = self;
     [self.bannerView loadRequest:[GADRequest request]];
 }
