@@ -11,7 +11,6 @@
 #import "MCExchangeRate.h"
 #import "FilePath.h"
 #import "MCExchangeRateRequest.h"
-#import "ToastManager.h"
 
 #define ALL_EXCHANGE_UPDATE_DATE @"ALL_EXCHANGE_UPDATE_DATE"
 #define CURRENCY_LIST_FILE @"Currency"

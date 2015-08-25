@@ -9,8 +9,6 @@
 #import "MCExchangeRateViewController.h"
 #import "MCExchangeRateCell.h"
 #import "DataManager.h"
-#import "ToastManager.h"
-#import "MBProgressHUD.h"
 #import "MingleChang.h"
 #import "MCExchangeRate.h"
 #import "MCCurrencyListNavigationController.h"

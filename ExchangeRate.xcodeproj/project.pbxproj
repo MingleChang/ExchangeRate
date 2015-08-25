@@ -24,17 +24,14 @@
 		4C1F06551B5F978C00DF101C /* MCExchangeRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */; };
 		4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */; };
 		4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064D1B5F978C00DF101C /* Main.storyboard */; };
+		4C2014B01B8C467F000994B7 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2014AF1B8C467F000994B7 /* GoogleMobileAds.framework */; };
 		4C38FCAB1B686B8F0025709E /* MCCurrencyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCA91B686B8F0025709E /* MCCurrencyListCell.m */; };
 		4C38FCAC1B686B8F0025709E /* MCCurrencyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C38FCAA1B686B8F0025709E /* MCCurrencyListCell.xib */; };
 		4C38FCAF1B686F740025709E /* StartUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCAE1B686F740025709E /* StartUp.m */; };
-		4C38FCF41B6883DC0025709E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCF31B6883DC0025709E /* MBProgressHUD.m */; };
-		4C38FCF71B6899DD0025709E /* ToastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCF61B6899DD0025709E /* ToastManager.m */; };
-		4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ACD5C1B6715A3003B7C59 /* Reachability.m */; };
 		4C3ACD601B672A11003B7C59 /* FilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3ACD5F1B672A11003B7C59 /* FilePath.m */; };
 		4C4D4F721B70A94900F18518 /* MCNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D4F701B70A94900F18518 /* MCNumberKeyboard.m */; };
 		4C4D4F731B70A94900F18518 /* MCNumberKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D4F711B70A94900F18518 /* MCNumberKeyboard.xib */; };
 		4C4D4F761B70A95100F18518 /* MCCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D4F751B70A95100F18518 /* MCCalculate.m */; };
-		4CF1A5E51B84228D000EC30A /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF1A5E41B84228D000EC30A /* GoogleMobileAds.framework */; };
 		4CF9E5791B661EED003C1A56 /* MCExchangeRateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5741B661EED003C1A56 /* MCExchangeRateCell.m */; };
 		4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */; };
 		4CF9E57B1B661EED003C1A56 /* MCPanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5771B661EED003C1A56 /* MCPanCell.m */; };
@@ -95,17 +92,12 @@
 		4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRate.m; sourceTree = "<group>"; };
 		4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4C1F064D1B5F978C00DF101C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4C2014AF1B8C467F000994B7 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		4C38FCA81B686B8F0025709E /* MCCurrencyListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyListCell.h; sourceTree = "<group>"; };
 		4C38FCA91B686B8F0025709E /* MCCurrencyListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListCell.m; sourceTree = "<group>"; };
 		4C38FCAA1B686B8F0025709E /* MCCurrencyListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCCurrencyListCell.xib; sourceTree = "<group>"; };
 		4C38FCAD1B686F740025709E /* StartUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUp.h; sourceTree = "<group>"; };
 		4C38FCAE1B686F740025709E /* StartUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUp.m; sourceTree = "<group>"; };
-		4C38FCF21B6883DC0025709E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		4C38FCF31B6883DC0025709E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		4C38FCF51B6899DD0025709E /* ToastManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastManager.h; sourceTree = "<group>"; };
-		4C38FCF61B6899DD0025709E /* ToastManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastManager.m; sourceTree = "<group>"; };
-		4C3ACD5B1B6715A3003B7C59 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		4C3ACD5C1B6715A3003B7C59 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4C3ACD5E1B672A11003B7C59 /* FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePath.h; sourceTree = "<group>"; };
 		4C3ACD5F1B672A11003B7C59 /* FilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePath.m; sourceTree = "<group>"; };
 		4C4D4F6F1B70A94900F18518 /* MCNumberKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNumberKeyboard.h; sourceTree = "<group>"; };
@@ -113,7 +105,6 @@
 		4C4D4F711B70A94900F18518 /* MCNumberKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNumberKeyboard.xib; sourceTree = "<group>"; };
 		4C4D4F741B70A95100F18518 /* MCCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCalculate.h; sourceTree = "<group>"; };
 		4C4D4F751B70A95100F18518 /* MCCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCalculate.m; sourceTree = "<group>"; };
-		4CF1A5E41B84228D000EC30A /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		4CF9E5731B661EED003C1A56 /* MCExchangeRateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateCell.h; sourceTree = "<group>"; };
 		4CF9E5741B661EED003C1A56 /* MCExchangeRateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateCell.m; sourceTree = "<group>"; };
 		4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCExchangeRateCell.xib; sourceTree = "<group>"; };
@@ -143,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CF1A5E51B84228D000EC30A /* GoogleMobileAds.framework in Frameworks */,
+				4C2014B01B8C467F000994B7 /* GoogleMobileAds.framework in Frameworks */,
 				82687B531B7CDF76008876CF /* libFlurry_6.7.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,7 +186,6 @@
 		4C1F05BD1B5F8E6700DF101C /* ExchangeRate */ = {
 			isa = PBXGroup;
 			children = (
-				4CF1A5E31B84227F000EC30A /* Frameworks */,
 				82B627631B5FE66400070EB9 /* Depends */,
 				4C1F06401B5F978C00DF101C /* Common */,
 				4C1F06431B5F978C00DF101C /* Controller */,
@@ -247,8 +237,6 @@
 				4C3ACD5F1B672A11003B7C59 /* FilePath.m */,
 				4C38FCAD1B686F740025709E /* StartUp.h */,
 				4C38FCAE1B686F740025709E /* StartUp.m */,
-				4C38FCF51B6899DD0025709E /* ToastManager.h */,
-				4C38FCF61B6899DD0025709E /* ToastManager.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -299,32 +287,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4C38FCF11B6883DC0025709E /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				4C38FCF21B6883DC0025709E /* MBProgressHUD.h */,
-				4C38FCF31B6883DC0025709E /* MBProgressHUD.m */,
-			);
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		4C3ACD5A1B6715A3003B7C59 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				4C3ACD5B1B6715A3003B7C59 /* Reachability.h */,
-				4C3ACD5C1B6715A3003B7C59 /* Reachability.m */,
-			);
-			path = Reachability;
-			sourceTree = "<group>";
-		};
-		4CF1A5E31B84227F000EC30A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4CF1A5E41B84228D000EC30A /* GoogleMobileAds.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		4CF9E5721B661EED003C1A56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,9 +319,8 @@
 		82B627631B5FE66400070EB9 /* Depends */ = {
 			isa = PBXGroup;
 			children = (
+				4C2014AF1B8C467F000994B7 /* GoogleMobileAds.framework */,
 				82687B4F1B7CDF76008876CF /* Flurry */,
-				4C38FCF11B6883DC0025709E /* MBProgressHUD */,
-				4C3ACD5A1B6715A3003B7C59 /* Reachability */,
 				4C1338561B60B97C00585E62 /* MingleChang */,
 				82B627641B5FE66400070EB9 /* YQL */,
 			);
@@ -492,15 +453,12 @@
 				4C38FCAB1B686B8F0025709E /* MCCurrencyListCell.m in Sources */,
 				4C13387B1B60B97C00585E62 /* MCStringExtension.m in Sources */,
 				823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */,
-				4C38FCF71B6899DD0025709E /* ToastManager.m in Sources */,
 				4C4D4F721B70A94900F18518 /* MCNumberKeyboard.m in Sources */,
-				4C38FCF41B6883DC0025709E /* MBProgressHUD.m in Sources */,
 				4C38FCAF1B686F740025709E /* StartUp.m in Sources */,
 				4C13387A1B60B97C00585E62 /* MCImageExtension.m in Sources */,
 				4C1338851B60BDA100585E62 /* MCExchangeRateQuery.m in Sources */,
 				4C3ACD601B672A11003B7C59 /* FilePath.m in Sources */,
 				825B206A1B67D88A00ED9E7D /* MCCurrencyListViewController.m in Sources */,
-				4C3ACD5D1B6715A3003B7C59 /* Reachability.m in Sources */,
 				4C4D4F761B70A95100F18518 /* MCCalculate.m in Sources */,
 				4C1338821B60BD6800585E62 /* MCExchangeRateRoot.m in Sources */,
 				4C1338761B60B97C00585E62 /* MCDevice.m in Sources */,
@@ -622,6 +580,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExchangeRate/Frameworks",
+					"$(PROJECT_DIR)/ExchangeRate/Depends",
 				);
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -644,6 +603,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExchangeRate/Frameworks",
+					"$(PROJECT_DIR)/ExchangeRate/Depends",
 				);
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
