@@ -70,7 +70,7 @@
             }else{
                 self.navigationItem.title=@"更新失败";
             }
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 self.navigationItem.title=@"小明汇率";
             });
         }];
@@ -91,6 +91,15 @@
 }
 
 - (IBAction)rightBarButtonItemClick:(UIBarButtonItem *)sender {
+    if([DataManager manager].selectedExchangeRate.count>=6){
+        UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:nil message:@"最多只能关注6种货币汇率" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *lAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [lAlertController dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [lAlertController addAction:lAction];
+        [self presentViewController:lAlertController animated:YES completion:nil];
+        return;
+    }
     [self performSegueWithIdentifier:MCCurrencyListNavigationControllerID sender:nil];
 }
 #pragma mark - TableView DataSource
