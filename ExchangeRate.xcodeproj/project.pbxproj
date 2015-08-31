@@ -25,6 +25,9 @@
 		4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */; };
 		4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064D1B5F978C00DF101C /* Main.storyboard */; };
 		4C2014B01B8C467F000994B7 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2014AF1B8C467F000994B7 /* GoogleMobileAds.framework */; };
+		4C30BC901B93E24A0081F391 /* Sentences.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C30BC8F1B93E24A0081F391 /* Sentences.json */; };
+		4C30BC931B93E2740081F391 /* MCSentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30BC921B93E2740081F391 /* MCSentence.m */; };
+		4C30BC961B93E3670081F391 /* MCEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30BC951B93E3670081F391 /* MCEmptyView.m */; };
 		4C38FCAB1B686B8F0025709E /* MCCurrencyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCA91B686B8F0025709E /* MCCurrencyListCell.m */; };
 		4C38FCAC1B686B8F0025709E /* MCCurrencyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C38FCAA1B686B8F0025709E /* MCCurrencyListCell.xib */; };
 		4C38FCAF1B686F740025709E /* StartUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCAE1B686F740025709E /* StartUp.m */; };
@@ -93,6 +96,11 @@
 		4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4C1F064D1B5F978C00DF101C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C2014AF1B8C467F000994B7 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		4C30BC8F1B93E24A0081F391 /* Sentences.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sentences.json; sourceTree = "<group>"; };
+		4C30BC911B93E2740081F391 /* MCSentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSentence.h; sourceTree = "<group>"; };
+		4C30BC921B93E2740081F391 /* MCSentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSentence.m; sourceTree = "<group>"; };
+		4C30BC941B93E3670081F391 /* MCEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCEmptyView.h; sourceTree = "<group>"; };
+		4C30BC951B93E3670081F391 /* MCEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCEmptyView.m; sourceTree = "<group>"; };
 		4C38FCA81B686B8F0025709E /* MCCurrencyListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCurrencyListCell.h; sourceTree = "<group>"; };
 		4C38FCA91B686B8F0025709E /* MCCurrencyListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListCell.m; sourceTree = "<group>"; };
 		4C38FCAA1B686B8F0025709E /* MCCurrencyListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCCurrencyListCell.xib; sourceTree = "<group>"; };
@@ -271,6 +279,8 @@
 				4C1F064A1B5F978C00DF101C /* MCExchangeRate.m */,
 				4C1338501B6087A300585E62 /* MCCurrency.h */,
 				4C1338511B6087A300585E62 /* MCCurrency.m */,
+				4C30BC911B93E2740081F391 /* MCSentence.h */,
+				4C30BC921B93E2740081F391 /* MCSentence.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +293,7 @@
 				82AAAB101B73BDD900C4C73A /* Currency.json */,
 				822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */,
 				82B1B3A61B779AE800A16890 /* AllExchangeRateCache */,
+				4C30BC8F1B93E24A0081F391 /* Sentences.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -302,6 +313,8 @@
 				4CF9E5761B661EED003C1A56 /* MCPanCell.h */,
 				4CF9E5771B661EED003C1A56 /* MCPanCell.m */,
 				4CF9E5781B661EED003C1A56 /* MCPanCell.xib */,
+				4C30BC941B93E3670081F391 /* MCEmptyView.h */,
+				4C30BC951B93E3670081F391 /* MCEmptyView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -418,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82B1B3A71B779AE800A16890 /* AllExchangeRateCache in Resources */,
+				4C30BC901B93E24A0081F391 /* Sentences.json in Resources */,
 				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
 				4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */,
 				822A40591B84DFA100CF3A53 /* SelectedCurrencies.json in Resources */,
@@ -448,11 +462,13 @@
 				4C1338881B60BDF600585E62 /* MCExchangeRateResult.m in Sources */,
 				4C1338781B60B97C00585E62 /* MCDrawImage.m in Sources */,
 				4CF9E57B1B661EED003C1A56 /* MCPanCell.m in Sources */,
+				4C30BC931B93E2740081F391 /* MCSentence.m in Sources */,
 				823DE42F1B667A6C009C4381 /* MCExchangeRateNavigationController.m in Sources */,
 				4C1338551B60899300585E62 /* MCExchangeRateRequest.m in Sources */,
 				4C38FCAB1B686B8F0025709E /* MCCurrencyListCell.m in Sources */,
 				4C13387B1B60B97C00585E62 /* MCStringExtension.m in Sources */,
 				823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */,
+				4C30BC961B93E3670081F391 /* MCEmptyView.m in Sources */,
 				4C4D4F721B70A94900F18518 /* MCNumberKeyboard.m in Sources */,
 				4C38FCAF1B686F740025709E /* StartUp.m in Sources */,
 				4C13387A1B60B97C00585E62 /* MCImageExtension.m in Sources */,
@@ -579,7 +595,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ExchangeRate/Frameworks",
 					"$(PROJECT_DIR)/ExchangeRate/Depends",
 				);
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
@@ -602,7 +617,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ExchangeRate/Frameworks",
 					"$(PROJECT_DIR)/ExchangeRate/Depends",
 				);
 				INFOPLIST_FILE = ExchangeRate/Info.plist;

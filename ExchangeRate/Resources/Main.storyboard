@@ -60,13 +60,19 @@
                                     <outlet property="delegate" destination="kec-6X-ocJ" id="Age-E7-f8Z"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFR-hp-cGO">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFR-hp-cGO" customClass="MCEmptyView">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMPTY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJV-CW-4qJ">
-                                        <rect key="frame" x="131" y="241" width="58" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMPTY" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJV-CW-4qJ">
+                                        <rect key="frame" x="15" y="223" width="290" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UL7-79-eFV">
+                                        <rect key="frame" x="272" y="250" width="33" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -74,9 +80,15 @@
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="aJV-CW-4qJ" secondAttribute="centerX" id="7q8-7Z-C0w"/>
-                                    <constraint firstAttribute="centerY" secondItem="aJV-CW-4qJ" secondAttribute="centerY" id="eN6-LX-klX"/>
+                                    <constraint firstItem="aJV-CW-4qJ" firstAttribute="leading" secondItem="jFR-hp-cGO" secondAttribute="leading" constant="15" id="Dzp-BM-DLR"/>
+                                    <constraint firstItem="UL7-79-eFV" firstAttribute="top" secondItem="aJV-CW-4qJ" secondAttribute="bottom" constant="9" id="aMn-kS-vSN"/>
+                                    <constraint firstAttribute="trailing" secondItem="aJV-CW-4qJ" secondAttribute="trailing" constant="15" id="aXG-Lg-wwr"/>
+                                    <constraint firstAttribute="centerY" secondItem="aJV-CW-4qJ" secondAttribute="centerY" constant="20" id="eN6-LX-klX"/>
+                                    <constraint firstAttribute="trailing" secondItem="UL7-79-eFV" secondAttribute="trailing" constant="15" id="oU1-NF-2nv"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="detailLabel" destination="aJV-CW-4qJ" id="cA9-u5-bfi"/>
+                                    <outlet property="nameLabel" destination="UL7-79-eFV" id="uty-eT-603"/>
                                     <outletCollection property="gestureRecognizers" destination="DQH-nc-4gk" appends="YES" id="jh8-aa-FNM"/>
                                 </connections>
                             </view>

@@ -15,6 +15,7 @@
 #import "MCCurrencyListViewController.h"
 #import "MCNumberKeyboard.h"
 #import "MCCalculate.h"
+#import "MCEmptyView.h"
 
 #define MCExchangeRateCellID @"MCExchangeRateCell"
 #define MCCurrencyListNavigationControllerID @"MCCurrencyListNavigationController"
@@ -27,7 +28,7 @@
 @property(nonatomic,weak)MCExchangeRateCell *selectedCell;
 @property(nonatomic,assign)CGFloat tableOffset;
 
-@property (weak, nonatomic) IBOutlet UIView *emptyView;
+@property (weak, nonatomic) IBOutlet MCEmptyView *emptyView;
 - (IBAction)emptyViewTapGestureClick:(UITapGestureRecognizer *)sender;
 - (IBAction)rightBarButtonItemClick:(UIBarButtonItem *)sender;
 
@@ -80,9 +81,9 @@
 }
 -(void)changeEmptyHidden{
     if ([DataManager manager].selectedExchangeRate.count>0) {
-        self.emptyView.hidden=YES;
+        [self.emptyView hide];
     }else{
-        self.emptyView.hidden=NO;
+        [self.emptyView show];
     }
 }
 #pragma mark - Event Response
