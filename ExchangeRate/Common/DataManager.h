@@ -7,6 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#define ALL_EXCHANGE_UPDATE_DATE @"ALL_EXCHANGE_UPDATE_DATE"
+#define CURRENCY_LIST_FILE @"Currency"
+#define ALL_EXCHANGE_RATE_CACHE_NAME @"ALL_EXCHANGE_RATE_CACHE_NAME"
+#define SELECTED_CURRENCY_CACHE_NAME @"SELECTED_CURRENCY_CACHE_NAME"
+
+#define CLICK_EXCHANGERATE @"CLICK_EXCHANGERATE"
+#define CLICK_VALUE @"CLICK_VALUE"
+
 @class MCExchangeRate;
 @class MCCurrency;
 @interface DataManager : NSObject
@@ -18,6 +27,9 @@
 @property(nonatomic,copy,readonly)NSArray *unselectedCurrencies;
 @property(nonatomic,copy)NSArray *allExchangeRate;
 @property(nonatomic,strong)NSMutableArray *selectedExchangeRate;
+
+@property(nonatomic,strong)MCExchangeRate *clickExchangeRate;
+@property(nonatomic,assign)double clickValue;
 +(DataManager *)manager;
 -(BOOL)checkNeedUpdate;
 -(void)updateAllExchangeCompletion:(void(^)(BOOL isSucceed))completion;

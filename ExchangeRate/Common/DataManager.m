@@ -12,10 +12,6 @@
 #import "FilePath.h"
 #import "MCExchangeRateRequest.h"
 
-#define ALL_EXCHANGE_UPDATE_DATE @"ALL_EXCHANGE_UPDATE_DATE"
-#define CURRENCY_LIST_FILE @"Currency"
-#define ALL_EXCHANGE_RATE_CACHE_NAME @"ALL_EXCHANGE_RATE_CACHE_NAME"
-#define SELECTED_CURRENCY_CACHE_NAME @"SELECTED_CURRENCY_CACHE_NAME"
 @implementation DataManager
 +(DataManager *)manager{
     static DataManager *dataManager = nil;
@@ -202,7 +198,32 @@
     [self setSelectedCurrencies:self.selectedCurrencies];
     return _selectedExchangeRate;
 }
-
+-(MCExchangeRate *)clickExchangeRate{
+    if (_clickExchangeRate) {
+        return _clickExchangeRate;
+    }
+    NSString *clickStr=[[NSUserDefaults standardUserDefaults]stringForKey:CLICK_EXCHANGERATE];
+    if (clickStr.length==0) {
+        clickStr=@"CNY";
+    }
+    NSString *lPredicateString=[NSString stringWithFormat:@"self.fromCurrency.unit LIKE '%@'",clickStr];
+    NSPredicate *lPredicate=[NSPredicate predicateWithFormat:lPredicateString];
+    NSArray *lPredicateArray=[self.allExchangeRate filteredArrayUsingPredicate:lPredicate];
+    if (lPredicateArray.count>0) {
+        return lPredicateArray[0];
+    }
+    return nil;
+}
+-(double)clickValue{
+    if (_clickValue!=0) {
+        return _clickValue;
+    }
+    _clickValue=[[NSUserDefaults standardUserDefaults]doubleForKey:CLICK_VALUE];
+    if(_clickValue==0){
+        _clickValue=100;
+    }
+    return _clickValue;
+}
 #pragma mark - TEST
 
 -(void)updateLocalCache{

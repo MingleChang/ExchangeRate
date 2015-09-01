@@ -8,11 +8,18 @@
 
 #import "StartUp.h"
 #import "DataManager.h"
+#import "MCExchangeRate.h"
+#import "MCCurrency.h"
 #import "Flurry.h"
 @implementation StartUp
 
 +(void)launch{
     [Flurry startSession:@"DYDGVJWM2BTZXC2W3VZP"];
+}
++(void)enterBackground{
+    [[NSUserDefaults standardUserDefaults]setDouble:[DataManager manager].clickValue forKey:CLICK_VALUE];
+    [[NSUserDefaults standardUserDefaults]setObject:[DataManager manager].clickExchangeRate.fromCurrency.unit forKey:CLICK_EXCHANGERATE];
+    [NSUserDefaults resetStandardUserDefaults];
 }
 +(void)updateExchange{
     if ([DataManager manager].allExchangeRateUpdateDate) {

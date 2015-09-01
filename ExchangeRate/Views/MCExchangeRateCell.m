@@ -12,7 +12,6 @@
 #import "MCExchangeRate.h"
 #import "DataManager.h"
 
-#define INPUT_VALUE_CHANGE_NOTIFICATION @"INPUT_VALUE_CHANGE_NOTIFICATION"
 
 @interface MCExchangeRateCell()
 
@@ -87,6 +86,8 @@
 }
 -(void)setCountLabelValue:(double)value{
     [DataManager manager].toCurrencyValue=value*self.exchangeRate.rate;
+    [DataManager manager].clickExchangeRate=self.exchangeRate;
+    [DataManager manager].clickValue=value;
     [[NSNotificationCenter defaultCenter]postNotificationName:INPUT_VALUE_CHANGE_NOTIFICATION object:self];
     NSNumberFormatter *lNumberFormat=[[NSNumberFormatter alloc]init];
     [lNumberFormat setNumberStyle:NSNumberFormatterDecimalStyle];

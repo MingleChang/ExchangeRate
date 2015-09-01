@@ -59,6 +59,7 @@
     [self changeEmptyHidden];
 }
 -(void)initAllData{
+    [DataManager manager].toCurrencyValue=[DataManager manager].clickValue*[DataManager manager].clickExchangeRate.rate;
     [self checkUpdateAllExchangeRate];
 }
 -(void)checkUpdateAllExchangeRate{
@@ -67,7 +68,9 @@
         [[DataManager manager]updateAllExchangeCompletion:^(BOOL isSucceed) {
             if(isSucceed){
                 self.navigationItem.title=@"更新成功";
-                [self.tableView reloadData];
+                [DataManager manager].toCurrencyValue=[DataManager manager].clickValue*[DataManager manager].clickExchangeRate.rate;
+                [[NSNotificationCenter defaultCenter]postNotificationName:INPUT_VALUE_CHANGE_NOTIFICATION object:self];
+//                [self.tableView reloadData];
             }else{
                 self.navigationItem.title=@"更新失败";
             }

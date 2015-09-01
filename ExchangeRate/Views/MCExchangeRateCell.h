@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MCPanCell.h"
+
+
+#define INPUT_VALUE_CHANGE_NOTIFICATION @"INPUT_VALUE_CHANGE_NOTIFICATION"
+
 @class MCExchangeRate,MCExchangeRateCell;
 @protocol MCExchangeRateCellDelegate <NSObject>
 

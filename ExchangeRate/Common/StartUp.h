@@ -11,5 +11,5 @@
 @interface StartUp : NSObject
 
 +(void)launch;
-
++(void)enterBackground;
 @end
