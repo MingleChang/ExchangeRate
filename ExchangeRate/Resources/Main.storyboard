@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.18823529411764706" green="0.31372549019607843" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -107,6 +107,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="小明汇率" id="mHc-Oy-esD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="MLQ-zQ-T0q">
+                            <color key="tintColor" red="0.18823529411764706" green="0.31372549019607843" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="rightBarButtonItemClick:" destination="kec-6X-ocJ" id="jkI-Nu-xVx"/>
                             </connections>

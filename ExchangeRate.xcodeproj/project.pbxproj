@@ -40,6 +40,7 @@
 		4CF9E57B1B661EED003C1A56 /* MCPanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5771B661EED003C1A56 /* MCPanCell.m */; };
 		4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5781B661EED003C1A56 /* MCPanCell.xib */; };
 		822A40591B84DFA100CF3A53 /* SelectedCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */; };
+		823B94AA1B97476E00EC2453 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 823B94AC1B97476E00EC2453 /* InfoPlist.strings */; };
 		823DE42F1B667A6C009C4381 /* MCExchangeRateNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */; };
 		823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */; };
 		825B206A1B67D88A00ED9E7D /* MCCurrencyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */; };
@@ -48,6 +49,7 @@
 		82AAAB111B73BDD900C4C73A /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 82AAAB101B73BDD900C4C73A /* Currency.json */; };
 		82B1B3A71B779AE800A16890 /* AllExchangeRateCache in Resources */ = {isa = PBXBuildFile; fileRef = 82B1B3A61B779AE800A16890 /* AllExchangeRateCache */; };
 		82B627671B5FE66400070EB9 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B627661B5FE66400070EB9 /* YQL.m */; };
+		82FE24A81B974A5A00C8E6A2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82FE24A71B974A5A00C8E6A2 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,6 @@
 		4C1338861B60BDF600585E62 /* MCExchangeRateResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateResult.h; sourceTree = "<group>"; };
 		4C1338871B60BDF600585E62 /* MCExchangeRateResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateResult.m; sourceTree = "<group>"; };
 		4C1F05BB1B5F8E6700DF101C /* ExchangeRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C1F05BF1B5F8E6700DF101C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1F05C01B5F8E6700DF101C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C1F05C21B5F8E6700DF101C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C1F05C31B5F8E6700DF101C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +121,8 @@
 		4CF9E5771B661EED003C1A56 /* MCPanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPanCell.m; sourceTree = "<group>"; };
 		4CF9E5781B661EED003C1A56 /* MCPanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCPanCell.xib; sourceTree = "<group>"; };
 		822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SelectedCurrencies.json; sourceTree = "<group>"; };
+		823B94AB1B97476E00EC2453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		823B94AD1B97478400EC2453 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		823DE42D1B667A6C009C4381 /* MCExchangeRateNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateNavigationController.h; sourceTree = "<group>"; };
 		823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateNavigationController.m; sourceTree = "<group>"; };
 		823DE4301B667A88009C4381 /* MCExchangeRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateViewController.h; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 		82B1B3A61B779AE800A16890 /* AllExchangeRateCache */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = AllExchangeRateCache; sourceTree = "<group>"; };
 		82B627651B5FE66400070EB9 /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
 		82B627661B5FE66400070EB9 /* YQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQL.m; sourceTree = "<group>"; };
+		82FE24A71B974A5A00C8E6A2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +215,7 @@
 		4C1F05BE1B5F8E6700DF101C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C1F05BF1B5F8E6700DF101C /* Info.plist */,
+				82FE24A71B974A5A00C8E6A2 /* Info.plist */,
 				4C1F05C01B5F8E6700DF101C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -294,6 +298,7 @@
 				822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */,
 				82B1B3A61B779AE800A16890 /* AllExchangeRateCache */,
 				4C30BC8F1B93E24A0081F391 /* Sentences.json */,
+				823B94AC1B97476E00EC2453 /* InfoPlist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 4C1F05B21B5F8E6700DF101C;
 			productRefGroup = 4C1F05BC1B5F8E6700DF101C /* Products */;
@@ -431,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82B1B3A71B779AE800A16890 /* AllExchangeRateCache in Resources */,
+				823B94AA1B97476E00EC2453 /* InfoPlist.strings in Resources */,
 				4C30BC901B93E24A0081F391 /* Sentences.json in Resources */,
 				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
 				4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */,
@@ -441,6 +448,7 @@
 				4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */,
 				82AAAB111B73BDD900C4C73A /* Currency.json in Resources */,
 				4C1F05CC1B5F8E6700DF101C /* Images.xcassets in Resources */,
+				82FE24A81B974A5A00C8E6A2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +513,18 @@
 			targetProxy = 4C1F05D51B5F8E6700DF101C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		823B94AC1B97476E00EC2453 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				823B94AB1B97476E00EC2453 /* Base */,
+				823B94AD1B97478400EC2453 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4C1F05DC1B5F8E6700DF101C /* Debug */ = {

@@ -10,21 +10,21 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnk-Ml-zpj">
-                    <rect key="frame" x="205" y="183" width="71" height="114"/>
-                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="90"/>
-                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-zd-ODD">
+                    <rect key="frame" x="140" y="140" width="200" height="200"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="Mnk-Ml-zpj" secondAttribute="centerX" id="aWQ-Yh-kH1"/>
-                <constraint firstAttribute="centerY" secondItem="Mnk-Ml-zpj" secondAttribute="centerY" id="gBI-Ec-VrA"/>
+                <constraint firstAttribute="centerX" secondItem="WTY-zd-ODD" secondAttribute="centerX" id="gYb-ar-Xnm"/>
+                <constraint firstAttribute="centerY" secondItem="WTY-zd-ODD" secondAttribute="centerY" id="u6H-7e-qnF"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="404" y="445"/>
         </view>
     </objects>
+    <resources>
+        <image name="Logo" width="200" height="200"/>
+    </resources>
 </document>

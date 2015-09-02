@@ -1,0 +1,10 @@
+/* 
+  infoPlist.strings
+  ExchangeRate
+
+  Created by 常峻玮 on 15/9/2.
+  Copyright (c) 2015年 MingleChang. All rights reserved.
+*/
+
+
+CFBundleDisplayName = "小明汇率";
