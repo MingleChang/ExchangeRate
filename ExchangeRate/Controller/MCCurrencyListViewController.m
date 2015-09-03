@@ -11,6 +11,7 @@
 #import "MCCurrencyListCell.h"
 #import "MCCurrency.h"
 #import "MingleChang.h"
+#import "Flurry.h"
 
 @import GoogleMobileAds;
 
@@ -123,6 +124,7 @@
     if (lCell.isSelected) {
         return;
     }
+    [Flurry logEvent:lCell.currency.unit];
     if (self.replaceExchangeRate) {
         NSUInteger index=[[DataManager manager].selectedExchangeRate indexOfObject:self.replaceExchangeRate];
         MCExchangeRate *lReplaceExchange=[[DataManager manager]getExchangeRateByCurrency:lCell.currency];

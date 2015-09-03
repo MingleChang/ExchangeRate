@@ -16,6 +16,9 @@
 +(void)launch{
     [Flurry startSession:@"DYDGVJWM2BTZXC2W3VZP"];
 }
++(void)enterForeground{
+    
+}
 +(void)enterBackground{
     [[NSUserDefaults standardUserDefaults]setDouble:[DataManager manager].clickValue forKey:CLICK_VALUE];
     [[NSUserDefaults standardUserDefaults]setObject:[DataManager manager].clickExchangeRate.fromCurrency.unit forKey:CLICK_EXCHANGERATE];

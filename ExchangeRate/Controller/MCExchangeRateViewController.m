@@ -95,6 +95,7 @@
 }
 
 - (IBAction)rightBarButtonItemClick:(UIBarButtonItem *)sender {
+    [self.lastPanCell showNormalWith:YES];
     if([DataManager manager].selectedExchangeRate.count>=6){
         UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:nil message:@"最多只能关注6种货币汇率" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *lAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
@@ -125,6 +126,7 @@
 #pragma mark - TableView Delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.selectedCell=(MCExchangeRateCell *)[tableView cellForRowAtIndexPath:indexPath];
+    [self.lastPanCell showNormalWith:YES];
     MCNumberKeyboard *lView=[[NSBundle mainBundle]loadNibNamed:@"MCNumberKeyboard" owner:nil options:nil][0];
     lView.delegate=self;
     [lView showInView:self.navigationController.view];

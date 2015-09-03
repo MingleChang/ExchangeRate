@@ -94,6 +94,7 @@
 
 -(void)showNumberKeyBoardWith:(BOOL)animation completion:(void (^)())completion{
     if (animation) {
+        [self layoutIfNeeded];
         [UIView animateWithDuration:0.2 animations:^{
             self.keyBoardViewTopConstraint.constant=-self.keyBoardViewHeightConstraint.constant;
             [self layoutIfNeeded];
