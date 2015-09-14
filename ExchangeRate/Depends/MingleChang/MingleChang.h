@@ -35,4 +35,9 @@ NSLog(@"%@",[NSString stringWithFormat:(s), ##__VA_ARGS__])
 #define RGB(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]//宏定义颜色获取方法，alpha不可设置，默认为1.0
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]//宏定义颜色获取方法，alpha可设置
 
+#define APP_ENTER_FOREGROUND @"APP_ENTER_FOREGROUND"
+#define APP_BECOME_ACTIVE @"APP_BECOME_ACTIVE"
+#define APP_ENTER_BACKGROUND @"APP_ENTER_BACKGROUND"
+#define APP_RESIGN_ACTIVE @"APP_RESIGN_ACTIVE"
+
 #endif

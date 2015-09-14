@@ -12,5 +12,7 @@
 
 +(void)launch;
 +(void)enterForeground;
++(void)becomeActive;
 +(void)enterBackground;
++(void)resignActive;
 @end
