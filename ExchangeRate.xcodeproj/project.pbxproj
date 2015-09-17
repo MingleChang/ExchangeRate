@@ -397,7 +397,7 @@
 		4C1F05B31B5F8E6700DF101C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = MingleChang;
 				TargetAttributes = {
 					4C1F05BA1B5F8E6700DF101C = {
@@ -546,6 +546,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -622,6 +623,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExchangeRate/Depends/Flurry",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = mingle.chang.exchangerate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "510b2023-0877-412f-b805-5f9b1f6fd8d3";
 			};
@@ -644,6 +646,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExchangeRate/Depends/Flurry",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = mingle.chang.exchangerate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5e30a8d0-3fa3-4d46-8086-ee291f5f89a4";
 			};
@@ -663,6 +666,7 @@
 				);
 				INFOPLIST_FILE = ExchangeRateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MingleChang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExchangeRate.app/ExchangeRate";
 			};
@@ -678,6 +682,7 @@
 				);
 				INFOPLIST_FILE = ExchangeRateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MingleChang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExchangeRate.app/ExchangeRate";
 			};
