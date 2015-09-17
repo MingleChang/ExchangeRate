@@ -68,7 +68,7 @@
 -(void)updateUI{
     self.currencyImageView.image=[UIImage imageNamed:self.exchangeRate.fromCurrency.unit];
     self.currencyUnitLabel.text=self.exchangeRate.fromCurrency.unit;
-    self.currencyName.text=self.exchangeRate.fromCurrency.name;
+    self.currencyName.text=self.exchangeRate.fromCurrency.localName;
     [self showNormalWith:NO];
     [self setCountLabelValue];
 }

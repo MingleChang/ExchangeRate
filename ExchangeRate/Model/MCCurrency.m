@@ -38,6 +38,13 @@
     NSString *lString=[NSString stringWithFormat:@"%@cate:%@ name:%@ unit:%@ symbol:%@",self,self.cate,self.name,self.unit,self.symbol];
     return lString;
 }
+-(NSString *)localName{
+    if (_localName) {
+        return _localName;
+    }
+    _localName=NSLocalizedStringFromTable(self.unit, @"Currency", nil);
+    return _localName;
+}
 #pragma mark - Coding
 -(void)encodeWithCoder:(NSCoder *)aCoder{
     [aCoder encodeObject:self.prefix forKey:CURRENCY_PREFIX_CODING_KEY];

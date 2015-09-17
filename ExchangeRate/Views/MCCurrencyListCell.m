@@ -48,7 +48,7 @@
 -(void)setupCurrency:(MCCurrency *)currency withIsSelected:(BOOL)isSelected{
     self.currency=currency;
     self.isSelected=isSelected;
-    self.currencyNameLabel.text=[NSString stringWithFormat:@"%@(%@)",self.currency.name,self.currency.unit];
+    self.currencyNameLabel.text=[NSString stringWithFormat:@"%@(%@)",self.currency.localName,self.currency.unit];
     self.currencySelectedLabel.hidden=!isSelected;
 }
 #pragma mark - Setter And Getter

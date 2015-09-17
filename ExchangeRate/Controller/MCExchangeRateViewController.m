@@ -36,7 +36,7 @@
 
 @implementation MCExchangeRateViewController
 -(void)dealloc{
-    
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,6 +60,10 @@
 }
 -(void)initAllData{
     [DataManager manager].toCurrencyValue=[DataManager manager].clickValue*[DataManager manager].clickExchangeRate.rate;
+    [self checkUpdateAllExchangeRate];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(appEnterForegroundNotification:) name:APP_ENTER_FOREGROUND object:nil];
+}
+-(void)appEnterForegroundNotification:(NSNotification *)sender{
     [self checkUpdateAllExchangeRate];
 }
 -(void)checkUpdateAllExchangeRate{

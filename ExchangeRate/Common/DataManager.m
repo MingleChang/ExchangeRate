@@ -38,15 +38,25 @@
     return nil;
 }
 -(BOOL)checkNeedUpdate{
-    NSInteger timezoneFix=[NSTimeZone localTimeZone].secondsFromGMT;
-    NSDate *lNowDate=[NSDate date];
-    NSInteger lNowDays=((NSInteger)[lNowDate timeIntervalSince1970]+timezoneFix)/(60*60*24);
-    NSInteger lLastUpdateDays=((NSInteger)[self.allExchangeRateUpdateDate timeIntervalSince1970]+timezoneFix)/(60*60*24);
-    if (lNowDays==lLastUpdateDays) {
-        return NO;
-    }else{
+//    NSInteger timezoneFix=[NSTimeZone localTimeZone].secondsFromGMT;
+//    NSDate *lNowDate=[NSDate date];
+//    NSInteger lNowDays=((NSInteger)[lNowDate timeIntervalSince1970]+timezoneFix)/(60*60*24);
+//    NSInteger lLastUpdateDays=((NSInteger)[self.allExchangeRateUpdateDate timeIntervalSince1970]+timezoneFix)/(60*60*24);
+//    if (lNowDays==lLastUpdateDays) {
+//        return NO;
+//    }else{
+//        return YES;
+//    }
+    if (self.allExchangeRateUpdateDate==nil) {
         return YES;
     }
+    NSDate *lNowDate=[NSDate date];
+    if ([lNowDate timeIntervalSinceDate:self.allExchangeRateUpdateDate]>60*60) {
+        return YES;
+    }else{
+        return NO;
+    }
+    
 }
 -(void)updateAllExchangeCompletion:(void(^)(BOOL isSucceed))completion{
     [MCExchangeRateRequest requestExchangeRates:self.allExchangeRate completion:^(BOOL isSucceed, NSArray *info) {

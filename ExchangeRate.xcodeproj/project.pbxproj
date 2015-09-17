@@ -41,11 +41,12 @@
 		4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5781B661EED003C1A56 /* MCPanCell.xib */; };
 		822A40591B84DFA100CF3A53 /* SelectedCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */; };
 		823B94AA1B97476E00EC2453 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 823B94AC1B97476E00EC2453 /* InfoPlist.strings */; };
+		823C538C1BAB18B000DB1DD6 /* libFlurry_7.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 823C538B1BAB18B000DB1DD6 /* libFlurry_7.1.1.a */; settings = {ASSET_TAGS = (); }; };
+		823C538F1BAB285800DB1DD6 /* Currency.strings in Resources */ = {isa = PBXBuildFile; fileRef = 823C53911BAB285800DB1DD6 /* Currency.strings */; };
 		823DE42F1B667A6C009C4381 /* MCExchangeRateNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */; };
 		823DE4321B667A88009C4381 /* MCExchangeRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 823DE4311B667A88009C4381 /* MCExchangeRateViewController.m */; };
 		825B206A1B67D88A00ED9E7D /* MCCurrencyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B20691B67D88A00ED9E7D /* MCCurrencyListViewController.m */; };
 		825B206D1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */; };
-		82687B531B7CDF76008876CF /* libFlurry_6.7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82687B521B7CDF76008876CF /* libFlurry_6.7.0.a */; };
 		82AAAB111B73BDD900C4C73A /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 82AAAB101B73BDD900C4C73A /* Currency.json */; };
 		82B1B3A71B779AE800A16890 /* AllExchangeRateCache in Resources */ = {isa = PBXBuildFile; fileRef = 82B1B3A61B779AE800A16890 /* AllExchangeRateCache */; };
 		82B627671B5FE66400070EB9 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B627661B5FE66400070EB9 /* YQL.m */; };
@@ -122,6 +123,11 @@
 		822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SelectedCurrencies.json; sourceTree = "<group>"; };
 		823B94AB1B97476E00EC2453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		823B94AD1B97478400EC2453 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		823C538B1BAB18B000DB1DD6 /* libFlurry_7.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.1.1.a; sourceTree = "<group>"; };
+		823C53901BAB285800DB1DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Currency.strings; sourceTree = "<group>"; };
+		823C53921BAB285E00DB1DD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Currency.strings; sourceTree = "<group>"; };
+		823C53931BAB286000DB1DD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Currency.strings"; sourceTree = "<group>"; };
+		823C53941BAB286B00DB1DD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		823DE42D1B667A6C009C4381 /* MCExchangeRateNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateNavigationController.h; sourceTree = "<group>"; };
 		823DE42E1B667A6C009C4381 /* MCExchangeRateNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateNavigationController.m; sourceTree = "<group>"; };
 		823DE4301B667A88009C4381 /* MCExchangeRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateViewController.h; sourceTree = "<group>"; };
@@ -132,7 +138,6 @@
 		825B206C1B67D8A900ED9E7D /* MCCurrencyListNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCurrencyListNavigationController.m; sourceTree = "<group>"; };
 		82687B501B7CDF76008876CF /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
 		82687B511B7CDF76008876CF /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
-		82687B521B7CDF76008876CF /* libFlurry_6.7.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.7.0.a; sourceTree = "<group>"; };
 		82AAAB101B73BDD900C4C73A /* Currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Currency.json; sourceTree = "<group>"; };
 		82B1B3A61B779AE800A16890 /* AllExchangeRateCache */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = AllExchangeRateCache; sourceTree = "<group>"; };
 		82B627651B5FE66400070EB9 /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
@@ -146,7 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2014B01B8C467F000994B7 /* GoogleMobileAds.framework in Frameworks */,
-				82687B531B7CDF76008876CF /* libFlurry_6.7.0.a in Frameworks */,
+				823C538C1BAB18B000DB1DD6 /* libFlurry_7.1.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +303,7 @@
 				82B1B3A61B779AE800A16890 /* AllExchangeRateCache */,
 				4C30BC8F1B93E24A0081F391 /* Sentences.json */,
 				823B94AC1B97476E00EC2453 /* InfoPlist.strings */,
+				823C53911BAB285800DB1DD6 /* Currency.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -328,7 +334,7 @@
 			children = (
 				82687B501B7CDF76008876CF /* Flurry.h */,
 				82687B511B7CDF76008876CF /* FlurryWatch.h */,
-				82687B521B7CDF76008876CF /* libFlurry_6.7.0.a */,
+				823C538B1BAB18B000DB1DD6 /* libFlurry_7.1.1.a */,
 			);
 			path = Flurry;
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 				4C38FCAC1B686B8F0025709E /* MCCurrencyListCell.xib in Resources */,
 				4C4D4F731B70A94900F18518 /* MCNumberKeyboard.xib in Resources */,
 				4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */,
+				823C538F1BAB285800DB1DD6 /* Currency.strings in Resources */,
 				4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */,
 				82AAAB111B73BDD900C4C73A /* Currency.json in Resources */,
 				4C1F05CC1B5F8E6700DF101C /* Images.xcassets in Resources */,
@@ -518,8 +525,19 @@
 			children = (
 				823B94AB1B97476E00EC2453 /* Base */,
 				823B94AD1B97478400EC2453 /* zh-Hans */,
+				823C53941BAB286B00DB1DD6 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		823C53911BAB285800DB1DD6 /* Currency.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				823C53901BAB285800DB1DD6 /* Base */,
+				823C53921BAB285E00DB1DD6 /* en */,
+				823C53931BAB286000DB1DD6 /* zh-Hans */,
+			);
+			name = Currency.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -612,6 +630,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Junwei Chang (FNG8894989)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Junwei Chang (FNG8894989)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExchangeRate/Depends",
@@ -635,6 +654,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Junwei Chang (USZ9R7RQAA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Junwei Chang (USZ9R7RQAA)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ExchangeRate/Depends",
