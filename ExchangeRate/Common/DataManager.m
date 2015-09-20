@@ -12,6 +12,8 @@
 #import "FilePath.h"
 #import "MCExchangeRateRequest.h"
 
+#define UPDATE_DISTANCE 60*60*2
+
 @implementation DataManager
 +(DataManager *)manager{
     static DataManager *dataManager = nil;
@@ -51,7 +53,7 @@
         return YES;
     }
     NSDate *lNowDate=[NSDate date];
-    if ([lNowDate timeIntervalSinceDate:self.allExchangeRateUpdateDate]>60*60) {
+    if ([lNowDate timeIntervalSinceDate:self.allExchangeRateUpdateDate]>UPDATE_DISTANCE) {
         return YES;
     }else{
         return NO;
