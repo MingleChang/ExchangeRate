@@ -58,7 +58,7 @@
     self.searchBar.barStyle=UIBarStyleBlackTranslucent;
     self.searchBar.delegate=self;
     self.navigationItem.titleView=self.searchBar;
-    UIBarButtonItem *lRightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonClick:)];
+    UIBarButtonItem *lRightBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(LOCAL_CANCEL, nil) style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonClick:)];
     self.navigationItem.rightBarButtonItem=lRightBarButtonItem;
 }
 -(void)initAllData{

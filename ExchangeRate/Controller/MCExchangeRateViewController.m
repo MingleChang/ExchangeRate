@@ -68,22 +68,22 @@
 }
 -(void)checkUpdateAllExchangeRate{
     if ([[DataManager manager]checkNeedUpdate]) {
-        self.navigationItem.title=@"更新中...";
+        self.navigationItem.title=NSLocalizedString(LOCAL_UPDATING, nil);
         [[DataManager manager]updateAllExchangeCompletion:^(BOOL isSucceed) {
             if(isSucceed){
-                self.navigationItem.title=@"更新成功";
+                self.navigationItem.title=NSLocalizedString(LOCAL_UPDATE_SUCCESS, nil);
                 [DataManager manager].toCurrencyValue=[DataManager manager].clickValue*[DataManager manager].clickExchangeRate.rate;
                 [[NSNotificationCenter defaultCenter]postNotificationName:INPUT_VALUE_CHANGE_NOTIFICATION object:self];
 //                [self.tableView reloadData];
             }else{
-                self.navigationItem.title=@"更新失败";
+                self.navigationItem.title=NSLocalizedString(LOCAL_UPDATE_FAIL, nil);
             }
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                self.navigationItem.title=@"小明汇率";
+                self.navigationItem.title=NSLocalizedString(LOCAL_APP_NAME, nil);
             });
         }];
     }else{
-        self.navigationItem.title=@"小明汇率";
+        self.navigationItem.title=NSLocalizedString(LOCAL_APP_NAME, nil);
     }
 }
 -(void)changeEmptyHidden{

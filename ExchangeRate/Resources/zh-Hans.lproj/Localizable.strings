@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  ExchangeRate
+
+  Created by 常峻玮 on 15/9/20.
+  Copyright © 2015年 MingleChang. All rights reserved.
+*/
+
+AppName="小明汇率";
+Updating="更新中...";
+UpdateSuccess="更新成功";
+UpdateFail="更新失败";
+
+Cancel="取消";

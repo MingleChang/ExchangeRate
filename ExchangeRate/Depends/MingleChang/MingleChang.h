@@ -40,4 +40,10 @@ NSLog(@"%@",[NSString stringWithFormat:(s), ##__VA_ARGS__])
 #define APP_ENTER_BACKGROUND @"APP_ENTER_BACKGROUND"
 #define APP_RESIGN_ACTIVE @"APP_RESIGN_ACTIVE"
 
+#define LOCAL_APP_NAME @"AppName"
+#define LOCAL_UPDATING @"Updating"
+#define LOCAL_UPDATE_SUCCESS @"UpdateSuccess"
+#define LOCAL_UPDATE_FAIL @"UpdateFail"
+#define LOCAL_CANCEL @"Cancel"
+
 #endif
