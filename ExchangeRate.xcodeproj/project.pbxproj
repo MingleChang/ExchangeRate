@@ -40,7 +40,6 @@
 		4CF9E57B1B661EED003C1A56 /* MCPanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5771B661EED003C1A56 /* MCPanCell.m */; };
 		4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5781B661EED003C1A56 /* MCPanCell.xib */; };
 		822205B81BAF1071007DDE4E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 822205BA1BAF1071007DDE4E /* Localizable.strings */; };
-		822A40591B84DFA100CF3A53 /* SelectedCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */; };
 		823B94AA1B97476E00EC2453 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 823B94AC1B97476E00EC2453 /* InfoPlist.strings */; };
 		823C538C1BAB18B000DB1DD6 /* libFlurry_7.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 823C538B1BAB18B000DB1DD6 /* libFlurry_7.1.1.a */; settings = {ASSET_TAGS = (); }; };
 		823C538F1BAB285800DB1DD6 /* Currency.strings in Resources */ = {isa = PBXBuildFile; fileRef = 823C53911BAB285800DB1DD6 /* Currency.strings */; };
@@ -51,6 +50,7 @@
 		82AAAB111B73BDD900C4C73A /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 82AAAB101B73BDD900C4C73A /* Currency.json */; };
 		82B1B3A71B779AE800A16890 /* AllExchangeRateCache in Resources */ = {isa = PBXBuildFile; fileRef = 82B1B3A61B779AE800A16890 /* AllExchangeRateCache */; };
 		82B627671B5FE66400070EB9 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B627661B5FE66400070EB9 /* YQL.m */; };
+		82C0714B1BB059FB00112F0D /* SelectedCurrencies.json in Resources */ = {isa = PBXBuildFile; fileRef = 82C0714D1BB059FB00112F0D /* SelectedCurrencies.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +124,6 @@
 		822205B91BAF1071007DDE4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		822205BB1BAF1072007DDE4E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		822205BC1BAF1073007DDE4E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SelectedCurrencies.json; sourceTree = "<group>"; };
 		823B94AB1B97476E00EC2453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		823B94AD1B97478400EC2453 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		823C538B1BAB18B000DB1DD6 /* libFlurry_7.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.1.1.a; sourceTree = "<group>"; };
@@ -146,6 +145,9 @@
 		82B1B3A61B779AE800A16890 /* AllExchangeRateCache */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = AllExchangeRateCache; sourceTree = "<group>"; };
 		82B627651B5FE66400070EB9 /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
 		82B627661B5FE66400070EB9 /* YQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQL.m; sourceTree = "<group>"; };
+		82C0714C1BB059FB00112F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/SelectedCurrencies.json; sourceTree = "<group>"; };
+		82C0714E1BB059FD00112F0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/SelectedCurrencies.json; sourceTree = "<group>"; };
+		82C0714F1BB05A0200112F0D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hans"; path = "zh-Hans.lproj/SelectedCurrencies.json"; sourceTree = "<group>"; };
 		82FE24A71B974A5A00C8E6A2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -303,7 +305,7 @@
 				4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */,
 				4C1F064D1B5F978C00DF101C /* Main.storyboard */,
 				82AAAB101B73BDD900C4C73A /* Currency.json */,
-				822A40581B84DFA100CF3A53 /* SelectedCurrencies.json */,
+				82C0714D1BB059FB00112F0D /* SelectedCurrencies.json */,
 				82B1B3A61B779AE800A16890 /* AllExchangeRateCache */,
 				4C30BC8F1B93E24A0081F391 /* Sentences.json */,
 				823B94AC1B97476E00EC2453 /* InfoPlist.strings */,
@@ -452,7 +454,7 @@
 				822205B81BAF1071007DDE4E /* Localizable.strings in Resources */,
 				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
 				4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */,
-				822A40591B84DFA100CF3A53 /* SelectedCurrencies.json in Resources */,
+				82C0714B1BB059FB00112F0D /* SelectedCurrencies.json in Resources */,
 				4C38FCAC1B686B8F0025709E /* MCCurrencyListCell.xib in Resources */,
 				4C4D4F731B70A94900F18518 /* MCNumberKeyboard.xib in Resources */,
 				4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */,
@@ -554,6 +556,16 @@
 				823C53931BAB286000DB1DD6 /* zh-Hans */,
 			);
 			name = Currency.strings;
+			sourceTree = "<group>";
+		};
+		82C0714D1BB059FB00112F0D /* SelectedCurrencies.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82C0714C1BB059FB00112F0D /* Base */,
+				82C0714E1BB059FD00112F0D /* en */,
+				82C0714F1BB05A0200112F0D /* zh-Hans */,
+			);
+			name = SelectedCurrencies.json;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

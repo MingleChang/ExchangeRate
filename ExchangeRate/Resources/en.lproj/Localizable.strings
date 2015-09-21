@@ -12,3 +12,8 @@ UpdateSuccess="Update Success";
 UpdateFail="Update Fail";
 
 Cancel="Cancel";
+OK="OK";
+
+OnlySix="No more than six currency";
+
+DefaultCurrency="USD";

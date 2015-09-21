@@ -74,7 +74,6 @@
                 self.navigationItem.title=NSLocalizedString(LOCAL_UPDATE_SUCCESS, nil);
                 [DataManager manager].toCurrencyValue=[DataManager manager].clickValue*[DataManager manager].clickExchangeRate.rate;
                 [[NSNotificationCenter defaultCenter]postNotificationName:INPUT_VALUE_CHANGE_NOTIFICATION object:self];
-//                [self.tableView reloadData];
             }else{
                 self.navigationItem.title=NSLocalizedString(LOCAL_UPDATE_FAIL, nil);
             }
@@ -101,8 +100,8 @@
 - (IBAction)rightBarButtonItemClick:(UIBarButtonItem *)sender {
     [self.lastPanCell showNormalWith:YES];
     if([DataManager manager].selectedExchangeRate.count>=6){
-        UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:nil message:@"最多只能关注6种货币汇率" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *lAction=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIAlertController *lAlertController=[UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"OnlySix", nil) preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *lAction=[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             [lAlertController dismissViewControllerAnimated:YES completion:nil];
         }];
         [lAlertController addAction:lAction];

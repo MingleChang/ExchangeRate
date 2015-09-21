@@ -40,15 +40,6 @@
     return nil;
 }
 -(BOOL)checkNeedUpdate{
-//    NSInteger timezoneFix=[NSTimeZone localTimeZone].secondsFromGMT;
-//    NSDate *lNowDate=[NSDate date];
-//    NSInteger lNowDays=((NSInteger)[lNowDate timeIntervalSince1970]+timezoneFix)/(60*60*24);
-//    NSInteger lLastUpdateDays=((NSInteger)[self.allExchangeRateUpdateDate timeIntervalSince1970]+timezoneFix)/(60*60*24);
-//    if (lNowDays==lLastUpdateDays) {
-//        return NO;
-//    }else{
-//        return YES;
-//    }
     if (self.allExchangeRateUpdateDate==nil) {
         return YES;
     }
@@ -176,7 +167,6 @@
                 }
             }
         }
-//        self.selectedExchangeRate=[[self.allExchangeRate filteredArrayUsingPredicate:lPredicate]mutableCopy];
     }
     @catch (NSException *exception) {
         self.selectedExchangeRate=[NSMutableArray array];
@@ -216,7 +206,7 @@
     }
     NSString *clickStr=[[NSUserDefaults standardUserDefaults]stringForKey:CLICK_EXCHANGERATE];
     if (clickStr.length==0) {
-        clickStr=@"CNY";
+        clickStr=NSLocalizedString(@"DefaultCurrency", nil);
     }
     NSString *lPredicateString=[NSString stringWithFormat:@"self.fromCurrency.unit LIKE '%@'",clickStr];
     NSPredicate *lPredicate=[NSPredicate predicateWithFormat:lPredicateString];

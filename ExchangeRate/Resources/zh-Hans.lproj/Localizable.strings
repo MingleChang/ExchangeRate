@@ -12,3 +12,8 @@ UpdateSuccess="更新成功";
 UpdateFail="更新失败";
 
 Cancel="取消";
+OK="确定";
+
+OnlySix="最多只能关注6种货币汇率";
+
+DefaultCurrency="CNY";
