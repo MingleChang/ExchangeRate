@@ -40,7 +40,7 @@
 }
 -(void)initAllSubviews{
     self.lineViewHeightConstraint.constant=ONE_PIXEL;
-    self.currencySelectedLabel.text=@"已选择";
+    self.currencySelectedLabel.text=NSLocalizedString(@"Selected", nil);
 }
 -(void)initAllData{
     

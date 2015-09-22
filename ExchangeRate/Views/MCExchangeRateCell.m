@@ -61,6 +61,8 @@
     self.leftDistance=120;
     self.rightDistance=80;
     self.lineViewHeightConstraint.constant=ONE_PIXEL;
+    [self.changeButton setTitle:NSLocalizedString(@"Replace", nil) forState:UIControlStateNormal];
+    [self.deleteButton setTitle:NSLocalizedString(@"Delete", nil) forState:UIControlStateNormal];
 }
 -(void)initAllData{
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(inputValueChangeNotification:) name:INPUT_VALUE_CHANGE_NOTIFICATION object:nil];

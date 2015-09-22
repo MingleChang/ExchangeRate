@@ -13,6 +13,9 @@ UpdateFail="Update Fail";
 
 Cancel="Cancel";
 OK="OK";
+Delete="Delete";
+Replace="Replace";
+Selected="Selected";
 
 OnlySix="No more than six currency";
 
