@@ -684,7 +684,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mingle.chang.exchangerate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "510b2023-0877-412f-b805-5f9b1f6fd8d3";
 			};
 			name = Debug;
 		};
