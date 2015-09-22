@@ -25,7 +25,6 @@
 		4C1F06561B5F978C00DF101C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */; };
 		4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F064D1B5F978C00DF101C /* Main.storyboard */; };
 		4C2014B01B8C467F000994B7 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2014AF1B8C467F000994B7 /* GoogleMobileAds.framework */; };
-		4C30BC901B93E24A0081F391 /* Sentences.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C30BC8F1B93E24A0081F391 /* Sentences.json */; };
 		4C30BC931B93E2740081F391 /* MCSentence.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30BC921B93E2740081F391 /* MCSentence.m */; };
 		4C30BC961B93E3670081F391 /* MCEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C30BC951B93E3670081F391 /* MCEmptyView.m */; };
 		4C38FCAB1B686B8F0025709E /* MCCurrencyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C38FCA91B686B8F0025709E /* MCCurrencyListCell.m */; };
@@ -35,6 +34,7 @@
 		4C4D4F721B70A94900F18518 /* MCNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D4F701B70A94900F18518 /* MCNumberKeyboard.m */; };
 		4C4D4F731B70A94900F18518 /* MCNumberKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4D4F711B70A94900F18518 /* MCNumberKeyboard.xib */; };
 		4C4D4F761B70A95100F18518 /* MCCalculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D4F751B70A95100F18518 /* MCCalculate.m */; };
+		4C7299EE1BB0E3D2007ED787 /* Sentences.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C7299F01BB0E3D2007ED787 /* Sentences.json */; };
 		4CF9E5791B661EED003C1A56 /* MCExchangeRateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5741B661EED003C1A56 /* MCExchangeRateCell.m */; };
 		4CF9E57A1B661EED003C1A56 /* MCExchangeRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */; };
 		4CF9E57B1B661EED003C1A56 /* MCPanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9E5771B661EED003C1A56 /* MCPanCell.m */; };
@@ -98,7 +98,6 @@
 		4C1F064C1B5F978C00DF101C /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4C1F064D1B5F978C00DF101C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4C2014AF1B8C467F000994B7 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		4C30BC8F1B93E24A0081F391 /* Sentences.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sentences.json; sourceTree = "<group>"; };
 		4C30BC911B93E2740081F391 /* MCSentence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCSentence.h; sourceTree = "<group>"; };
 		4C30BC921B93E2740081F391 /* MCSentence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSentence.m; sourceTree = "<group>"; };
 		4C30BC941B93E3670081F391 /* MCEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCEmptyView.h; sourceTree = "<group>"; };
@@ -115,6 +114,9 @@
 		4C4D4F711B70A94900F18518 /* MCNumberKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCNumberKeyboard.xib; sourceTree = "<group>"; };
 		4C4D4F741B70A95100F18518 /* MCCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCalculate.h; sourceTree = "<group>"; };
 		4C4D4F751B70A95100F18518 /* MCCalculate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCalculate.m; sourceTree = "<group>"; };
+		4C7299EF1BB0E3D2007ED787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Sentences.json; sourceTree = "<group>"; };
+		4C7299F11BB0E3D3007ED787 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Sentences.json; sourceTree = "<group>"; };
+		4C7299F21BB0E3D4007ED787 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hans"; path = "zh-Hans.lproj/Sentences.json"; sourceTree = "<group>"; };
 		4CF9E5731B661EED003C1A56 /* MCExchangeRateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCExchangeRateCell.h; sourceTree = "<group>"; };
 		4CF9E5741B661EED003C1A56 /* MCExchangeRateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCExchangeRateCell.m; sourceTree = "<group>"; };
 		4CF9E5751B661EED003C1A56 /* MCExchangeRateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCExchangeRateCell.xib; sourceTree = "<group>"; };
@@ -307,7 +309,7 @@
 				82AAAB101B73BDD900C4C73A /* Currency.json */,
 				82C0714D1BB059FB00112F0D /* SelectedCurrencies.json */,
 				82B1B3A61B779AE800A16890 /* AllExchangeRateCache */,
-				4C30BC8F1B93E24A0081F391 /* Sentences.json */,
+				4C7299F01BB0E3D2007ED787 /* Sentences.json */,
 				823B94AC1B97476E00EC2453 /* InfoPlist.strings */,
 				823C53911BAB285800DB1DD6 /* Currency.strings */,
 				822205BA1BAF1071007DDE4E /* Localizable.strings */,
@@ -450,7 +452,7 @@
 			files = (
 				82B1B3A71B779AE800A16890 /* AllExchangeRateCache in Resources */,
 				823B94AA1B97476E00EC2453 /* InfoPlist.strings in Resources */,
-				4C30BC901B93E24A0081F391 /* Sentences.json in Resources */,
+				4C7299EE1BB0E3D2007ED787 /* Sentences.json in Resources */,
 				822205B81BAF1071007DDE4E /* Localizable.strings in Resources */,
 				4C1F06571B5F978C00DF101C /* Main.storyboard in Resources */,
 				4CF9E57C1B661EED003C1A56 /* MCPanCell.xib in Resources */,
@@ -528,6 +530,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4C7299F01BB0E3D2007ED787 /* Sentences.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C7299EF1BB0E3D2007ED787 /* Base */,
+				4C7299F11BB0E3D3007ED787 /* en */,
+				4C7299F21BB0E3D4007ED787 /* zh-Hans */,
+			);
+			name = Sentences.json;
+			sourceTree = "<group>";
+		};
 		822205BA1BAF1071007DDE4E /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
