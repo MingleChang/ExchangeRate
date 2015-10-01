@@ -33,22 +33,5 @@
 +(void)resignActive{
     [[NSNotificationCenter defaultCenter]postNotificationName:APP_RESIGN_ACTIVE object:nil];
 }
-+(void)updateExchange{
-    if ([DataManager manager].allExchangeRateUpdateDate) {
-        if ([self checkNeedUpdateExchange]) {
-            [[DataManager manager]updateAllExchangeCompletion:nil];
-        }
-    }
-}
-+(BOOL)checkNeedUpdateExchange{
-    NSInteger timezoneFix=[NSTimeZone localTimeZone].secondsFromGMT;
-    NSDate *lNowDate=[NSDate date];
-    NSInteger lNowDays=((NSInteger)[lNowDate timeIntervalSince1970]+timezoneFix)/(60*60*24);
-    NSInteger lLastUpdateDays=((NSInteger)[[DataManager manager].allExchangeRateUpdateDate timeIntervalSince1970]+timezoneFix)/(60*60*24);
-    if (lNowDays==lLastUpdateDays) {
-        return NO;
-    }else{
-        return YES;
-    }
-}
+
 @end
